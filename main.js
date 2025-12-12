@@ -22,6 +22,11 @@ const CLASS_PRESETS = {
   mage: { health: 13, strength: 3, intelligence: 7, agility: 5, charisma: 5 }
 };
 
+const NAME_BANK = [
+  "Eira", "Kael", "Sylas", "Rowan", "Thorne", "Mira", "Anwen", "Corin", "Lyra", "Bram",
+  "Isolde", "Fen", "Varyn", "Lysa", "Doran", "Neris", "Hale", "Talwyn", "Riven", "Sable"
+];
+
 function on(event, handler) {
   eventBus.addEventListener(event, handler);
 }
@@ -70,6 +75,10 @@ function sanitizeName(name) {
   const trimmed = name.trim();
   if (!trimmed.length) return "Adventurer";
   return trimmed.slice(0, 24);
+}
+
+function randomName() {
+  return NAME_BANK[Math.floor(Math.random() * NAME_BANK.length)];
 }
 
 function validatePlayer(player, statBounds) {
@@ -146,6 +155,7 @@ async function loadCoreData() {
   gameState.encounters = validateEncounters(encounters);
 
   await checkRequiredAssets(config);
+  emit("data:loaded", { quests: gameState.quests });
 }
 
 function startGameLoop() {
@@ -197,11 +207,22 @@ function bindIdentityForm() {
   const classSelect = document.getElementById("class-select");
   const applyBtn = document.getElementById("apply-identity");
   const form = document.getElementById("identity-form");
+  const randomBtn = document.getElementById("random-name");
   if (!applyBtn || !nameInput || !classSelect || !form) return;
   applyBtn.onclick = () => {
     setPlayerIdentity({ name: nameInput.value, classType: classSelect.value });
     form.style.display = "none";
   };
+  if (randomBtn) {
+    randomBtn.onclick = () => {
+      nameInput.value = randomName();
+    };
+  }
+
+  // Auto-hide if a save exists
+  if (localStorage.getItem("eldhollow-save-0")) {
+    form.style.display = "none";
+  }
   emit("ui:identity-ready", {});
 }
 

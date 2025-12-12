@@ -11,3 +11,8 @@ body { font-family: "Segoe UI", sans-serif; background: #0e0e12; color: #e9e9f0;
 .dlg-speaker { font-weight: 600; margin-bottom: 4px; }
 .dlg-line { margin-bottom: 6px; }
 .dlg-choices button { margin-right: 6px; margin-top: 4px; }
+.quests { border: 1px solid #444; padding: 10px; min-height: 200px; grid-column: 1 / span 2; }
+.quest-item { margin-bottom: 6px; padding: 6px; background: #14141c; border: 1px solid #2a2a34; }
+.quest-title { font-weight: 600; }
+.quest-meta { font-size: 12px; color: #b6b6c8; }
+.quest-objectives { font-size: 13px; margin-top: 4px; }

@@ -1,5 +1,5 @@
 import { logger } from "./logger.js";
-import { gameState } from "./main.js";
+import { gameState, emit } from "./main.js";
 
 const SAVE_KEY = "eldhollow-save";
 
@@ -20,6 +20,7 @@ export function saveGame(slot = 0) {
     const stored = JSON.stringify(payload);
     localStorage.setItem(`${SAVE_KEY}-${slot}`, stored);
     logger.info("Game saved", { slot });
+    emit("save:completed", { slot });
     return true;
   } catch (err) {
     logger.error("Save failed", { error: err.message });
