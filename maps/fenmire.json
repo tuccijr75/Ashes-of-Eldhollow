@@ -1,0 +1,25 @@
+{
+  "name": "Fenmire Lowlands",
+  "tileset": "../assets/tilesets/tiles.png",
+  "tileSize": 16,
+  "width": 36,
+  "height": 28,
+  "regions": [
+    {"id":"fenmire_crossing","type":"bridge","entry":[2,14],"exit":[8,14],"spawn_points":[[4,14]]},
+    {"id":"fens_hut","type":"npc","entry":[12,10],"exit":[14,12],"npcs":[{"id":"witch","pos":[13,11]}]},
+    {"id":"fenmire_marsh","type":"dungeon","entry":[20,16],"exit":[24,16],"spawn_points":[[22,16],[23,17]]},
+    {"id":"temple_choice","type":"temple","entry":[30,8],"exit":[34,8],"spawn_points":[[32,9]]}
+  ],
+  "exits": [
+    {"from":"fenmire_crossing","to":"fens_hut","coords":[9,14]},
+    {"from":"fens_hut","to":"fenmire_marsh","coords":[16,12]},
+    {"from":"fenmire_marsh","to":"temple_choice","coords":[26,16]}
+  ],
+  "tilePlaceholders": {
+    "marsh": 6,
+    "plank": 7,
+    "hut": 8,
+    "ruin": 9,
+    "altar": 10
+  }
+}

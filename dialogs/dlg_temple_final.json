@@ -1,0 +1,11 @@
+[
+  {
+    "speaker":"Temple Voice",
+    "line":"Choose: restore, rule, or end all.",
+    "choices":[
+      {"text":"Restore balance","outcome":"toggle_flag","toggle_flag":"ending_balance"},
+      {"text":"Rule as Hollow","outcome":"toggle_flag","toggle_flag":"ending_rule"},
+      {"text":"End all","outcome":"toggle_flag","toggle_flag":"ending_ash"}
+    ]
+  }
+]

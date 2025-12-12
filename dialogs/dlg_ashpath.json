@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Trapped Child",
+    "line":"The fire whispers—help!",
+    "choices":[
+      {"text":"Break the door (STR)","flags":["rescued_child"],"outcome":"set_checkpoint"},
+      {"text":"Calm the child (CHA)","flags":["calmed_child"],"outcome":"toggle_flag","toggle_flag":"calmed_child"}
+    ]
+  }
+]

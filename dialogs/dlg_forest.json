@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Cursed Hunter",
+    "line":"Paths twist without a soul-guide. Free me and I'll lead you.",
+    "choices":[
+      {"text":"Accept his guidance","outcome":"start_quest","start_quest":5,"toggle_flag":"hunter_companion"},
+      {"text":"Refuse","outcome":"toggle_flag","toggle_flag":"hunter_refused"}
+    ]
+  }
+]

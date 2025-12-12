@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Bandit Leader",
+    "line":"Hand over the blade, ash-marked, or bleed for it!",
+    "choices":[
+      {"text":"Fight","outcome":"start_quest","start_quest":14},
+      {"text":"Parley (CHA)","outcome":"toggle_flag","toggle_flag":"bandit_parley"}
+    ]
+  }
+]

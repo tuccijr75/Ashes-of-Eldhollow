@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Village Elder",
+    "line":"Children vanish and bells toll alone. Will you help us?",
+    "choices":[
+      {"text":"I will investigate.","outcome":"start_quest","start_quest":2},
+      {"text":"I need supplies first.","outcome":"gain_item","gain_item":"itm_ration"}
+    ]
+  }
+]

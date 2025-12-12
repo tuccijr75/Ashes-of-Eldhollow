@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Echoing Voice",
+    "line":"Descent begins. Traps hunger for haste.",
+    "choices":[
+      {"text":"Proceed carefully","outcome":"start_quest","start_quest":21},
+      {"text":"Rush through","outcome":"toggle_flag","toggle_flag":"trap_triggered"}
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Dying Priest",
+    "line":"Seek the Hollow's heart before the ash takes you...",
+    "choices":[
+      {"text":"Where am I?","flags":["intro_heard"],"outcome":"continue"},
+      {"text":"I will seek it.","flags":["quest_start_1"],"outcome":"start_quest","start_quest":1}
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "name": "Blightlands Reach",
+  "tileset": "../assets/tilesets/tiles.png",
+  "tileSize": 16,
+  "width": 44,
+  "height": 32,
+  "regions": [
+    {"id":"bandit_ambush","type":"combat","entry":[4,6],"exit":[10,6],"spawn_points":[[6,6],[7,7]]},
+    {"id":"vale_bones","type":"trial","entry":[14,10],"exit":[18,10],"spawn_points":[[16,11]]},
+    {"id":"watchtower","type":"lore","entry":[22,4],"exit":[26,4],"npcs":[{"id":"ghost_knight","pos":[24,4]}]},
+    {"id":"village_reborn","type":"town","entry":[28,14],"exit":[32,14],"spawn_points":[[30,15]]},
+    {"id":"herald_arena","type":"arena","entry":[34,20],"exit":[38,20],"spawn_points":[[36,20]]},
+    {"id":"heald_lainee","type":"siege","entry":[24,24],"exit":[28,24],"spawn_points":[[26,24],[27,25]]},
+    {"id":"stonebridge","type":"bridge","entry":[16,26],"exit":[20,26],"spawn_points":[[18,26]]},
+    {"id":"cavern_approach","type":"dungeon","entry":[8,24],"exit":[12,24],"spawn_points":[[10,24]]},
+    {"id":"hollow_city","type":"city","entry":[4,18],"exit":[8,18],"spawn_points":[[6,18]]},
+    {"id":"lava_chasm","type":"boss","entry":[12,20],"exit":[16,20],"spawn_points":[[14,20]]},
+    {"id":"final_arena","type":"boss","entry":[6,12],"exit":[10,12],"spawn_points":[[8,12]]},
+    {"id":"temple_final","type":"ending","entry":[2,10],"exit":[6,10],"spawn_points":[[4,10]]}
+  ],
+  "exits": [
+    {"from":"bandit_ambush","to":"vale_bones","coords":[12,8]},
+    {"from":"vale_bones","to":"watchtower","coords":[20,10]},
+    {"from":"watchtower","to":"village_reborn","coords":[26,6]},
+    {"from":"village_reborn","to":"herald_arena","coords":[32,16]},
+    {"from":"herald_arena","to":"heald_lainee","coords":[34,22]},
+    {"from":"heald_lainee","to":"stonebridge","coords":[22,24]},
+    {"from":"stonebridge","to":"cavern_approach","coords":[14,26]},
+    {"from":"cavern_approach","to":"hollow_city","coords":[8,22]},
+    {"from":"hollow_city","to":"lava_chasm","coords":[10,18]},
+    {"from":"lava_chasm","to":"final_arena","coords":[12,14]},
+    {"from":"final_arena","to":"temple_final","coords":[8,10]}
+  ],
+  "tilePlaceholders": {
+    "blight_soil": 11,
+    "obsidian": 12,
+    "bridge": 13,
+    "arena": 14,
+    "lava": 15
+  }
+}

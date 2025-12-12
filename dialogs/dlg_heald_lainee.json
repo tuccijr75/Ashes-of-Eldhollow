@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Captain on the Wall",
+    "line":"Hold the line or evacuate? Decide now!",
+    "choices":[
+      {"text":"Defend","outcome":"start_quest","start_quest":19},
+      {"text":"Evacuate","outcome":"toggle_flag","toggle_flag":"evacuated"}
+    ]
+  }
+]

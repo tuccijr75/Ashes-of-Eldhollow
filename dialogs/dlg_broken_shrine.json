@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Shrine Echo",
+    "line":"Power slumbers. Channel the amulet through the stones.",
+    "choices":[
+      {"text":"Channel now","outcome":"toggle_flag","toggle_flag":"fast_travel_unlocked"},
+      {"text":"Leave","outcome":"toggle_flag","toggle_flag":"shrine_ignored"}
+    ]
+  }
+]

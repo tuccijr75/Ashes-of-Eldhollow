@@ -1,0 +1,11 @@
+{
+  "health": 15,
+  "strength": 5,
+  "intelligence": 4,
+  "agility": 5,
+  "charisma": 4,
+  "money": 900,
+  "experience": 0,
+  "inventory": [],
+  "flags": []
+}

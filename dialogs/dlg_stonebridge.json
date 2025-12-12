@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Stonemason Mirka",
+    "line":"With a soulstone and will, this bridge can stand again.",
+    "choices":[
+      {"text":"Use soulstone","outcome":"start_quest","start_quest":20},
+      {"text":"Delay","outcome":"toggle_flag","toggle_flag":"bridge_delayed"}
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Hollow Herald",
+    "line":"Prove the mark upon you was earned, not stolen.",
+    "choices":[
+      {"text":"Fight","outcome":"start_quest","start_quest":18},
+      {"text":"Attempt diplomacy","outcome":"toggle_flag","toggle_flag":"herald_spared"}
+    ]
+  }
+]

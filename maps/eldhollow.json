@@ -1,0 +1,26 @@
+{
+  "name": "Eldhollow Core",
+  "tileset": "../assets/tilesets/tiles.png",
+  "tileSize": 16,
+  "width": 40,
+  "height": 30,
+  "regions": [
+    {"id":"chapel","type":"dungeon","entry":[2,2],"exit":[5,5],"spawn_points":[[3,3],[4,4]],"npcs":[{"id":"priest","pos":[2,3]}]},
+    {"id":"village","type":"town","entry":[10,10],"exit":[15,15],"spawn_points":[[12,12]],"npcs":[{"id":"elder","pos":[11,11]}]},
+    {"id":"ashpath","type":"field","entry":[20,8],"exit":[25,8],"spawn_points":[[22,9],[23,10]]},
+    {"id":"graveyard","type":"combat","entry":[30,5],"exit":[32,6],"spawn_points":[[31,6]]}
+  ],
+  "exits": [
+    {"from":"chapel","to":"village","coords":[5,5]},
+    {"from":"village","to":"ashpath","coords":[18,10]},
+    {"from":"ashpath","to":"graveyard","coords":[28,8]},
+    {"from":"village","to":"forest","coords":[14,3]}
+  ],
+  "tilePlaceholders": {
+    "floor": 1,
+    "wall": 2,
+    "water": 3,
+    "door": 4,
+    "spawn": 5
+  }
+}

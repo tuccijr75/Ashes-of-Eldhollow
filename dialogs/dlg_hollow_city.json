@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Hollow Guard",
+    "line":"State your purpose in the undercity.",
+    "choices":[
+      {"text":"Blend in with Mark","outcome":"toggle_flag","toggle_flag":"city_disguise"},
+      {"text":"Attack","outcome":"start_quest","start_quest":22}
+    ]
+  }
+]

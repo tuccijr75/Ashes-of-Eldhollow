@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Ancient Tree",
+    "line":"Answer three riddles to hear the root of prophecy.",
+    "choices":[
+      {"text":"Listen","outcome":"start_quest","start_quest":12},
+      {"text":"Refuse","outcome":"toggle_flag","toggle_flag":"tree_offended"}
+    ]
+  }
+]

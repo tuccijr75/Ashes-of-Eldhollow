@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Ghost Knight",
+    "line":"Do you bear the Blade of Ash? Only then will I speak.",
+    "choices":[
+      {"text":"Show blade","outcome":"toggle_flag","toggle_flag":"watchtower_trust"},
+      {"text":"Leave","outcome":"toggle_flag","toggle_flag":"watchtower_left"}
+    ]
+  }
+]

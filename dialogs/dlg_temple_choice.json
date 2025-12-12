@@ -1,0 +1,11 @@
+[
+  {
+    "speaker":"Temple Voice",
+    "line":"Place your offering: light or shadow?",
+    "choices":[
+      {"text":"Light","outcome":"toggle_flag","toggle_flag":"align_light"},
+      {"text":"Shadow","outcome":"toggle_flag","toggle_flag":"align_shadow"},
+      {"text":"Refuse both","outcome":"toggle_flag","toggle_flag":"align_balance"}
+    ]
+  }
+]

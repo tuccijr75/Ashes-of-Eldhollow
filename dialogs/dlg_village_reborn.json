@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Villager Trainee",
+    "line":"Teach me to fight the Hollow?",
+    "choices":[
+      {"text":"Train them","outcome":"start_quest","start_quest":17},
+      {"text":"Refuse","outcome":"toggle_flag","toggle_flag":"village_untrained"}
+    ]
+  }
+]

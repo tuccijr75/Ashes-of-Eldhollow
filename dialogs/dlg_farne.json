@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Lonely Note",
+    "line":"Brother, wait by the well at moonrise...",
+    "choices":[
+      {"text":"Piece the clues","outcome":"start_quest","start_quest":6},
+      {"text":"Leave the note","outcome":"toggle_flag","toggle_flag":"ignored_farne"}
+    ]
+  }
+]

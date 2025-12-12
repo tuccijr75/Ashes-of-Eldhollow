@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Crypt Door",
+    "line":"Living vines bind the seal. What do you offer?",
+    "choices":[
+      {"text":"Use Amulet of Sighs","outcome":"toggle_flag","toggle_flag":"crypt_open"},
+      {"text":"Force it open","outcome":"start_quest","start_quest":11}
+    ]
+  }
+]

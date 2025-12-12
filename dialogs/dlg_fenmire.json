@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Witch of Fenmire",
+    "line":"Your path forks: gift of sight or resistance to the mire?",
+    "choices":[
+      {"text":"Take her boon","outcome":"gain_item","gain_item":"itm_witch_boon","flags":["witch_voice_taken"]},
+      {"text":"Refuse, take resistance","outcome":"toggle_flag","toggle_flag":"witch_refused"}
+    ]
+  }
+]

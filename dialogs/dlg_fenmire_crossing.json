@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Phantom Tollman",
+    "line":"A memory is the price. Which will you pay?",
+    "choices":[
+      {"text":"Give a companion memory","outcome":"toggle_flag","toggle_flag":"lost_companion_memory"},
+      {"text":"Fight the Collector","outcome":"start_quest","start_quest":9}
+    ]
+  }
+]

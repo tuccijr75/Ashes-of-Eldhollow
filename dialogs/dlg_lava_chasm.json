@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Avatar of Regret",
+    "line":"Face what your choices forged.",
+    "choices":[
+      {"text":"Confront","outcome":"start_quest","start_quest":23},
+      {"text":"Deny responsibility","outcome":"toggle_flag","toggle_flag":"regret_denied"}
+    ]
+  }
+]

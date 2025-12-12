@@ -1,0 +1,9 @@
+body { font-family: "Segoe UI", sans-serif; background: #0e0e12; color: #e9e9f0; margin: 0; padding: 0; }
+#game { padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+#hud { display: flex; gap: 12px; align-items: center; }
+.inventory { border: 1px solid #333; padding: 8px; min-height: 120px; }
+.inv-item { padding: 4px 6px; margin: 2px 0; background: #1c1c24; }
+.dialog { border: 1px solid #444; padding: 10px; min-height: 120px; }
+.dlg-speaker { font-weight: 600; margin-bottom: 4px; }
+.dlg-line { margin-bottom: 6px; }
+.dlg-choices button { margin-right: 6px; margin-top: 4px; }

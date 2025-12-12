@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Grinning Shade",
+    "line":"Return the locket or join the broken dead." ,
+    "choices":[
+      {"text":"Hold up the locket","outcome":"toggle_flag","toggle_flag":"shade_weakened"},
+      {"text":"Attack","outcome":"start_quest","start_quest":4}
+    ]
+  }
+]

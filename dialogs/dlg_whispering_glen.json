@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Spirit Lira",
+    "line":"Truth is a mirror. Can you see the cracks?",
+    "choices":[
+      {"text":"Answer riddles","outcome":"start_quest","start_quest":10},
+      {"text":"Invite Lira","outcome":"toggle_flag","toggle_flag":"companion_lira"}
+    ]
+  }
+]

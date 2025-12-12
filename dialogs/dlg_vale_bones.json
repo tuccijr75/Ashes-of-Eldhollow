@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Obelisk Voice",
+    "line":"Silence is the trial. Make no sound to claim the blade.",
+    "choices":[
+      {"text":"Attempt trial","outcome":"start_quest","start_quest":15},
+      {"text":"Fail loudly","outcome":"toggle_flag","toggle_flag":"trial_failed"}
+    ]
+  }
+]

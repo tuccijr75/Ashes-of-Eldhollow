@@ -1,0 +1,10 @@
+[
+  {
+    "speaker":"Hollow King",
+    "line":"All your paths converge here. Will you defy or kneel?",
+    "choices":[
+      {"text":"Fight","outcome":"start_quest","start_quest":24},
+      {"text":"Parley","outcome":"toggle_flag","toggle_flag":"king_parley"}
+    ]
+  }
+]
