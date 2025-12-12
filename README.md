@@ -25,6 +25,8 @@ Top-down 2D pixel RPG scaffold with quest, dialogue, combat, inventory, and save
 - `dialogs/` 25 dialogue JSONs (dlg_{location}.json)
 - `data/` player, items, quests, encounters
 - `assets/` placeholders for sprites, tilesets, music, portraits
+	- sprites: `warrior.png`, `rogue.png`, `mage.png`, `npc_villager.png`, `enemy_shade.png`
+	- portraits: `warrior.png`, `rogue.png`, `mage.png`, `villager.png`, `shade.png`
 - `design-docs/` copies of rules, structure, storyboard, map image
 
 ## Modding

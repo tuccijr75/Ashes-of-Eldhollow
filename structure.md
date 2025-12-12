@@ -8,7 +8,9 @@
 /maps/eldhollow.json  
 /assets/  
   ├── sprites/  
-  │    ├── hero.png  
+  │    ├── warrior.png  
+  │    ├── rogue.png  
+  │    ├── mage.png  
   │    ├── npc_villager.png  
   │    └── enemy_shade.png  
   ├── tilesets/tiles.png  
@@ -16,7 +18,9 @@
   │    ├── main_theme.ogg  
   │    └── village_ambience.ogg  
   ├── portraits/  
-  │    ├── hero.png  
+  │    ├── warrior.png  
+  │    ├── rogue.png  
+  │    ├── mage.png  
   │    ├── villager.png  
   │    └── shade.png  
 /dialogs/  
