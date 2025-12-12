@@ -1,6 +1,5 @@
-import { gameState } from "./main.js";
+import { gameState, on, setActiveQuest, markQuestComplete } from "./main.js";
 import { logger } from "./logger.js";
-import { on } from "./main.js";
 
 // Basic UI binding placeholders. Works with HTML overlays; extend for canvas later.
 const ui = {
@@ -67,21 +66,37 @@ export function promptForUITarget() {
 export function renderQuests(quests = []) {
   if (!ui.quests) return;
   ui.quests.innerHTML = "";
+  const activeId = gameState.activeQuestId;
+  const completed = new Set(Array.from(gameState.flags).filter(f => f.endsWith("_done")).map(f => parseInt(f.replace("quest_", "").replace("_done", ""), 10)));
+
   quests.forEach(q => {
     const wrap = document.createElement("div");
-    wrap.className = "quest-item";
+    const isActive = q.quest_id === activeId;
+    const isDone = completed.has(q.quest_id);
+    wrap.className = "quest-item" + (isActive ? " quest-active" : "") + (isDone ? " quest-complete" : "");
     const title = document.createElement("div");
     title.className = "quest-title";
     title.textContent = `${q.quest_id}. ${q.name}`;
     const meta = document.createElement("div");
     meta.className = "quest-meta";
-    meta.textContent = `${q.region} • tags: ${(q.tags || []).join(", ")}`;
+    meta.textContent = `${q.region} • tags: ${(q.tags || []).join(", ")} ${isDone ? "• COMPLETE" : ""}`;
     const obj = document.createElement("div");
     obj.className = "quest-objectives";
     obj.textContent = `Objectives: ${(q.objectives || []).join("; ")}`;
+    const actions = document.createElement("div");
+    actions.className = "quest-actions";
+    const setBtn = document.createElement("button");
+    setBtn.textContent = "Set Active";
+    setBtn.onclick = () => setActiveQuest(q.quest_id);
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "Mark Complete";
+    doneBtn.onclick = () => markQuestComplete(q.quest_id);
+    actions.appendChild(setBtn);
+    actions.appendChild(doneBtn);
     wrap.appendChild(title);
     wrap.appendChild(meta);
     wrap.appendChild(obj);
+    wrap.appendChild(actions);
     ui.quests.appendChild(wrap);
   });
 }
@@ -94,3 +109,6 @@ on("data:loaded", ({ detail }) => {
 on("save:completed", () => {
   if (ui.identityForm) ui.identityForm.style.display = "none";
 });
+
+on("quest:active", () => renderQuests(gameState.quests));
+on("quest:completed", () => renderQuests(gameState.quests));

@@ -10,6 +10,7 @@ const gameState = {
   encounters: [],
   maps: {},
   flags: new Set(),
+  activeQuestId: null,
   currentScene: null,
   currentMap: null,
   lastTick: 0,
@@ -153,9 +154,16 @@ async function loadCoreData() {
   gameState.items = validateItems(items, config);
   gameState.quests = validateQuests(quests, config);
   gameState.encounters = validateEncounters(encounters);
-
   await checkRequiredAssets(config);
-  emit("data:loaded", { quests: gameState.quests });
+
+  // Derive active quest from flags if present
+  const activeFlag = Array.from(gameState.flags).find(f => f.startsWith("quest_active_"));
+  if (activeFlag) {
+    const qid = parseInt(activeFlag.replace("quest_active_", ""), 10);
+    if (!Number.isNaN(qid)) gameState.activeQuestId = qid;
+  }
+
+  emit("data:loaded", { quests: gameState.quests, activeQuestId: gameState.activeQuestId });
 }
 
 function startGameLoop() {
@@ -237,6 +245,22 @@ export function setPlayerIdentity({ name, classType, applyPreset = true } = {}) 
     }
   }
   emit("player:identity", { name: gameState.player.name, classType: gameState.player.classType });
+}
+
+export function setActiveQuest(questId) {
+  if (!questId) return;
+  gameState.activeQuestId = questId;
+  gameState.flags.forEach(f => {
+    if (f.startsWith("quest_active_")) gameState.flags.delete(f);
+  });
+  gameState.flags.add(`quest_active_${questId}`);
+  emit("quest:active", { questId });
+}
+
+export function markQuestComplete(questId) {
+  if (!questId) return;
+  gameState.flags.add(`quest_${questId}_done`);
+  emit("quest:completed", { questId });
 }
 
 export { gameState, on, emit, loadScene, setMap };
