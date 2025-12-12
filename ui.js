@@ -12,7 +12,9 @@ const ui = {
 
 export function renderHUD() {
   if (!ui.health) return;
-  ui.health.textContent = `HP: ${gameState.player.health}`;
+  const name = gameState.player.name || "Adventurer";
+  const classType = gameState.player.classType || "";
+  ui.health.textContent = `${name}${classType ? " (" + classType + ")" : ""} — HP: ${gameState.player.health}`;
   ui.money.textContent = `Money: ${gameState.player.money}`;
   ui.traits.textContent = `STR ${gameState.player.strength} | INT ${gameState.player.intelligence} | AGI ${gameState.player.agility} | CHA ${gameState.player.charisma}`;
   renderInventory();

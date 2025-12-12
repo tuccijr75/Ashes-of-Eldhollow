@@ -16,6 +16,12 @@ const gameState = {
   running: false
 };
 
+const CLASS_PRESETS = {
+  warrior: { health: 16, strength: 7, intelligence: 3, agility: 5, charisma: 4 },
+  rogue: { health: 14, strength: 5, intelligence: 4, agility: 7, charisma: 5 },
+  mage: { health: 13, strength: 3, intelligence: 7, agility: 5, charisma: 5 }
+};
+
 function on(event, handler) {
   eventBus.addEventListener(event, handler);
 }
@@ -49,16 +55,35 @@ function validateConfig(config) {
   return true;
 }
 
+function applyClassPreset(player) {
+  const classType = CLASS_PRESETS[player.classType] ? player.classType : "warrior";
+  const preset = CLASS_PRESETS[classType];
+  return {
+    ...preset,
+    ...player,
+    classType
+  };
+}
+
+function sanitizeName(name) {
+  if (typeof name !== "string") return "Adventurer";
+  const trimmed = name.trim();
+  if (!trimmed.length) return "Adventurer";
+  return trimmed.slice(0, 24);
+}
+
 function validatePlayer(player, statBounds) {
   if (!player) return null;
-  const normalized = { ...player };
-  normalized.health = clamp(player.health ?? 15, statBounds.health);
-  normalized.strength = clamp(player.strength ?? 5, statBounds.strength);
-  normalized.intelligence = clamp(player.intelligence ?? 4, statBounds.intelligence);
-  normalized.agility = clamp(player.agility ?? 5, statBounds.agility);
-  normalized.charisma = clamp(player.charisma ?? 4, statBounds.charisma);
-  normalized.inventory = Array.isArray(player.inventory) ? player.inventory : [];
-  normalized.flags = new Set(player.flags || []);
+  const withPreset = applyClassPreset(player);
+  const normalized = { ...withPreset };
+  normalized.name = sanitizeName(withPreset.name || "Adventurer");
+  normalized.health = clamp(withPreset.health ?? 15, statBounds.health);
+  normalized.strength = clamp(withPreset.strength ?? 5, statBounds.strength);
+  normalized.intelligence = clamp(withPreset.intelligence ?? 4, statBounds.intelligence);
+  normalized.agility = clamp(withPreset.agility ?? 5, statBounds.agility);
+  normalized.charisma = clamp(withPreset.charisma ?? 4, statBounds.charisma);
+  normalized.inventory = Array.isArray(withPreset.inventory) ? withPreset.inventory : [];
+  normalized.flags = new Set(withPreset.flags || []);
   return normalized;
 }
 
@@ -164,6 +189,19 @@ export async function bootstrap() {
   loadScene("prologue");
   startGameLoop();
   logger.info("Game booted", { scene: gameState.currentScene });
+}
+
+export function setPlayerIdentity({ name, classType, applyPreset = true } = {}) {
+  if (!gameState.player) return;
+  if (name) gameState.player.name = sanitizeName(name);
+  if (classType && CLASS_PRESETS[classType]) {
+    gameState.player.classType = classType;
+    if (applyPreset) {
+      const preset = CLASS_PRESETS[classType];
+      gameState.player = validatePlayer({ ...gameState.player, ...preset }, gameState.config.statBounds);
+    }
+  }
+  emit("player:identity", { name: gameState.player.name, classType: gameState.player.classType });
 }
 
 export { gameState, on, emit, loadScene, setMap };

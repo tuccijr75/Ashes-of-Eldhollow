@@ -1,5 +1,5 @@
 
-# Structure – Michael: Ashes of Eldhollow
+# Structure – Ashes of Eldhollow
 
 ## 📁 Project File Tree
 /index.html  
@@ -8,7 +8,7 @@
 /maps/eldhollow.json  
 /assets/  
   ├── sprites/  
-  │    ├── michael.png  
+  │    ├── hero.png  
   │    ├── npc_villager.png  
   │    └── enemy_shade.png  
   ├── tilesets/tiles.png  
@@ -16,7 +16,7 @@
   │    ├── main_theme.ogg  
   │    └── village_ambience.ogg  
   ├── portraits/  
-  │    ├── michael.png  
+  │    ├── hero.png  
   │    ├── villager.png  
   │    └── shade.png  
 /dialogs/  

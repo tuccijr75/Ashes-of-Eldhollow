@@ -2,6 +2,8 @@
 
 Top-down 2D pixel RPG scaffold with quest, dialogue, combat, inventory, and save/load systems.
 
+- Player can set a custom name and choose a class (`warrior`, `rogue`, `mage`); class presets adjust base stats.
+
 ## Run (Electron)
 - Install deps: `npm install`
 - Start: `npm start` (launches Electron loading `index.html`)

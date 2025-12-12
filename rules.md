@@ -1,10 +1,10 @@
 
-# Rules – Michael: Ashes of Eldhollow
+# Rules – Ashes of Eldhollow
 
 ## 🎮 Gameplay Overview
 - Top-down 2D pixel RPG
 - Movement: tile-based (16x16 grid), 4 directions
-- Player controls Michael in a medieval-fantasy world
+- Player controls a custom-named protagonist (warrior / rogue / mage) in a medieval-fantasy world
 - Interaction system for talking, opening, looting, activating
 
 ## 🎲 Stats System

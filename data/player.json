@@ -1,7 +1,9 @@
 {
+  "name": "Adventurer",
+  "classType": "warrior",
   "health": 15,
-  "strength": 5,
-  "intelligence": 4,
+  "strength": 6,
+  "intelligence": 3,
   "agility": 5,
   "charisma": 4,
   "money": 900,
