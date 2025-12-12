@@ -1,0 +1,12 @@
+{
+  "name": "ashes-of-eldhollow",
+  "version": "0.1.0",
+  "description": "Ashes of Eldhollow - Electron shell for local playtest",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^29.0.0"
+  }
+}

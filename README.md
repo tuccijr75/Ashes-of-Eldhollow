@@ -2,9 +2,16 @@
 
 Top-down 2D pixel RPG scaffold with quest, dialogue, combat, inventory, and save/load systems.
 
+## Run (Electron)
+- Install deps: `npm install`
+- Start: `npm start` (launches Electron loading `index.html`)
+	- DevTools auto-open when `NODE_ENV=development`
+
 ## Project Structure
 - `index.html` (placeholder pending UI choice)
 - `style.css` (placeholder)
+- `electron-main.js` Electron entry point
+- `preload.js` safe bridge for front-end (currently minimal)
 - `config.json` global settings
 - `main.js` bootstrap, loop, event bus
 - `logger.js` timestamped logging with localStorage persistence
