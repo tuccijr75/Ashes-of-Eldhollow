@@ -7,6 +7,17 @@
 </head>
 <body>
   <main id="game">
+    <section id="identity-form" class="panel">
+      <label>Name <input id="name-input" type="text" maxlength="24" placeholder="Adventurer" /></label>
+      <label>Class
+        <select id="class-select">
+          <option value="warrior">Warrior</option>
+          <option value="rogue">Rogue</option>
+          <option value="mage">Mage</option>
+        </select>
+      </label>
+      <button id="apply-identity">Start</button>
+    </section>
     <section id="hud">
       <div id="ui-health">HP: --</div>
       <div id="ui-money">Money: --</div>

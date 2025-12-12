@@ -191,6 +191,20 @@ export async function bootstrap() {
   logger.info("Game booted", { scene: gameState.currentScene });
 }
 
+// Bind identity form if present
+function bindIdentityForm() {
+  const nameInput = document.getElementById("name-input");
+  const classSelect = document.getElementById("class-select");
+  const applyBtn = document.getElementById("apply-identity");
+  const form = document.getElementById("identity-form");
+  if (!applyBtn || !nameInput || !classSelect || !form) return;
+  applyBtn.onclick = () => {
+    setPlayerIdentity({ name: nameInput.value, classType: classSelect.value });
+    form.style.display = "none";
+  };
+  emit("ui:identity-ready", {});
+}
+
 export function setPlayerIdentity({ name, classType, applyPreset = true } = {}) {
   if (!gameState.player) return;
   if (name) gameState.player.name = sanitizeName(name);
@@ -206,4 +220,4 @@ export function setPlayerIdentity({ name, classType, applyPreset = true } = {}) 
 
 export { gameState, on, emit, loadScene, setMap };
 
-bootstrap();
+bootstrap().then(bindIdentityForm);

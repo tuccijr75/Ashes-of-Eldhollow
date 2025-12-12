@@ -1,5 +1,9 @@
 body { font-family: "Segoe UI", sans-serif; background: #0e0e12; color: #e9e9f0; margin: 0; padding: 0; }
 #game { padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+#identity-form { grid-column: 1 / span 2; display: flex; gap: 12px; align-items: flex-end; }
+#identity-form label { display: flex; flex-direction: column; font-size: 14px; }
+#identity-form input, #identity-form select { padding: 4px 6px; margin-top: 4px; }
+#identity-form button { padding: 6px 12px; }
 #hud { display: flex; gap: 12px; align-items: center; }
 .inventory { border: 1px solid #333; padding: 8px; min-height: 120px; }
 .inv-item { padding: 4px 6px; margin: 2px 0; background: #1c1c24; }
