@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Phantom Tollman",
+    "line":"Toll. Toll. Not money—memory. A single true moment. Hand it over.",
+    "choices":[
+      {"text":"No. I keep my moments.", "flags":["TOLLMAN_REFUSED"]},
+      {"text":"Take a small one. Just a flicker.", "flags":["TOLLMAN_PAID_SMALL"]},
+      {"text":"What happens if I pay?", "flags":["TOLLMAN_WHAT_HAPPENS"]}
+    ]
+  },
+  {
+    "speaker":"Phantom Tollman",
+    "line":"Payment makes the road kinder. Refusal makes it creative."
+  }
+]

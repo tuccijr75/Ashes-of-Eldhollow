@@ -1,0 +1,37 @@
+{
+  "quest_id": 144,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rill",
+      "text": "Give me a rule for crossings.\n\nA rule you’ll follow when the water is dark, the stakes are high, and your excuses are ready.",
+      "choices": [
+        {
+          "text": "No crossing without a way back.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 144},
+            {"set_flag": "RILL_RULE_WAY_BACK", "value": true},
+            {"set_flag": "Q_READY_144", "value": true},
+            {"complete_quest": 144}
+          ]
+        },
+        {
+          "text": "No crossing that makes innocents the price.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 144},
+            {"set_flag": "RILL_RULE_NO_INNOCENTS", "value": true},
+            {"set_flag": "Q_READY_144", "value": true},
+            {"complete_quest": 144}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rill nods, once. In Fenmire, that’s as close as anyone gets to a blessing.",
+      "end": true
+    }
+  }
+}

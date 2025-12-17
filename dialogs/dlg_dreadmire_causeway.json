@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Dreadmire Causeway",
+    "line": "A raised path over half-frozen muck. Reeds rattle like bones in a bag."
+  },
+  {
+    "speaker": "Stagnant Water",
+    "line": "Black ice skins the pools, thin enough to show what’s sleeping underneath."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "The causeway leads somewhere you may not like.",
+    "choices": [
+      {
+        "text": "Take the next contract and keep your boots dry.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_DREADMIRE_CONTRACT"]
+      },
+      {
+        "text": "Mark Dreadmire Causeway as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_dreadmire_causeway",
+        "flags": ["NW_DREADMIRE_CHECKPOINT"]
+      },
+      {
+        "text": "Cross quickly.",
+        "flags": ["NW_DREADMIRE_CROSSED"]
+      }
+    ]
+  },
+  {
+    "speaker": "Dreadmire Causeway",
+    "line": "Behind you, the reeds stop rattling—as if listening for the splash you didn’t make."
+  }
+]

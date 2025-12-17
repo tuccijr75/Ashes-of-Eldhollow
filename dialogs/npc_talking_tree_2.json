@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Talking Tree",
+    "line":"If you’re looking for a prophecy, try someone who profits from lying. I only grow the truth.",
+    "choices":[
+      {"text":"What truth should I carry?", "flags":["TREE_TRUTH"]},
+      {"text":"Any warning about the road?", "flags":["TREE_ROAD_WARNING"]},
+      {"text":"Fine. Keep your truth.", "flags":["TREE_SHUT_DOWN"]}
+    ]
+  },
+  {
+    "speaker":"Talking Tree",
+    "line":"Here’s one: the road remembers your worst day and tries to recreate it. Don’t let it."
+  }
+]

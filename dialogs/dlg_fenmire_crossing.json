@@ -1,10 +1,42 @@
 [
   {
+    "speaker":"Fenmire Crossing",
+    "line":"A narrow span of stone vanishes into fog. Water below is dark enough to swallow torchlight whole. A bell hangs from a post—unrung, yet impatient."
+  },
+  {
     "speaker":"Phantom Tollman",
-    "line":"A memory is the price. Which will you pay?",
+    "line":"Crossing is consent. Consent requires a witness. I am the witness."
+  },
+  {
+    "speaker":"Phantom Tollman",
+    "line":"The price is a memory—small enough to spare, true enough to matter.",
     "choices":[
-      {"text":"Give a companion memory","outcome":"toggle_flag","toggle_flag":"lost_companion_memory"},
-      {"text":"Fight the Collector","outcome":"start_quest","start_quest":9}
+      {"text":"Offer the memory of a warm meal.", "flags":["TOLL_PAID_MEAL", "FENMIRE_TOLL_PAID"]},
+      {"text":"Offer the memory of someone’s name.", "flags":["TOLL_PAID_NAME", "FENMIRE_TOLL_PAID"]},
+      {"text":"Refuse.", "flags":["FENMIRE_TOLL_REFUSED"]}
     ]
+  },
+  {
+    "speaker":"Phantom Tollman",
+    "line":"Accepted. The bridge knows you now. It will not pretend you aren’t here.",
+    "conditions":[{"has_flag":"FENMIRE_TOLL_PAID"}]
+  },
+  {
+    "speaker":"Phantom Tollman",
+    "line":"Refused. Then take the long way, living thing. The long way always costs more.",
+    "conditions":[{"has_flag":"FENMIRE_TOLL_REFUSED"}]
+  },
+  {
+    "speaker":"Boatwoman Kade",
+    "line":"If you’re heading into the mire, keep your eyes on the reed-lines. When they break, it’s not the water that’s wrong—it’s you.",
+    "choices":[
+      {"text":"Any safe shelter nearby?", "flags":["RUMOR_FENS_SHELTER"]},
+      {"text":"I’m looking for missing folk.", "flags":["RUMOR_FEN_MISSING"]},
+      {"text":"Thank you.", "flags":["FENMIRE_CROSSING_COUNSEL"]}
+    ]
+  },
+  {
+    "speaker":"Fenmire Crossing",
+    "line":"The fog shifts aside for a heartbeat—long enough to show you a path. Then it closes again, as if daring you to keep walking anyway."
   }
 ]

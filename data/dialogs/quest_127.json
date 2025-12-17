@@ -1,0 +1,37 @@
+{
+  "quest_id": 127,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Edrin",
+      "text": "There’s an arrow you don’t loose.\n\nNot because you can’t hit. Because the hit teaches the wrong lesson.",
+      "choices": [
+        {
+          "text": "I’ll hold my shot until it matters.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 127},
+            {"set_flag": "EDRIN_RESTRAINT_CHOSEN", "value": true},
+            {"set_flag": "Q_READY_127", "value": true},
+            {"complete_quest": 127}
+          ]
+        },
+        {
+          "text": "If it moves, I drop it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 127},
+            {"set_flag": "EDRIN_AGGRESSION_CHOSEN", "value": true},
+            {"set_flag": "Q_READY_127", "value": true},
+            {"complete_quest": 127}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Your hands remember the tension of a bowstring you chose not to release. The choice leaves its own bruise.",
+      "end": true
+    }
+  }
+}

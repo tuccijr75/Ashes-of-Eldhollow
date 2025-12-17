@@ -1,0 +1,37 @@
+{
+  "quest_id": 145,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Sera",
+      "text": "Light is not gentle. It burns rot away—and sometimes it burns what the rot was hiding behind.\n\nIf you want me with you, don’t ask for comfort. Ask for truth.",
+      "choices": [
+        {
+          "text": "Then come. I’ll take truth over comfort.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 145},
+            {"set_flag": "SERA_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_145", "value": true},
+            {"complete_quest": 145}
+          ]
+        },
+        {
+          "text": "I’m not ready for that kind of truth.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 145},
+            {"set_flag": "SERA_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_145", "value": true},
+            {"complete_quest": 145}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Sera’s calm is not softness. It’s discipline—practiced until it stopped trembling.",
+      "end": true
+    }
+  }
+}

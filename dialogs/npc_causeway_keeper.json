@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Causeway Keeper",
+    "line": "The mire collects debts. Boots. Bones. Oaths. If you cross, you’ll pay in one of those.",
+    "choices": [
+      {"text": "I’ll pay. Tell me how.", "flags": ["CAUSEWAY_TOLL_ACCEPTED"]},
+      {"text": "What is the toll?", "flags": ["CAUSEWAY_TOLL_ASKED"]},
+      {"text": "I refuse.", "flags": ["CAUSEWAY_TOLL_REFUSED"]}
+    ]
+  },
+  {
+    "speaker": "Causeway Keeper",
+    "line": "A token will do. Not money. Proof you fear something." 
+  }
+]

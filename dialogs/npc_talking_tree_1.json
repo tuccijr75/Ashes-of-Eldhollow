@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Talking Tree",
+    "line":"You walk like a question. That’s dangerous. Questions invite answers.",
+    "choices":[
+      {"text":"Tell me a safe route.", "flags":["TREE_ROUTE_HINT"]},
+      {"text":"Tell me a true name.", "flags":["TREE_TRUE_NAME"]},
+      {"text":"I’m only passing through.", "flags":["TREE_PASSING"]}
+    ]
+  },
+  {
+    "speaker":"Talking Tree",
+    "line":"Then pass quickly. The glen is polite until it isn’t."
+  }
+]

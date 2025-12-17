@@ -1,10 +1,27 @@
 [
   {
+    "speaker":"Stonebridge",
+    "line":"Old stone arches over a river that runs too fast for its width. Cracks spiderweb the keystone, as if the bridge is holding itself together out of pride."
+  },
+  {
     "speaker":"Stonemason Mirka",
-    "line":"With a soulstone and will, this bridge can stand again.",
+    "line":"Don’t stomp. I can hear the stress lines. If this thing fails, it won’t be dramatic—it’ll be quiet, and then you’ll be gone.",
     "choices":[
-      {"text":"Use soulstone","outcome":"start_quest","start_quest":20},
-      {"text":"Delay","outcome":"toggle_flag","toggle_flag":"bridge_delayed"}
+      {"text":"Can it be repaired?", "flags":["STONEBRIDGE_REPAIR_NEEDED"]},
+      {"text":"What do you need?", "flags":["STONEBRIDGE_REPAIR_SUPPLIES"]},
+      {"text":"I’ll find another way around.", "toggle_flag":"bridge_delayed", "flags":["STONEBRIDGE_DETOUR"]}
+    ]
+  },
+  {
+    "speaker":"Stonemason Mirka",
+    "line":"A soulstone would help. Not because it’s magic—because it’s stubborn. Stone respects that kind of will."
+  },
+  {
+    "speaker":"River-Sound",
+    "line":"Below, water hisses along the broken pilings. The bridge doesn’t feel unsafe. It feels tired.",
+    "choices":[
+      {"text":"I’ll return when I can help.", "flags":["STONEBRIDGE_PROMISED_RETURN"]},
+      {"text":"Tell me what lies beyond.", "flags":["RUMOR_BEYOND_STONEBRIDGE"]}
     ]
   }
 ]

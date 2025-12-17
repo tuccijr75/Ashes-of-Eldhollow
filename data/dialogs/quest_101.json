@@ -1,0 +1,37 @@
+{
+  "quest_id": 101,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Narrator",
+      "text": "The air is honest here. It tells you exactly how long you have before it takes your fingers.\n\nA scout’s warning is practical, not kind: the whiteouts have started to move against the wind.",
+      "choices": [
+        {
+          "text": "Accept the warning and plan your route.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 101},
+            {"set_flag": "NW_ROUTE_PLANNED", "value": true},
+            {"set_flag": "Q_READY_101", "value": true},
+            {"complete_quest": 101}
+          ]
+        },
+        {
+          "text": "Ignore it and press on anyway.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 101},
+            {"set_flag": "NW_ROUTE_RECKLESS", "value": true},
+            {"set_flag": "Q_READY_101", "value": true},
+            {"complete_quest": 101}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You step into the Northern Wastes with a plan—or with pride. Either way, the cold keeps receipts.",
+      "end": true
+    }
+  }
+}

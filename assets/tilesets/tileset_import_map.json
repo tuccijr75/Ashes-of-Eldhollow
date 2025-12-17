@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "notes": "Overrides selected tile IDs with art cut from imported 2D RPG tilesheets. Existing map layouts keep the same numeric tile IDs.",
+  "sheetSources": {
+    "mystic_grass": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/grass.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "mystic_plains": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/plains.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "mystic_water": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/water-sheet.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "mystic_walls": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/walls/walls.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "mystic_door": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/walls/wooden_door.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "mystic_decor": {
+      "image": "assets/tilesets/2d_rpg/maps/mystic_woods/sprites/tilesets/decor_16x16.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "dungeon_walls_floor": {
+      "image": "assets/tilesets/2d_rpg/maps/dungeon/Tiled_files/walls_floor.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    },
+    "volcano_tiles": {
+      "image": "assets/tilesets/2d_rpg/maps/volcanic/volcanoe_tileset_and_assets/volcanoe_tiles.png",
+      "tileWidth": 16,
+      "tileHeight": 16
+    }
+  },
+  "tileOverrides": {
+    "1": { "sheetId": "mystic_grass", "x": 0, "y": 0 },
+    "2": { "sheetId": "mystic_plains", "x": 0, "y": 0 },
+    "3": { "sheetId": "dungeon_walls_floor", "x": 0, "y": 0 },
+    "4": { "sheetId": "mystic_walls", "x": 0, "y": 0 },
+
+    "7": { "sheetId": "mystic_door", "x": 0, "y": 0 },
+    "8": { "sheetId": "mystic_walls", "x": 1, "y": 0 },
+
+    "14": { "sheetId": "mystic_decor", "x": 0, "y": 0 },
+    "15": { "sheetId": "mystic_decor", "x": 1, "y": 0 },
+    "16": { "sheetId": "mystic_decor", "x": 2, "y": 0 },
+    "17": { "sheetId": "mystic_decor", "x": 3, "y": 0 },
+    "18": { "sheetId": "dungeon_walls_floor", "x": 2, "y": 0 },
+
+    "20": { "sheetId": "mystic_plains", "x": 1, "y": 1 },
+    "23": { "sheetId": "mystic_water", "x": 0, "y": 0 },
+
+    "25": { "sheetId": "mystic_plains", "x": 0, "y": 1 },
+    "26": { "sheetId": "mystic_plains", "x": 1, "y": 1 },
+    "27": { "sheetId": "mystic_plains", "x": 2, "y": 1 },
+    "28": { "sheetId": "mystic_plains", "x": 3, "y": 1 },
+    "29": { "sheetId": "mystic_plains", "x": 4, "y": 1 },
+    "30": { "sheetId": "mystic_plains", "x": 5, "y": 1 },
+    "31": { "sheetId": "mystic_plains", "x": 0, "y": 2 },
+    "32": { "sheetId": "mystic_plains", "x": 1, "y": 2 },
+    "33": { "sheetId": "mystic_plains", "x": 2, "y": 2 },
+    "34": { "sheetId": "mystic_plains", "x": 3, "y": 2 },
+    "35": { "sheetId": "mystic_plains", "x": 4, "y": 2 },
+
+    "40": { "sheetId": "volcano_tiles", "x": 0, "y": 0 },
+    "41": { "sheetId": "volcano_tiles", "x": 1, "y": 0 },
+    "42": { "sheetId": "volcano_tiles", "x": 2, "y": 0 },
+    "43": { "sheetId": "volcano_tiles", "x": 3, "y": 0 },
+
+    "45": { "sheetId": "volcano_tiles", "x": 4, "y": 0 },
+    "46": { "sheetId": "volcano_tiles", "x": 5, "y": 0 },
+    "47": { "sheetId": "volcano_tiles", "x": 6, "y": 0 },
+    "48": { "sheetId": "volcano_tiles", "x": 7, "y": 0 },
+    "49": { "sheetId": "volcano_tiles", "x": 8, "y": 0 },
+    "50": { "sheetId": "volcano_tiles", "x": 9, "y": 0 },
+
+    "52": { "sheetId": "volcano_tiles", "x": 10, "y": 0 },
+    "53": { "sheetId": "volcano_tiles", "x": 11, "y": 0 },
+    "54": { "sheetId": "volcano_tiles", "x": 12, "y": 0 },
+    "55": { "sheetId": "volcano_tiles", "x": 13, "y": 0 }
+  }
+}

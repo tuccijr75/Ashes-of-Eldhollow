@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Frost Hermit",
+    "line": "The snow remembers footsteps longer than people do. If you came to be forgiven, the tundra has no interest. If you came to be changed, it listens.",
+    "choices": [
+      {"text": "What threatens Whitespire?", "flags": ["WHITESPIRE_RUMOR_THREAT"]},
+      {"text": "Do you trade?", "flags": ["WHITESPIRE_RUMOR_TRADE"]},
+      {"text": "I should move on.", "flags": ["WHITESPIRE_DEPARTED"]}
+    ]
+  },
+  {
+    "speaker": "Frost Hermit",
+    "line": "The monastery sings when it should be silent. That is how you know the vows are breaking."
+  }
+]

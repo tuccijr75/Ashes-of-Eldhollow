@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Skyreach Librarian",
+    "line": "We catalog vows here. Recent entries keep rewriting themselves. That’s not ink—it's weather.",
+    "choices": [
+      {"text": "What vow changed?", "flags": ["SKYREACH_VOW_CHANGED"]},
+      {"text": "Do you have a map of the pass?", "flags": ["SKYREACH_MAP_REQUESTED"]},
+      {"text": "I’ll let you work.", "flags": ["SKYREACH_LIBRARIAN_END"]}
+    ]
+  },
+  {
+    "speaker": "Skyreach Librarian",
+    "line": "If you carry a Sky Crystal, keep it wrapped. Curiosity is contagious."
+  }
+]

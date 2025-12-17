@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Umbral Reaches",
+    "line": "The light thins here. Snow turns gray, then almost black, as if the sky is running out of ink."
+  },
+  {
+    "speaker": "Silence",
+    "line": "Even the wind quiets—like it is afraid of waking something."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "This edge of the wastes feels watched.",
+    "choices": [
+      {
+        "text": "Take the next contract before your courage cools.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_UMBRAL_CONTRACT"]
+      },
+      {
+        "text": "Mark Umbral Reaches as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_umbral_reaches",
+        "flags": ["NW_UMBRAL_CHECKPOINT"]
+      },
+      {
+        "text": "Leave without looking back.",
+        "flags": ["NW_UMBRAL_LEFT"]
+      }
+    ]
+  },
+  {
+    "speaker": "Umbral Reaches",
+    "line": "Something shifts in the corner of your vision and refuses to be caught."
+  }
+]

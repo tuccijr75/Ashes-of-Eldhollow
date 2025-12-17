@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Watchman Sable",
+    "line":"I watch roads the way others watch storms. You learn patterns, or you get buried in them.",
+    "choices":[
+      {"text":"Where’s the next trouble?", "start_next_available_quest":"eldhollow"},
+      {"text":"Any safe route out?", "flags":["SABLE_SAFE_ROUTE"]},
+      {"text":"What are you really watching for?", "flags":["SABLE_REAL_WATCH"]}
+    ]
+  },
+  {
+    "speaker":"Watchman Sable",
+    "line":"For the moment a road stops pretending it’s a road. That’s when it starts being a mouth."
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "speaker": "Northern Wastes",
+    "line": "The wind here has a blade’s patience—always cutting, never hurried. Snow buries old roads, but not the feeling that something is waiting beneath it."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "You can take work in the wastes, or simply mark your progress.",
+    "choices": [
+      {
+        "text": "Take the next contract in the Northern Wastes.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_CONTRACT_ACCEPTED"]
+      },
+      {
+        "text": "Mark the Northern Wastes as your focus.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "northern_wastes",
+        "flags": ["NW_MARKED"]
+      },
+      {
+        "text": "Close the journal.",
+        "flags": ["NW_JOURNAL_CLOSED"]
+      }
+    ]
+  },
+  {
+    "speaker": "Northern Wastes",
+    "line": "The cold does not approve or forbid. It only remembers."
+  }
+]

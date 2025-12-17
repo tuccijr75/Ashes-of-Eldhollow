@@ -1,10 +1,37 @@
 [
   {
-    "speaker":"Crypt Door",
-    "line":"Living vines bind the seal. What do you offer?",
+    "speaker":"Fenmire Marsh",
+    "line":"The marsh breathes around you. Reeds lean inward, listening. Somewhere beneath the mud, stonework refuses to forget it was ever clean."
+  },
+  {
+    "speaker":"Vine-Bound Door",
+    "line":"A sealed archway sinks into black water. Living vines knot across the runes, pulsing faintly—as if the lock is alive and hungry."
+  },
+  {
+    "speaker":"Fenmire Marsh",
+    "line":"The runes aren’t a warning. They’re a contract.",
     "choices":[
-      {"text":"Use Amulet of Sighs","outcome":"toggle_flag","toggle_flag":"crypt_open"},
-      {"text":"Force it open","outcome":"start_quest","start_quest":11}
+      {"text":"Study the runes and mark them down.", "flags":["MARSH_RUNE_NOTES"]},
+      {"text":"Offer a whispered vow to leave what you find undisturbed.", "flags":["MARSH_VOW_RESPECT_TOMB"]},
+      {"text":"Cut the vines and test the seal.", "toggle_flag":"MARSH_CRYPT_TOUCHED"}
+    ]
+  },
+  {
+    "speaker":"Vine-Bound Door",
+    "line":"The vines slacken for a heartbeat—then tighten again, as if amused by your attempt.",
+    "conditions":[{"has_flag":"MARSH_CRYPT_TOUCHED"}]
+  },
+  {
+    "speaker":"Fenmire Marsh",
+    "line":"A soft click echoes from below. Not an opening—an acknowledgement.",
+    "conditions":[{"any":[{"has_flag":"MARSH_RUNE_NOTES"},{"has_flag":"MARSH_VOW_RESPECT_TOMB"}]}]
+  },
+  {
+    "speaker":"Distant Frog-Croak",
+    "line":"Two croaks. A pause. Then three more—like a signal you were not meant to recognize.",
+    "choices":[
+      {"text":"Follow the signal into deeper marsh.", "flags":["MARSH_FOLLOWED_SIGNAL"]},
+      {"text":"Leave before the mire decides you’ve stayed too long.", "flags":["MARSH_WITHDREW"]}
     ]
   }
 ]

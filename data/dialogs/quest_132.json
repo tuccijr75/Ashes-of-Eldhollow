@@ -1,0 +1,37 @@
+{
+  "quest_id": 132,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Noma",
+      "text": "This ledger contains memories. Not mine. Not yours. Borrowed.\n\nIf we keep it, we owe something. If we burn it, we lose something.",
+      "choices": [
+        {
+          "text": "Keep it. We can carry the debt.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 132},
+            {"set_flag": "NOMA_LEDGER_KEPT", "value": true},
+            {"set_flag": "Q_READY_132", "value": true},
+            {"complete_quest": 132}
+          ]
+        },
+        {
+          "text": "Burn it. Some knowledge isn’t worth the cost.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 132},
+            {"set_flag": "NOMA_LEDGER_BURNED", "value": true},
+            {"set_flag": "Q_READY_132", "value": true},
+            {"complete_quest": 132}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The Hollow City doesn’t like being remembered. You feel it tighten around the decision.",
+      "end": true
+    }
+  }
+}

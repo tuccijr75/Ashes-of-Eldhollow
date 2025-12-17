@@ -1,0 +1,37 @@
+{
+  "quest_id": 124,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirka",
+      "text": "Stone holds because it is honest. Mortar holds because it keeps its promise.\n\nTell me what you will keep, when keeping it costs you.",
+      "choices": [
+        {
+          "text": "I’ll keep the promise to repair—no matter who benefits.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 124},
+            {"set_flag": "MIRKA_PROMISE_REPAIR", "value": true},
+            {"set_flag": "Q_READY_124", "value": true},
+            {"complete_quest": 124}
+          ]
+        },
+        {
+          "text": "I’ll keep the promise to people first—walls second.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 124},
+            {"set_flag": "MIRKA_PROMISE_PEOPLE", "value": true},
+            {"set_flag": "Q_READY_124", "value": true},
+            {"complete_quest": 124}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Mirka nods once. The gesture is small, but it sets like mortar: slow, binding, real.",
+      "end": true
+    }
+  }
+}

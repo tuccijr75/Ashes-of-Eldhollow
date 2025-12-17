@@ -1,0 +1,37 @@
+{
+  "quest_id": 143,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rill",
+      "text": "Sometimes your oars are in mud. Sometimes they’re in blood.\n\nChoose what line you won’t cross—or choose who pays when you do.",
+      "choices": [
+        {
+          "text": "Keep it clean. No one gets sacrificed.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 143},
+            {"set_flag": "RILL_LINE_CLEAN", "value": true},
+            {"set_flag": "Q_READY_143", "value": true},
+            {"complete_quest": 143}
+          ]
+        },
+        {
+          "text": "Do what’s necessary to get someone out alive.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 143},
+            {"set_flag": "RILL_LINE_NECESSARY", "value": true},
+            {"set_flag": "Q_READY_143", "value": true},
+            {"complete_quest": 143}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rill’s gaze stays on you a moment too long. She’s memorizing your habits, the way a ferryman memorizes currents.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Ash Wanderer",
+    "line": "I walk where the world used to be. The steppe is full of old mistakes. Yours or mine?",
+    "choices": [
+      {"text": "What happened here?", "flags": ["ASH_STEPPE_LORE"]},
+      {"text": "Have you seen travelers?", "flags": ["ASH_STEPPE_TRAVELERS"]},
+      {"text": "No mistakes. Just roads.", "flags": ["ASH_STEPPE_ROADS"]}
+    ]
+  },
+  {
+    "speaker": "Ash Wanderer",
+    "line": "If you find a mirror that shows you kinder than you are, break it. It’s lying for profit."
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Village Runner",
+    "line":"Message for anyone brave enough to carry one: the villages aren’t quiet because they’re safe. They’re quiet because they’re listening.",
+    "choices":[
+      {"text":"Who should I talk to?", "flags":["RUNNER_WHO"]},
+      {"text":"Where are the roads worst?", "flags":["RUNNER_ROADS"]},
+      {"text":"Thanks.", "flags":["RUNNER_THANKS"]}
+    ]
+  },
+  {
+    "speaker":"Village Runner",
+    "line":"If you meet someone on the road who smiles too easily, don’t answer their questions. Ask your own."
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "companion_lira",
+    "name": "Lira the Spirit-Touched",
+    "class": "seer",
+    "recruitment_quest": 110,
+    "loyalty_track": "lira_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 60,
+      "atk": 4,
+      "def": 3,
+      "agi": 6,
+      "int": 8
+    },
+    "abilities": [
+      {"id": "spirit_sight", "name": "Spirit Sight", "cost": 2, "effect": "reveal_hidden"},
+      {"id": "ethereal_shield", "name": "Ethereal Shield", "cost": 3, "effect": "def_buff"}
+    ],
+    "quest_chain": [110, 111, 112, 113, 114],
+    "dialog": "res://dialogs/companion_lira.json",
+    "romance_available": true
+  },
+  {
+    "id": "companion_korinth",
+    "name": "Master Korinth",
+    "class": "monk",
+    "recruitment_quest": 115,
+    "loyalty_track": "korinth_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 80,
+      "atk": 7,
+      "def": 6,
+      "agi": 5,
+      "int": 5
+    },
+    "abilities": [
+      {"id": "iron_fist", "name": "Iron Fist", "cost": 2, "effect": "melee_strike"},
+      {"id": "meditation", "name": "Meditation", "cost": 3, "effect": "heal_self"}
+    ],
+    "quest_chain": [115, 116, 117, 118, 119],
+    "dialog": "res://dialogs/companion_korinth.json",
+    "romance_available": false
+  },
+  {
+    "id": "companion_mirka",
+    "name": "Stonemason Mirka",
+    "class": "engineer",
+    "recruitment_quest": 120,
+    "loyalty_track": "mirka_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 70,
+      "atk": 6,
+      "def": 7,
+      "agi": 3,
+      "int": 6
+    },
+    "abilities": [
+      {"id": "fortify", "name": "Fortify", "cost": 2, "effect": "def_buff_party"},
+      {"id": "demolish", "name": "Demolish", "cost": 4, "effect": "aoe_damage"}
+    ],
+    "quest_chain": [120, 121, 122, 123, 124],
+    "dialog": "res://dialogs/companion_mirka.json",
+    "romance_available": true
+  },
+  {
+    "id": "companion_edrin",
+    "name": "Cursed Hunter Edrin",
+    "class": "ranger",
+    "recruitment_quest": 125,
+    "loyalty_track": "edrin_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 65,
+      "atk": 8,
+      "def": 4,
+      "agi": 7,
+      "int": 4
+    },
+    "abilities": [
+      {"id": "hunters_mark", "name": "Hunter's Mark", "cost": 2, "effect": "damage_buff"},
+      {"id": "track", "name": "Track", "cost": 1, "effect": "reveal_path"}
+    ],
+    "quest_chain": [125, 126, 127, 128, 129],
+    "dialog": "res://dialogs/companion_edrin.json",
+    "romance_available": true
+  },
+  {
+    "id": "companion_noma",
+    "name": "Archivist Noma",
+    "class": "scholar",
+    "recruitment_quest": 130,
+    "loyalty_track": "noma_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 55,
+      "atk": 3,
+      "def": 3,
+      "agi": 4,
+      "int": 9
+    },
+    "abilities": [
+      {"id": "lore_insight", "name": "Lore Insight", "cost": 2, "effect": "reveal_weakness"},
+      {"id": "arcane_blast", "name": "Arcane Blast", "cost": 4, "effect": "magic_damage"}
+    ],
+    "quest_chain": [130, 131, 132, 133, 134],
+    "dialog": "res://dialogs/companion_noma.json",
+    "romance_available": true
+  },
+  {
+    "id": "companion_rusk",
+    "name": "Blacksmith Rusk",
+    "class": "warrior",
+    "recruitment_quest": 135,
+    "loyalty_track": "rusk_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 90,
+      "atk": 8,
+      "def": 8,
+      "agi": 2,
+      "int": 3
+    },
+    "abilities": [
+      {"id": "forge_strike", "name": "Forge Strike", "cost": 3, "effect": "heavy_melee"},
+      {"id": "armor_repair", "name": "Armor Repair", "cost": 2, "effect": "restore_def"}
+    ],
+    "quest_chain": [135, 136, 137, 138, 139],
+    "dialog": "res://dialogs/companion_rusk.json",
+    "romance_available": false
+  },
+  {
+    "id": "companion_rill",
+    "name": "Boatwoman Rill",
+    "class": "rogue",
+    "recruitment_quest": 140,
+    "loyalty_track": "rill_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 58,
+      "atk": 6,
+      "def": 3,
+      "agi": 9,
+      "int": 5
+    },
+    "abilities": [
+      {"id": "backstab", "name": "Backstab", "cost": 3, "effect": "critical_strike"},
+      {"id": "smoke_bomb", "name": "Smoke Bomb", "cost": 2, "effect": "escape"}
+    ],
+    "quest_chain": [140, 141, 142, 143, 144],
+    "dialog": "res://dialogs/companion_rill.json",
+    "romance_available": true
+  },
+  {
+    "id": "companion_sera",
+    "name": "Acolyte Sera",
+    "class": "cleric",
+    "recruitment_quest": 145,
+    "loyalty_track": "sera_loyalty",
+    "max_loyalty": 100,
+    "base_stats": {
+      "hp": 62,
+      "atk": 4,
+      "def": 5,
+      "agi": 4,
+      "int": 7
+    },
+    "abilities": [
+      {"id": "heal", "name": "Heal", "cost": 3, "effect": "restore_hp"},
+      {"id": "holy_light", "name": "Holy Light", "cost": 4, "effect": "undead_damage"}
+    ],
+    "quest_chain": [145, 146, 147, 148, 149],
+    "dialog": "res://dialogs/companion_sera.json",
+    "romance_available": true
+  }
+]

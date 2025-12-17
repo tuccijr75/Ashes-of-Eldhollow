@@ -1,11 +1,34 @@
 [
   {
+    "speaker":"Temple Threshold",
+    "line":"The doorway is carved with vows worn smooth by hands that trembled while making them. The air smells of dust and old incense—like a prayer that never finished."
+  },
+  {
     "speaker":"Temple Voice",
-    "line":"Place your offering: light or shadow?",
+    "line":"Place your offering: light or shadow? Your choice will follow you, even when you pretend it won’t.",
     "choices":[
-      {"text":"Light","outcome":"toggle_flag","toggle_flag":"align_light"},
-      {"text":"Shadow","outcome":"toggle_flag","toggle_flag":"align_shadow"},
-      {"text":"Refuse both","outcome":"toggle_flag","toggle_flag":"align_balance"}
+      {"text":"Offer light (mercy).", "toggle_flag":"align_light", "flags":["TEMPLE_OFFERED"]},
+      {"text":"Offer shadow (certainty).", "toggle_flag":"align_shadow", "flags":["TEMPLE_OFFERED"]},
+      {"text":"Refuse both (balance).", "toggle_flag":"align_balance", "flags":["TEMPLE_OFFERED"]}
     ]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Mercy is costly. You’ve chosen to pay it.",
+    "conditions":[{"has_flag":"align_light"}]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Certainty is clean. You’ve chosen to live with what it cuts away.",
+    "conditions":[{"has_flag":"align_shadow"}]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Balance is not neutrality. It is a discipline. You’ve chosen the harder road.",
+    "conditions":[{"has_flag":"align_balance"}]
+  },
+  {
+    "speaker":"Temple Threshold",
+    "line":"Something deep inside the stone shifts, acknowledging your decision without approving it."
   }
 ]

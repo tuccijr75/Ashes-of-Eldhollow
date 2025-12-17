@@ -1,0 +1,37 @@
+{
+  "quest_id": 107,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Sableglass Cartographer",
+      "text": "Don’t trust dunes. They rearrange landmarks like a bored thief.\n\nIf you find a compass that spins only when you think of home—throw it away. It’s already owned you.",
+      "choices": [
+        {
+          "text": "Break the cursed compass.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 107},
+            {"set_flag": "NW_COMPASS_BROKEN", "value": true},
+            {"set_flag": "Q_READY_107", "value": true},
+            {"complete_quest": 107}
+          ]
+        },
+        {
+          "text": "Keep it and use it knowingly.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 107},
+            {"set_flag": "NW_COMPASS_KEPT", "value": true},
+            {"set_flag": "Q_READY_107", "value": true},
+            {"complete_quest": 107}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You learn the first rule of sableglass: navigation is a negotiation.",
+      "end": true
+    }
+  }
+}

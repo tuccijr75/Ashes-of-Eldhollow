@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Edrin",
+    "line": "My curse has teeth. Keep close and it may bite someone else.",
+    "choices": [
+      {"text": "I’ll risk it. Join me.", "flags": ["EDRIN_RECRUIT_OPEN"]},
+      {"text": "I need a tracker, not a tragedy.", "flags": ["EDRIN_RECRUIT_COLD"]},
+      {"text": "No.", "flags": ["EDRIN_RECRUIT_NO"]}
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "quest_id": 126,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Edrin",
+      "text": "Names leave tracks. People think they vanish into air—no. They settle. They stick.\n\nWe follow what was said and what was swallowed.",
+      "choices": [
+        {
+          "text": "I’ll follow the names.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 126},
+            {"set_flag": "EDRIN_TRAIL_NAMES", "value": true},
+            {"set_flag": "Q_READY_126", "value": true},
+            {"complete_quest": 126}
+          ]
+        },
+        {
+          "text": "We should follow footsteps, not rumors.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 126},
+            {"set_flag": "EDRIN_TRAIL_FOOTSTEPS", "value": true},
+            {"set_flag": "Q_READY_126", "value": true},
+            {"complete_quest": 126}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You learn to hear the negative space in conversation—the shapes made by what people refuse to name.",
+      "end": true
+    }
+  }
+}

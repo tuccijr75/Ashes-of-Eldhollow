@@ -1,0 +1,37 @@
+{
+  "quest_id": 113,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Lira",
+      "text": "Some threats are protected by being unnamed.\n\nGive it a name, and it will finally have to answer.",
+      "choices": [
+        {
+          "text": "Name it and accept being noticed.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 113},
+            {"set_flag": "LIRA_THREAT_NAMED", "value": true},
+            {"set_flag": "Q_READY_113", "value": true},
+            {"complete_quest": 113}
+          ]
+        },
+        {
+          "text": "Leave it unnamed; stay safer.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 113},
+            {"set_flag": "LIRA_THREAT_UNNAMED", "value": true},
+            {"set_flag": "Q_READY_113", "value": true},
+            {"complete_quest": 113}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Names are hooks. Now something has a place to hang its attention.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Sableglass Dunes",
+    "line": "Dark sand drifts over ice like ink spilled on a frozen page. Each step leaves a mark too crisp to trust."
+  },
+  {
+    "speaker": "Shards",
+    "line": "Tiny glass flecks sing when the wind lifts them. It sounds like distant chimes being broken."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "Here, direction is a guess. Purpose helps.",
+    "choices": [
+      {
+        "text": "Hunt for the next contract among the dunes.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_SABLEGLASS_CONTRACT"]
+      },
+      {
+        "text": "Mark Sableglass Dunes as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_sableglass_dunes",
+        "flags": ["NW_SABLEGLASS_CHECKPOINT"]
+      },
+      {
+        "text": "Move carefully—no sudden turns.",
+        "flags": ["NW_SABLEGLASS_CAREFUL"]
+      }
+    ]
+  },
+  {
+    "speaker": "Sableglass Dunes",
+    "line": "The wind erases your trail, but not the feeling that someone could redraw it."
+  }
+]

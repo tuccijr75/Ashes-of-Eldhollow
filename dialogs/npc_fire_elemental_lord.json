@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Cinderway Warden",
+    "line": "This caldera is a court. Heat is the law. Ash is the witness. Name your claim, mortal.",
+    "choices": [
+      {"text": "I seek passage.", "flags": ["CINDERWAY_PASSAGE_REQUESTED"]},
+      {"text": "I seek power.", "flags": ["CINDERWAY_POWER_REQUESTED"]},
+      {"text": "I seek answers.", "flags": ["CINDERWAY_ANSWERS_REQUESTED"]}
+    ]
+  },
+  {
+    "speaker": "Cinderway Warden",
+    "line": "Then bring me an Ember Core that still remembers what it burned."
+  }
+]

@@ -1,10 +1,47 @@
 [
   {
+    "speaker":"Chapel of Ash",
+    "line":"The nave is cold, but the candles are warm—recently lit, deliberately placed. Someone is trying to keep the dark from learning your name."
+  },
+  {
     "speaker":"Dying Priest",
-    "line":"Seek the Hollow's heart before the ash takes you...",
+    "line":"Don’t kneel. The floor remembers too much."
+  },
+  {
+    "speaker":"Acolyte Sera",
+    "line":"Forgive him—he hasn’t slept since the bells went wrong. If you’re armed, keep it lowered. If you’re honest, keep it closer.",
     "choices":[
-      {"text":"Where am I?","flags":["intro_heard"],"outcome":"continue"},
-      {"text":"I will seek it.","flags":["quest_start_1"],"outcome":"start_quest","start_quest":1}
+      {"text":"What’s ‘wrong’ with the bells?", "flags":["CHAPEL_BELLS_WRONG"]},
+      {"text":"I’m looking for guidance.", "flags":["CHAPEL_SEEK_GUIDANCE"]},
+      {"text":"I can help, if there’s work that matters.", "flags":["VOW_HELP_CHAPEL"]}
     ]
+  },
+  {
+    "speaker":"Dying Priest",
+    "line":"There’s a hollow in the world. Not a place—an absence. People walk around it until they’re tired, then they step into it because it feels like rest."
+  },
+  {
+    "speaker":"Acolyte Sera",
+    "line":"We call it the Hollow City. The name is a warning pretending to be geography.",
+    "choices":[
+      {"text":"How do I get there?", "flags":["RUMOR_HOLLOW_CITY_ROUTE"]},
+      {"text":"Why would anyone go?", "flags":["RUMOR_HOLLOW_CITY_REASON"]}
+    ]
+  },
+  {
+    "speaker":"Dying Priest",
+    "line":"Because they want answers that don’t bleed. Because they think authority can replace faith. Because the world taught them to obey—then stopped explaining why."
+  },
+  {
+    "speaker":"Acolyte Sera",
+    "line":"Take a blessing, traveler. Not a shield—just a reminder that you can still choose.",
+    "choices":[
+      {"text":"Accept the blessing.", "flags":["CHAPEL_BLESSING_ACCEPTED"]},
+      {"text":"Refuse. I don’t trust borrowed comfort.", "flags":["CHAPEL_BLESSING_REFUSED"]}
+    ]
+  },
+  {
+    "speaker":"Chapel of Ash",
+    "line":"As you step away, the candleflames lean toward you—then straighten, as if embarrassed to be seen caring."
   }
 ]

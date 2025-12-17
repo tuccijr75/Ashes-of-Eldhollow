@@ -1,0 +1,37 @@
+{
+  "quest_id": 118,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Korinth",
+      "text": "A straight line is not a cage.\n\nIt is a promise: you will not swerve just because temptation learned your name.",
+      "choices": [
+        {
+          "text": "Mercy can be disciplined.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 118},
+            {"set_flag": "KORINTH_RULE_MERCY", "value": true},
+            {"set_flag": "Q_READY_118", "value": true},
+            {"complete_quest": 118}
+          ]
+        },
+        {
+          "text": "Rules exist to hold when it hurts.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 118},
+            {"set_flag": "KORINTH_RULE_HARD", "value": true},
+            {"set_flag": "Q_READY_118", "value": true},
+            {"complete_quest": 118}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Korinth says nothing. His silence is not approval—it is attention. That is rarer.",
+      "end": true
+    }
+  }
+}

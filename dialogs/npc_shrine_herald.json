@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Shrine Herald",
+    "line":"No prayers. No promises. Only the ledger of what you owe—and what the world will take anyway.",
+    "choices":[
+      {"text":"What should I do next?", "start_next_available_quest":"blightlands"},
+      {"text":"How do I survive the arenas?", "flags":["HERALD_SURVIVAL_TIP"]},
+      {"text":"I refuse your ledger.", "flags":["HERALD_REFUSED"]}
+    ]
+  },
+  {
+    "speaker":"Shrine Herald",
+    "line":"Refusal is still a signature. The world just writes it in ash."
+  }
+]

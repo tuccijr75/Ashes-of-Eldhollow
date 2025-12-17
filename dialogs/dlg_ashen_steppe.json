@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Ashen Steppe",
+    "line": "Snow thins to gray dust. The ground is littered with scorched reeds and stones that refuse to cool."
+  },
+  {
+    "speaker": "Old Footprints",
+    "line": "Many were made in a hurry. Too many end abruptly."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "A place like this breeds errands and tragedies.",
+    "choices": [
+      {
+        "text": "Take the next contract linked to the Northern Wastes.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_STEPPE_CONTRACT"]
+      },
+      {
+        "text": "Mark Ashen Steppe as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_ashen_steppe",
+        "flags": ["NW_STEPPE_CHECKPOINT"]
+      },
+      {
+        "text": "Keep your scarf tight and move on.",
+        "flags": ["NW_STEPPE_MOVED_ON"]
+      }
+    ]
+  },
+  {
+    "speaker": "Ashen Steppe",
+    "line": "The ash doesn’t fall. It rises, as if the land is exhaling."
+  }
+]

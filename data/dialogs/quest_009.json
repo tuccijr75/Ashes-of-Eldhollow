@@ -1,0 +1,190 @@
+{
+  "quest_id": 9,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Scribe",
+      "text": "We pretend the Ladder is a tool.\nBut tools don’t get hungry.\n\nThis is a contract you can feel in your teeth: in Hollow City, the Authority has written a rule that decides who gets to be real today.\n\nTell me how you will answer it. Not what you want — what you will pay.",
+      "choices": [
+        {
+          "text": "Speak the first line of the contract (begin).",
+          "next": "hinge",
+          "effects": [
+            {
+              "start_quest": 9
+            }
+          ]
+        },
+        {
+          "text": "Say nothing. Watch how silence signs itself.",
+          "next": "hinge",
+          "effects": [
+            {
+              "start_quest": 9
+            }
+          ]
+        },
+        {
+          "text": "Bind yourself to the Clause of Ink (become name-shaped).",
+          "next": "vow",
+          "effects": [
+            {
+              "set_clause": "ink"
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "==",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "text": "Bind yourself to the Clause of Blood (become take-shaped).",
+          "next": "vow",
+          "effects": [
+            {
+              "set_clause": "blood"
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "==",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "text": "Bind yourself to the Clause of Silence (become withhold-shaped).",
+          "next": "vow",
+          "effects": [
+            {
+              "set_clause": "silence"
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "==",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "text": "Bind yourself to the Clause of Debt (become owe-shaped).",
+          "next": "vow",
+          "effects": [
+            {
+              "set_clause": "debt"
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "==",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "text": "Bind yourself to the Clause of Witness (become witness-shaped).",
+          "next": "vow",
+          "effects": [
+            {
+              "set_clause": "witness"
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "==",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    "hinge": {
+      "speaker": "Scribe",
+      "text": "There are five ways the world keeps score, and none of them are kind.\n\nInk asks you to name it.\nBlood asks you to take it.\nSilence asks you to withhold it.\nDebt asks you to owe it.\nWitness asks you to witness it.\n\nChoose, and don’t flatter yourself: even refusal is a clause.",
+      "choices": [
+        {
+          "text": "Answer in Ink: choose clarity even if it stains you.",
+          "next": "vow",
+          "effects": [
+            {
+              "inc_flag": "DOMAIN_INK_SCORE",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "text": "Answer against Ink: choose restraint and carry the rewriting anyway.",
+          "next": "vow",
+          "effects": [
+            {
+              "inc_flag": "CENSURE",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "text": "Invoke your Clause. Let the Authority hear the shape of your vow.",
+          "next": "vow",
+          "effects": [
+            {
+              "inc_flag": "CENSURE",
+              "delta": -1
+            }
+          ],
+          "conditions": [
+            {
+              "flag": "CLAUSE_SET",
+              "op": "!=",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    "vow": {
+      "speaker": "Scribe",
+      "text": "Good. Then say it plainly.\n\nIf you step forward, the Ladder remembers your weight.\nIf you step back, it remembers the shape of your absence.",
+      "choices": [
+        {
+          "text": "Close the contract (complete this step).",
+          "next": "end",
+          "effects": [
+            {
+              "set_flag": "Q_READY_009",
+              "value": true
+            },
+            {
+              "complete_quest": 9
+            }
+          ]
+        },
+        {
+          "text": "Leave it open a moment longer. Breathe. Then close it.",
+          "next": "end",
+          "effects": [
+            {
+              "set_flag": "Q_READY_009",
+              "value": true
+            },
+            {
+              "complete_quest": 9
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The contract closes with a sound like a book shutting in an empty room.\n\nYou can walk away, but you cannot walk back into who you were.",
+      "end": true
+    }
+  }
+}

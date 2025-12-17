@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Elder Merrow",
+    "line":"You again. Either you found something, or the road didn’t want you yet.",
+    "choices":[
+      {"text":"What should I do next?", "start_next_available_quest":"eldhollow"},
+      {"text":"Any news from the bell tower?", "flags":["VILLAGE_BELL_RUMOR"]},
+      {"text":"Just checking in.", "flags":["VILLAGE_CHECKED_IN"]}
+    ]
+  },
+  {
+    "speaker":"Elder Merrow",
+    "line":"If you chase the truth, don’t chase it alone. Find people who hate the same lies you do."
+  }
+]

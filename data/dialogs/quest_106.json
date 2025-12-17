@@ -1,0 +1,37 @@
+{
+  "quest_id": 106,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Cinderway Warden",
+      "text": "This caldera is a court. Heat is the law. Ash is the witness.\n\nBring an Ember Core that still remembers what it burned.",
+      "choices": [
+        {
+          "text": "Offer a true ember.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 106},
+            {"set_flag": "NW_EMBER_TRUE", "value": true},
+            {"set_flag": "Q_READY_106", "value": true},
+            {"complete_quest": 106}
+          ]
+        },
+        {
+          "text": "Offer a lie and risk the court’s anger.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 106},
+            {"set_flag": "NW_EMBER_LIE", "value": true},
+            {"set_flag": "Q_READY_106", "value": true},
+            {"complete_quest": 106}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The heat accepts your offering—or accepts your audacity. Either way, it lets you pass.",
+      "end": true
+    }
+  }
+}

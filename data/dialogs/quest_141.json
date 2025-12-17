@@ -1,0 +1,37 @@
+{
+  "quest_id": 141,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rill",
+      "text": "A boat is a promise.\n\nYou don’t launch unless you mean to arrive with everyone you brought.",
+      "choices": [
+        {
+          "text": "Take the safer route.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 141},
+            {"set_flag": "RILL_ROUTE_SAFE", "value": true},
+            {"set_flag": "Q_READY_141", "value": true},
+            {"complete_quest": 141}
+          ]
+        },
+        {
+          "text": "Take the faster route.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 141},
+            {"set_flag": "RILL_ROUTE_FAST", "value": true},
+            {"set_flag": "Q_READY_141", "value": true},
+            {"complete_quest": 141}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The marsh doesn’t reward confidence. It rewards preparation. You start to understand why Rill is still alive.",
+      "end": true
+    }
+  }
+}

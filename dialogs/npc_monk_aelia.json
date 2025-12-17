@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Monk Aelia",
+    "line": "We keep the lamps lit so the sky doesn’t forget where to put the stars. Lately, the stars argue.",
+    "choices": [
+      {"text": "What do you need?", "flags": ["AELIA_NEEDS_HELP"]},
+      {"text": "Tell me about the Sky Crystal.", "flags": ["AELIA_SKY_CRYSTAL"]},
+      {"text": "I’ll leave you to your duties.", "flags": ["AELIA_END"]}
+    ]
+  },
+  {
+    "speaker": "Monk Aelia",
+    "line": "If you carry a crystal, don’t let it hear you doubt yourself. It learns that habit."
+  }
+]

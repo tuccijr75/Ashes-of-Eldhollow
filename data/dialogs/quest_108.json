@@ -1,0 +1,37 @@
+{
+  "quest_id": 108,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirror Oracle",
+      "text": "Shards show truths. Whole mirrors show bargains.\n\nWhich did you come to make?",
+      "choices": [
+        {
+          "text": "Take a truth that wounds.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 108},
+            {"set_flag": "NW_MIRROR_TRUTH", "value": true},
+            {"set_flag": "Q_READY_108", "value": true},
+            {"complete_quest": 108}
+          ]
+        },
+        {
+          "text": "Make a bargain that binds.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 108},
+            {"set_flag": "NW_MIRROR_BARGAIN", "value": true},
+            {"set_flag": "Q_READY_108", "value": true},
+            {"complete_quest": 108}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You leave the Mirror Wastes carrying either a truth or a tether. Both pull.",
+      "end": true
+    }
+  }
+}

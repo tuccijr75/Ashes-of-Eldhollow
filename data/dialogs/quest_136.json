@@ -1,0 +1,37 @@
+{
+  "quest_id": 136,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rusk",
+      "text": "This blade won’t hold quiet. It hums like it wants a fight.\n\nWe can temper it—quiet it—or listen and learn what put that hunger there.",
+      "choices": [
+        {
+          "text": "Quiet it. A weapon shouldn’t crave.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 136},
+            {"set_flag": "RUSK_BLADE_QUIETED", "value": true},
+            {"set_flag": "Q_READY_136", "value": true},
+            {"complete_quest": 136}
+          ]
+        },
+        {
+          "text": "Listen. If it’s a clue, we use it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 136},
+            {"set_flag": "RUSK_BLADE_READ", "value": true},
+            {"set_flag": "Q_READY_136", "value": true},
+            {"complete_quest": 136}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The forge heat makes the world honest. The blade’s song changes, even if it doesn’t stop.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Whitespire Tundra",
+    "line": "A white plain under a hard sky. Old cairns poke through the drift like knuckles trying to pray."
+  },
+  {
+    "speaker": "Wind",
+    "line": "It speaks in small syllables—ice against ice—too quick to be a language, too deliberate to be noise."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "What will you do?",
+    "choices": [
+      {
+        "text": "Take the next contract tied to the wastes.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_WHITEspire_CONTRACT"]
+      },
+      {
+        "text": "Mark Whitespire Tundra as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_whitespire_tundra",
+        "flags": ["NW_WHITEspire_CHECKPOINT"]
+      },
+      {
+        "text": "Move on.",
+        "flags": ["NW_WHITEspire_MOVED_ON"]
+      }
+    ]
+  },
+  {
+    "speaker": "Whitespire Tundra",
+    "line": "Your footprints fill with snow before you finish making them."
+  }
+]

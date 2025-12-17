@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Master Korinth",
+    "line": "Discipline is a door. Most people knock until their knuckles bleed. The worthy learn the hinges.",
+    "choices": [
+      {"text": "Teach me the monastery’s rule.", "flags": ["KORINTH_RULE_LEARNED"]},
+      {"text": "I’m here about the Skyreach unrest.", "flags": ["KORINTH_UNREST_ACK"]},
+      {"text": "Not today.", "flags": ["KORINTH_DISMISSED"]}
+    ]
+  },
+  {
+    "speaker": "Master Korinth",
+    "line": "If you want my help, earn it. Bring me proof the winds are being bribed."
+  }
+]

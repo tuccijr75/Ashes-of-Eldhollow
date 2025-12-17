@@ -1,0 +1,188 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AOE: Run Game (Godot 4.5.1)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\start.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "AOE: Open Editor (Godot 4.5.1)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\start.ps1",
+        "-Editor"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "AOE: Validate Data",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/validate-data.mjs"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "AOE: Integrate RPGGO Architecture",
+      "type": "shell",
+      "command": "echo 'GPT-5.2: Run the agent prompt: analyze project, refactor for RPGGO integration, validate, then prepare for commit.'",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": {
+        "kind": "none"
+      },
+      "detail": "Trigger task; use with the GPT-5.2 agent prompt in VS Code"
+    },
+    {
+      "label": "AOE: Validate RPGGO Integration",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/aoe-gates.mjs",
+        "validate-rpggo-usage"
+      ],
+      "problemMatcher": {
+        "owner": "aoe",
+        "severity": "warning",
+        "pattern": [
+          {
+            "regexp": "^(.*):(\\d+):(.*)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "detail": "Lists all occurrences of RPGGO usage so placement can be reviewed quickly"
+    },
+    {
+      "label": "AOE: Pre-Commit (RPGGO + Safety Gates)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "AOE: Gate - No RPGGO in _process/_physics_process",
+        "AOE: Gate - No HTTPRequest in _process/_physics_process",
+        "AOE: Gate - No hardcoded secrets",
+        "AOE: Gate - No inline RPGGO event IDs",
+        "AOE: Validate RPGGO Integration"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "detail": "Run this before committing; fails fast in Problems panel if anything is unsafe"
+    },
+    {
+      "label": "AOE: Gate - No RPGGO in _process/_physics_process",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/aoe-gates.mjs",
+        "gate-rpggo-hotloop"
+      ],
+      "problemMatcher": {
+        "owner": "aoe",
+        "severity": "error",
+        "pattern": [
+          {
+            "regexp": "^(.*):(\\d+):(.*)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      },
+      "detail": "Prevents per-frame RPGGO usage"
+    },
+    {
+      "label": "AOE: Gate - No HTTPRequest in _process/_physics_process",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/aoe-gates.mjs",
+        "gate-httprequest-hotloop"
+      ],
+      "problemMatcher": {
+        "owner": "aoe",
+        "severity": "error",
+        "pattern": [
+          {
+            "regexp": "^(.*):(\\d+):(.*)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      },
+      "detail": "Prevents network calls in hot loops"
+    },
+    {
+      "label": "AOE: Gate - No hardcoded secrets",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/aoe-gates.mjs",
+        "gate-secrets"
+      ],
+      "problemMatcher": {
+        "owner": "aoe",
+        "severity": "error",
+        "pattern": [
+          {
+            "regexp": "^(.*):(\\d+):(.*)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      },
+      "detail": "Flags likely API keys/tokens accidentally committed"
+    },
+    {
+      "label": "AOE: Gate - No inline RPGGO event IDs",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/aoe-gates.mjs",
+        "gate-rpggo-event-ids"
+      ],
+      "problemMatcher": {
+        "owner": "aoe",
+        "severity": "error",
+        "pattern": [
+          {
+            "regexp": "^(.*):(\\d+):(.*)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      },
+      "detail": "Ensures narrative event IDs are only defined in data/rpggo_events.gd"
+    }
+  ],
+  "problemMatchers": []
+}

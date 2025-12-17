@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Boatwoman Rill",
+    "line":"I don’t ferry bodies. I ferry decisions. Water’s just the excuse.",
+    "choices":[
+      {"text":"What’s the next safest crossing?", "start_next_available_quest":"fenmire"},
+      {"text":"What do you charge?", "flags":["RILL_TOLL"]},
+      {"text":"Any warning for the mire?", "flags":["RILL_WARNING"]}
+    ]
+  },
+  {
+    "speaker":"Boatwoman Rill",
+    "line":"Never pay with your name. The mire spends names like coin."
+  }
+]

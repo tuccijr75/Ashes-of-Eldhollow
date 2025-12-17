@@ -1,10 +1,29 @@
 [
   {
-    "speaker":"Cursed Hunter",
-    "line":"Paths twist without a soul-guide. Free me and I'll lead you.",
+    "speaker":"Forest",
+    "line":"The canopy knits itself closed above you. Every path looks familiar until you try to return.",
+    "flags":["FOREST_ENTERED"]
+  },
+  {
+    "speaker":"Cursed Hunter Edrin",
+    "line":"Don’t step on the pale roots. They listen. And if they like your story, they’ll keep it."
+  },
+  {
+    "speaker":"Cursed Hunter Edrin",
+    "line":"You want a straight path? You need a soul-guide. I can be that—if you cut the thread tying me to this place.",
     "choices":[
-      {"text":"Accept his guidance","outcome":"start_quest","start_quest":5,"toggle_flag":"hunter_companion"},
-      {"text":"Refuse","outcome":"toggle_flag","toggle_flag":"hunter_refused"}
+      {"text":"What thread?", "flags":["FOREST_EDRIN_THREAD"]},
+      {"text":"I’ll take your guidance.", "toggle_flag":"hunter_companion", "flags":["FOREST_ACCEPTED_GUIDE"], "conditions":[{"not":{"has_flag":"hunter_refused"}}]},
+      {"text":"No. I don’t trust bargains in the dark.", "toggle_flag":"hunter_refused", "flags":["FOREST_REFUSED_GUIDE"]}
     ]
+  },
+  {
+    "speaker":"Cursed Hunter Edrin",
+    "line":"A name. That’s the thread. Someone spoke mine into the trees and the trees refused to let go. If you hear it whispered, don’t answer.",
+    "conditions":[{"has_flag":"FOREST_EDRIN_THREAD"}]
+  },
+  {
+    "speaker":"Forest",
+    "line":"Somewhere deeper, a branch creaks with the patience of a trap. The forest is not hostile. It’s curious."
   }
 ]

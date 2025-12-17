@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Blacksmith Rusk",
+    "line":"If you’ve got hands, I can give them a reason. If you’ve got fear, I can turn it into a tool.",
+    "choices":[
+      {"text":"Any work that matters?", "start_next_available_quest":"eldhollow"},
+      {"text":"What do people need most?", "flags":["RUSK_NEEDS"]},
+      {"text":"I’m just looking.", "flags":["RUSK_LOOKING"]}
+    ]
+  },
+  {
+    "speaker":"Blacksmith Rusk",
+    "line":"The world breaks people like cheap iron. Stay hot, stay moving, don’t let it cool you down."
+  }
+]

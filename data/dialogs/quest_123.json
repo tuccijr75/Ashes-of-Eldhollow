@@ -1,0 +1,37 @@
+{
+  "quest_id": 123,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirka",
+      "text": "A clean break saves more than it ruins. A wild break is just fear wearing armor.\n\nChoose what must be removed—and what must be protected.",
+      "choices": [
+        {
+          "text": "Break only what must break.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 123},
+            {"set_flag": "MIRKA_DEMOLITION_CLEAN", "value": true},
+            {"set_flag": "Q_READY_123", "value": true},
+            {"complete_quest": 123}
+          ]
+        },
+        {
+          "text": "Do it fast. We can fix the rest later.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 123},
+            {"set_flag": "MIRKA_DEMOLITION_FAST", "value": true},
+            {"set_flag": "Q_READY_123", "value": true},
+            {"complete_quest": 123}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Stone falls where you tell it to. For once, the world obeys a plan.",
+      "end": true
+    }
+  }
+}

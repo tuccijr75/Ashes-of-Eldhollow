@@ -1,0 +1,37 @@
+{
+  "quest_id": 147,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Sera",
+      "text": "Confession is not a plea for forgiveness. It’s an inventory.\n\nWhat did you burn to survive? What will you burn next?",
+      "choices": [
+        {
+          "text": "I admit it. I name what I burned.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 147},
+            {"set_flag": "SERA_CONFESSED", "value": true},
+            {"set_flag": "Q_READY_147", "value": true},
+            {"complete_quest": 147}
+          ]
+        },
+        {
+          "text": "I keep it to myself.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 147},
+            {"set_flag": "SERA_WITHHELD", "value": true},
+            {"set_flag": "Q_READY_147", "value": true},
+            {"complete_quest": 147}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The words you speak—or refuse—leave heat in your chest like embers that don’t know how to die.",
+      "end": true
+    }
+  }
+}

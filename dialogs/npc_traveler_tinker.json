@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Traveling Tinker",
+    "line":"Got a bent hinge, a cursed locket, or a problem that needs a small lie? I’m your person.",
+    "choices":[
+      {"text":"Show me something useful.", "flags":["TINKER_SHOPPING"]},
+      {"text":"Any rumors?", "flags":["TINKER_RUMORS"]},
+      {"text":"Not today.", "flags":["TINKER_WAVED_OFF"]}
+    ]
+  },
+  {
+    "speaker":"Traveling Tinker",
+    "line":"If you hear bells where there are no towers, cover your ears. That’s not sound. It’s a summons."
+  }
+]

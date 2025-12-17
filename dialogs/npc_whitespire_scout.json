@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Whitespire Scout",
+    "line": "Wind’s shifting. Tracks vanish, then return facing the wrong way. Something is learning how we travel.",
+    "choices": [
+      {"text": "Show me where it hunts.", "flags": ["WHITESPIRE_SCOUT_MARKED"]},
+      {"text": "Any news from the monastery?", "flags": ["WHITESPIRE_SCOUT_MONASTERY"]},
+      {"text": "Stay safe.", "flags": ["WHITESPIRE_SCOUT_END"]}
+    ]
+  },
+  {
+    "speaker": "Whitespire Scout",
+    "line": "If you see a whiteout that moves against the wind—don’t stare. It notices attention."
+  }
+]

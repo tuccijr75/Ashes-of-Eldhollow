@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"The Hollow King",
+    "line":"You found me. Or the world placed you where it wanted you. The difference only matters to people who still believe in choice.",
+    "choices":[
+      {"text":"I’m here for the ending.", "flags":["KING_MET_BEFORE_FINALE"]},
+      {"text":"Tell me what you fear.", "flags":["KING_FEAR"]},
+      {"text":"Not yet.", "flags":["KING_DELAYED"]}
+    ]
+  },
+  {
+    "speaker":"The Hollow King",
+    "line":"I fear a world that learns it can live without permission."
+  }
+]

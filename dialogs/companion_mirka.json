@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Mirka",
+    "line": "You want a bridge built through hell? Pay me in honest answers and I’ll show you where the stones still listen.",
+    "choices": [
+      {"text": "I need your hands and your head.", "flags": ["MIRKA_RECRUIT_OPEN"]},
+      {"text": "I can pay you.", "flags": ["MIRKA_RECRUIT_MONEY"]},
+      {"text": "Another time.", "flags": ["MIRKA_RECRUIT_LATER"]}
+    ]
+  }
+]

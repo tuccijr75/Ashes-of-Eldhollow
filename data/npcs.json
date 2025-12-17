@@ -1,0 +1,155 @@
+{
+  "elder": {
+    "name": "Elder Merrow",
+    "dialog": "res://dialogs/npc_elder_merrow.json"
+  },
+  "elder_saved": {
+    "name": "Elder Merrow",
+    "dialog": "res://dialogs/npc_elder_merrow.json"
+  },
+  "priest": {
+    "name": "Acolyte Sera",
+    "dialog": "res://dialogs/npc_acolyte_sera.json"
+  },
+  "farne": {
+    "name": "Farne the Wayfinder",
+    "dialog": "res://dialogs/npc_farne.json"
+  },
+  "witch": {
+    "name": "Healer Tamsin",
+    "dialog": "res://dialogs/npc_healer_tamsin.json"
+  },
+  "herald": {
+    "name": "Shrine Herald",
+    "dialog": "res://dialogs/npc_shrine_herald.json"
+  },
+  "talking_tree_1": {
+    "name": "Talking Tree (Left)",
+    "dialog": "res://dialogs/npc_talking_tree_1.json"
+  },
+  "talking_tree_2": {
+    "name": "Talking Tree (Right)",
+    "dialog": "res://dialogs/npc_talking_tree_2.json"
+  },
+  "herald_lainee": {
+    "name": "Herald Lainee",
+    "dialog": "res://dialogs/npc_herald_lainee.json"
+  },
+  "final_boss": {
+    "name": "The Hollow King",
+    "dialog": "res://dialogs/npc_hollow_king.json"
+  },
+  "traveler_1": {
+    "name": "Traveling Tinker",
+    "dialog": "res://dialogs/npc_traveler_tinker.json"
+  },
+  "traveler_2": {
+    "name": "Roadside Minstrel",
+    "dialog": "res://dialogs/npc_traveler_minstrel.json"
+  },
+  "traveler_3": {
+    "name": "Village Runner",
+    "dialog": "res://dialogs/npc_traveler_runner.json"
+  },
+  "blacksmith_rusk": {
+    "name": "Blacksmith Rusk",
+    "dialog": "res://dialogs/npc_blacksmith_rusk.json"
+  },
+  "watchman_sable": {
+    "name": "Watchman Sable",
+    "dialog": "res://dialogs/npc_watchman_sable.json"
+  },
+  "hunter_edrin": {
+    "name": "Cursed Hunter Edrin",
+    "dialog": "res://dialogs/npc_hunter_edrin.json"
+  },
+  "lost_villager": {
+    "name": "Lost Villager",
+    "dialog": "res://dialogs/npc_lost_villager.json"
+  },
+  "gravekeeper_oren": {
+    "name": "Gravekeeper Oren",
+    "dialog": "res://dialogs/npc_gravekeeper_oren.json"
+  },
+  "boatwoman_rill": {
+    "name": "Boatwoman Rill",
+    "dialog": "res://dialogs/npc_boatwoman_rill.json"
+  },
+  "phantom_tollman": {
+    "name": "Phantom Tollman",
+    "dialog": "res://dialogs/npc_phantom_tollman.json"
+  },
+  "stonemason_mirka": {
+    "name": "Stonemason Mirka",
+    "dialog": "res://dialogs/npc_stonemason_mirka.json"
+  },
+  "archivist_noma": {
+    "name": "Archivist Noma",
+    "dialog": "res://dialogs/npc_archivist_noma.json"
+  },
+  "hollow_guard": {
+    "name": "Hollow City Guard",
+    "dialog": "res://dialogs/npc_hollow_guard.json"
+  },
+
+  "frost_hermit": {
+    "name": "Frost Hermit",
+    "dialog": "res://dialogs/npc_frost_hermit.json"
+  },
+  "master_korinth": {
+    "name": "Master Korinth",
+    "dialog": "res://dialogs/npc_master_korinth.json"
+  },
+  "monk_aelia": {
+    "name": "Monk Aelia",
+    "dialog": "res://dialogs/npc_monk_aelia.json"
+  },
+  "mountain_guide": {
+    "name": "Mountain Guide",
+    "dialog": "res://dialogs/npc_mountain_guide.json"
+  },
+  "fire_elemental_lord": {
+    "name": "Cinderway Warden",
+    "dialog": "res://dialogs/npc_fire_elemental_lord.json"
+  },
+  "ash_wanderer": {
+    "name": "Ash Wanderer",
+    "dialog": "res://dialogs/npc_ash_wanderer.json"
+  },
+  "void_sentinel": {
+    "name": "Void Sentinel",
+    "dialog": "res://dialogs/npc_void_sentinel.json"
+  },
+  "frost_titan": {
+    "name": "Frost Titan",
+    "dialog": "res://dialogs/npc_frost_titan.json"
+  },
+  "deep_guardian": {
+    "name": "Deep Guardian",
+    "dialog": "res://dialogs/npc_deep_guardian.json"
+  },
+  "causeway_keeper": {
+    "name": "Causeway Keeper",
+    "dialog": "res://dialogs/npc_causeway_keeper.json"
+  },
+  "whitespire_scout": {
+    "name": "Whitespire Scout",
+    "dialog": "res://dialogs/npc_whitespire_scout.json"
+  },
+  "skyreach_librarian": {
+    "name": "Skyreach Librarian",
+    "dialog": "res://dialogs/npc_skyreach_librarian.json"
+  },
+  "ice_cavern_delver": {
+    "name": "Ice-Cavern Delver",
+    "dialog": "res://dialogs/npc_ice_cavern_delver.json"
+  },
+  "sableglass_cartographer": {
+    "name": "Sableglass Cartographer",
+    "dialog": "res://dialogs/npc_sableglass_cartographer.json"
+  },
+  "mirror_oracle": {
+    "name": "Mirror Oracle",
+    "dialog": "res://dialogs/npc_mirror_oracle.json"
+  }
+}

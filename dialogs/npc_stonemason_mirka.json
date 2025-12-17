@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Stonemason Mirka",
+    "line":"Stone remembers. Bridges remember the weight they carried—and the weight they refused.",
+    "choices":[
+      {"text":"Point me toward what needs fixing.", "start_next_available_quest":"vale_of_bones"},
+      {"text":"What broke this place?", "flags":["MIRKA_WHAT_BROKE"]},
+      {"text":"Can you repair anything for me?", "flags":["MIRKA_REPAIR_PROMISE"]}
+    ]
+  },
+  {
+    "speaker":"Stonemason Mirka",
+    "line":"I can repair a bridge. I can’t repair the reasons people burn them."
+  }
+]

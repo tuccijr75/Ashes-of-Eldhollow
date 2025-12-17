@@ -1,0 +1,37 @@
+{
+  "quest_id": 114,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Lira",
+      "text": "One honest admission. Not confession—inventory.\n\nWhat truth do you carry that you never spend?",
+      "choices": [
+        {
+          "text": "Answer honestly.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 114},
+            {"set_flag": "LIRA_CLARITY_PAID", "value": true},
+            {"set_flag": "Q_READY_114", "value": true},
+            {"complete_quest": 114}
+          ]
+        },
+        {
+          "text": "Deflect with a joke.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 114},
+            {"set_flag": "LIRA_CLARITY_DEFLECTED", "value": true},
+            {"set_flag": "Q_READY_114", "value": true},
+            {"complete_quest": 114}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Lira doesn’t judge the answer. She measures whether you can hold it without flinching.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Void Sentinel",
+    "line": "The Umbral Reaches accept entry. They do not accept return.",
+    "choices": [
+      {"text": "I still enter.", "flags": ["UMBRAL_ENTER_VOW"]},
+      {"text": "What guards this place?", "flags": ["UMBRAL_GUARD_RUMOR"]},
+      {"text": "Then I won’t enter.", "flags": ["UMBRAL_WITHDRAW"]}
+    ]
+  },
+  {
+    "speaker": "Void Sentinel",
+    "line": "Good. The void respects confidence. It eats hesitation first."
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Mountain Guide",
+    "line": "Up there, a single bad step becomes a story the ravens tell. Stay close if you like breathing.",
+    "choices": [
+      {"text": "Which route is safest?", "flags": ["PASS_ROUTE_MARKED"]},
+      {"text": "What lives in the crags?", "flags": ["CRAGS_RUMOR"]},
+      {"text": "I can handle myself.", "flags": ["GUIDE_DECLINED"]}
+    ]
+  },
+  {
+    "speaker": "Mountain Guide",
+    "line": "You can. The mountain can, too."
+  }
+]

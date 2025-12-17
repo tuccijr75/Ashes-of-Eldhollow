@@ -1,50 +1,78 @@
 # Ashes of Eldhollow
 
-Top-down 2D pixel RPG scaffold with quest, dialogue, combat, inventory, and save/load systems.
+Top-down 2D pixel RPG built with Godot 4.5, featuring quest, dialogue, world streaming, procedural dungeons, and save/load systems.
 
-- Player can set a custom name and choose a class (`warrior`, `rogue`, `mage`); class presets adjust base stats.
+## Run (Godot 4.5)
+- **Godot 4.5.1+** required: [Download](https://godotengine.org/download/)
+- **Quick start**: `.\start.ps1` (Windows PowerShell launcher)
+- **Or**: Open `project.godot` in Godot Editor and press **Play** (F5)
+- **Debug console**: Press `F2` in-game to access commands (`help`, `regions`, `tp`, `proc`, etc.)
 
-## Run (Electron)
-- Install deps: `npm install`
-- Start: `npm start` (launches Electron loading `index.html`)
-	- DevTools auto-open when `NODE_ENV=development`
-
-## Project Structure
-- `index.html` (placeholder pending UI choice)
-- `style.css` (placeholder)
-- `electron-main.js` Electron entry point
-- `preload.js` safe bridge for front-end (currently minimal)
-- `config.json` global settings
-- `main.js` bootstrap, loop, event bus
-- `logger.js` timestamped logging with localStorage persistence
-- `combat.js` CTT combat helpers
-- `inventory.js` inventory logic and carry-weight checks
-- `ui.js` basic HUD bindings (HTML overlays)
-- `saveload.js` localStorage save/load/backup
-- `maps/` JSON map stubs (eldhollow, fenmire, blightlands)
-- `dialogs/` 25 dialogue JSONs (dlg_{location}.json)
-- `data/` player, items, quests, encounters
-- `assets/` placeholders for sprites, tilesets, music, portraits
-	- sprites: `warrior.png`, `rogue.png`, `mage.png`, `npc_villager.png`, `enemy_shade.png`
-	- portraits: `warrior.png`, `rogue.png`, `mage.png`, `villager.png`, `shade.png`
+## Project Structure (Godot)
+- `src/` GDScript source code
+  - `autoload/` Singleton systems (Game, GameLog, WorldFlags, QuestDirector, DB, QuestSys, SaveSys, WorldSys, Config, RNG)
+  - `main/` Main scene and boot logic
+  - `entities/player/` Player CharacterBody2D with movement
+  - `world/` Region streaming and procedural dungeon generation
+  - `dialog/` DialogRuntime for branching conversations
+  - `ui/` Debug console and HUD
+  - `tests/` Automated test suites
+  - `maps/` JSON region definitions (3 map files, 18 regions total)
+- `dialogs/` JSON dialogue trees
+- `data/` Quest, item, and encounter databases
+- `assets/` Imported 2D RPG tilesets, sprites, icons
 - `design-docs/` copies of rules, structure, storyboard, map image
 
 ## Modding
-- **Quests**: edit `data/quests.json`; keep `quest_id`, `dependencies`, `tags` consistent.
-- **Dialogs**: extend `dialogs/dlg_{location}.json`; use choices with outcomes (`gain_item`, `start_quest`, `toggle_flag`, `set_checkpoint`).
-- **Encounters**: add to `data/encounters.json`; include `ctt_test`, `spawn_prob`, `loot`.
-- **Maps**: update `maps/*.json`; set `regions`, `exits`, and placeholder tile ids.
+- **Quests**: edit `data/quests.json`.
+  - `quest_id` is a **canonical string ID** used for narrative events (RPGGO). It must be unique.
+  - The **runtime numeric quest ID** is the quest’s **1-based index** in `data/quests.json` (used for saves/flags and `quest_###.json` filenames).
+  - `dependencies` are numeric (quest indices).
+- **Quest dialogs**: edit `data/dialogs/quest_###.json` (console: `dlg <id>`). Dialogs can `start_quest` / `complete_quest` and must include a `complete_quest` effect for that quest.
+- **Location dialogs** (supplemental): edit `dialogs/dlg_{location}.json`.
 
-## Gameplay Notes
-- Initiative = 1d10 + Agility.
-- CTT check: roll 1d20 vs Combined Trait Total; equal is critical success.
-- Carry weight cap: 15 (from `config.json`).
-- Save system: localStorage slots (`saveload.js`).
+## Development
+
+### RPGGO (Narrative Layer)
+RPGGO is integrated as an **offline-first narrative service** (never called per-frame; never required for moment-to-moment play).
+
+**Configure via environment variables (do not hardcode keys):**
+- `RPGGO_BASE_URL` (example: `https://api.rpggo.example`)
+- `RPGGO_GAME_ID` (your RPGGO Creator Game ID)
+- `RPGGO_API_KEY` (secret)
+
+On region enter and NPC interactions, the game will **best-effort** sync/generate dialogue with short timeouts. If offline/unconfigured, it falls back to local scripted dialogue and cached narrative state.
+
+### Data Editing
+- **Quests**: Edit `data/quests.json` (currently 149 quests)
+- **Encounters**: Edit `data/encounters.json` (12 encounters with spawn probabilities)
+- **Maps**: Update `maps/*.json` (3 map files / 18 regions with bounds, entry points, layouts)
+- **Dialogs**: Add/edit `dialogs/*.json` for branching conversations
+
+### Verification (Build/CI)
+Run these checks before packaging/exporting:
+- `node scripts/validate-data.mjs`
+- `node scripts/audit-repo.mjs`
+- `node scripts/aoe-gates.mjs validate-rpggo-usage`
+- `node scripts/aoe-gates.mjs gate-rpggo-hotloop`
+- `node scripts/aoe-gates.mjs gate-httprequest-hotloop`
+- `node scripts/aoe-gates.mjs gate-secrets`
+- `node scripts/aoe-gates.mjs gate-rpggo-event-ids`
+
+Or run everything via PowerShell:
+- `./scripts/verify-content.ps1`
+
+### Key Systems
+- **World Streaming**: Proximity-based region loading (max 2 simultaneous by default)
+- **Procedural Dungeons**: BSP, Cellular, RoomGraph algorithms with validation
+- **Quest System**: Authority Web (stateful/reactive). Uses `WorldFlags` + `QuestDirector`; `QuestSys` is a stable facade for callers.
+- **Save/Load**: JSON serialization to `user://saves/save_01.json` (includes WorldFlags + quest director state)
 
 ## Troubleshooting
-- Missing tileset: add `assets/tilesets/tiles.png` and matching tilemap config.
-- Missing UI: provide `index.html` (canvas or DOM HUD). Update `ui.js` selectors.
-- Malformed JSON: check console logs and `eldhollow-log` in localStorage.
+- **Parse errors on boot**: Check Godot console; ensure GDScript syntax is valid for Godot 4.5+
+- **Missing textures**: Verify paths in `assets/tilesets/tileset_import_map.json` 
+- **Region not loading**: Check `maps/*.json` region IDs match those in `WorldStream._region_defs`
+- **Tests failing**: Enable `Config.run_tests_on_boot = true` and check logs
 
 ## Asset Attribution
-Placeholder assets only. Add licenses/credits for any art, music, or fonts you import.
+Uses imported 2D RPG tileset assets. See individual asset licenses in `assets/` subfolders.

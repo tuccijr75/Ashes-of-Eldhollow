@@ -1,0 +1,37 @@
+{
+  "quest_id": 102,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Narrator",
+      "text": "Tracks appear where no one walked. Then they return facing the wrong way.\n\nSomething is learning how travelers pretend to be safe.",
+      "choices": [
+        {
+          "text": "Mark the false trail and warn others.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 102},
+            {"set_flag": "NW_FALSE_TRAIL_MARKED", "value": true},
+            {"set_flag": "Q_READY_102", "value": true},
+            {"complete_quest": 102}
+          ]
+        },
+        {
+          "text": "Follow it to see what’s copying you.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 102},
+            {"set_flag": "NW_FALSE_TRAIL_FOLLOWED", "value": true},
+            {"set_flag": "Q_READY_102", "value": true},
+            {"complete_quest": 102}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You leave proof behind: either a warning for others, or bait for what is watching.",
+      "end": true
+    }
+  }
+}

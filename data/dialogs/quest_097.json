@@ -1,0 +1,57 @@
+{
+  "quest_id": 97,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Keystone",
+      "text": "Three seals are not a key.\nThey are proof you can survive the price.\n\nThe Keystone Trial does not test strength. It tests what you keep when strength is gone.",
+      "choices": [
+        {
+          "text": "Enter the Trial.",
+          "next": "vow",
+          "effects": [
+            {
+              "start_quest": 97
+            }
+          ]
+        },
+        {
+          "text": "Enter anyway. The hesitation is part of it.",
+          "next": "vow",
+          "effects": [
+            {
+              "start_quest": 97
+            }
+          ]
+        }
+      ]
+    },
+    "vow": {
+      "speaker": "Keystone",
+      "text": "You do not win.\nYou are measured.\n\nAnd the measure approves enough of you to let you pass.",
+      "choices": [
+        {
+          "text": "Take the Keystone.",
+          "next": "end",
+          "effects": [
+            {
+              "set_flag": "Q_READY_097",
+              "value": true
+            },
+            {
+              "complete_quest": 97
+            },
+            {
+              "compute_boss_unlock": true
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The contract closes with a sound like a book shutting in an empty room.\n\nYou can walk away, but you cannot walk back into who you were.",
+      "end": true
+    }
+  }
+}

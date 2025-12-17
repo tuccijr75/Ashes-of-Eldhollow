@@ -1,0 +1,37 @@
+{
+  "quest_id": 103,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Skyreach Librarian",
+      "text": "We catalog vows so the sky doesn’t forget where to put the stars.\n\nLately, the entries keep rewriting themselves. That’s not ink—it’s weather.",
+      "choices": [
+        {
+          "text": "Preserve the old vow.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 103},
+            {"set_flag": "NW_VOW_PRESERVED", "value": true},
+            {"set_flag": "Q_READY_103", "value": true},
+            {"complete_quest": 103}
+          ]
+        },
+        {
+          "text": "Let it change; learn what it becomes.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 103},
+            {"set_flag": "NW_VOW_ALLOWED_TO_CHANGE", "value": true},
+            {"set_flag": "Q_READY_103", "value": true},
+            {"complete_quest": 103}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The monastery returns to silence. For now. In the margins, the wind keeps practicing handwriting.",
+      "end": true
+    }
+  }
+}

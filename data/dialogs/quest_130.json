@@ -1,0 +1,37 @@
+{
+  "quest_id": 130,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Noma",
+      "text": "The Hollow City forgets on purpose. Someone has to remember on purpose too.\n\nI don’t collect secrets. I catalogue responsibilities.",
+      "choices": [
+        {
+          "text": "Then travel with me. We’ll carry what we must.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 130},
+            {"set_flag": "NOMA_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_130", "value": true},
+            {"complete_quest": 130}
+          ]
+        },
+        {
+          "text": "I’m not sure I want more responsibility.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 130},
+            {"set_flag": "NOMA_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_130", "value": true},
+            {"complete_quest": 130}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Noma’s satchel is heavy with paper and intent. She walks as if words have weight—and she knows exactly how much.",
+      "end": true
+    }
+  }
+}

@@ -1,10 +1,58 @@
 [
   {
+    "speaker":"Whispering Glen",
+    "line":"Mist coils between pale trunks. Your footsteps sound like someone else’s memory. A wind moves through the leaves—too patterned to be chance."
+  },
+  {
     "speaker":"Spirit Lira",
-    "line":"Truth is a mirror. Can you see the cracks?",
+    "line":"Truth is a mirror. Most of you arrive already cracked."
+  },
+  {
+    "speaker":"Spirit Lira",
+    "line":"Say what you came for, traveler—before the Glen decides you belong to it.",
     "choices":[
-      {"text":"Answer riddles","outcome":"start_quest","start_quest":10},
-      {"text":"Invite Lira","outcome":"toggle_flag","toggle_flag":"companion_lira"}
+      {"text":"Who are you?", "flags":["GLEN_MET_LIRA"]},
+      {"text":"I’m looking for a way through Fenmire.", "flags":["RUMOR_FENMIRE_ROUTE", "GLEN_MET_LIRA"]},
+      {"text":"I’m not here to make trouble.", "flags":["GLEN_PEACEFUL_APPROACH"]}
     ]
+  },
+  {
+    "speaker":"Spirit Lira",
+    "line":"Names are hooks. But… you may call me Lira. I was sworn once, and swearing is a kind of death that keeps talking."
+  },
+  {
+    "speaker":"Spirit Lira",
+    "line":"Fen paths shift. Crossings demand a price. And when a price is not coin, it is usually you.",
+    "choices":[
+      {"text":"What price?", "flags":["RUMOR_TOLL_PRICE"]},
+      {"text":"Then I’ll pay it.", "flags":["VOW_FENMIRE_CROSSING"]},
+      {"text":"I’ll find another route.", "flags":["RUMOR_ALT_ROUTE"]}
+    ]
+  },
+  {
+    "speaker":"Hushwood Ranger",
+    "line":"Don’t bargain with fog. If you must cross, do it at the old marks—stone posts half-sunk in the mire. Anything else and you’ll walk in circles until you forget why you started.",
+    "choices":[
+      {"text":"Where are the old marks?", "flags":["KNOWS_FENMIRE_CROSSING"]},
+      {"text":"What’s hunting people out here?", "flags":["RUMOR_FEN_THREAT"]},
+      {"text":"I can help. Tell me who you lost.", "flags":["VOW_HELP_FENMIRE"]}
+    ]
+  },
+  {
+    "speaker":"Spirit Lira",
+    "line":"If you keep your vows, the Glen will remember your shape. If you break them… it will remember that too."
+  },
+  {
+    "speaker":"Spirit Lira",
+    "line":"Take this small mercy: when the tollman speaks, answer plainly. Cleverness is a candle in wet hands.",
+    "choices":[
+      {"text":"Will you walk with me?", "toggle_flag":"companion_lira", "conditions":[{"not":{"has_flag":"companion_lira"}}]},
+      {"text":"Stay. I don’t want ghosts at my side.", "flags":["REFUSED_LIRA"]},
+      {"text":"I understand.", "flags":["GLEN_COUNSEL_ACCEPTED"]}
+    ]
+  },
+  {
+    "speaker":"Whispering Glen",
+    "line":"The mist loosens. Somewhere beyond the trees, water moves like a slow heartbeat—Fenmire waiting to be entered."
   }
 ]

@@ -1,0 +1,37 @@
+{
+  "quest_id": 137,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rusk",
+      "text": "They want payment in blood and call it necessity.\n\nNo. If we pay, we pay in heat, sweat, and time. Not someone else’s suffering.",
+      "choices": [
+        {
+          "text": "Refuse the blood price.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 137},
+            {"set_flag": "RUSK_REFUSED_BLOOD_PRICE", "value": true},
+            {"set_flag": "Q_READY_137", "value": true},
+            {"complete_quest": 137}
+          ]
+        },
+        {
+          "text": "Take the bargain—then make them regret it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 137},
+            {"set_flag": "RUSK_ACCEPTED_HARSH_BARGAIN", "value": true},
+            {"set_flag": "Q_READY_137", "value": true},
+            {"complete_quest": 137}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rusk’s eyes narrow. His anger isn’t wild—it’s precise, the way a chisel is precise.",
+      "end": true
+    }
+  }
+}

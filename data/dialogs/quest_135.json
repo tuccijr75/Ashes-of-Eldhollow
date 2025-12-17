@@ -1,0 +1,37 @@
+{
+  "quest_id": 135,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rusk",
+      "text": "Steel remembers the hand that shaped it.\n\nIf you want me along, you respect the craft—and you don’t ask me to make monsters easier.",
+      "choices": [
+        {
+          "text": "Come with me. We’ll make tools, not horrors.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 135},
+            {"set_flag": "RUSK_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_135", "value": true},
+            {"complete_quest": 135}
+          ]
+        },
+        {
+          "text": "I can’t promise what I’ll need forged.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 135},
+            {"set_flag": "RUSK_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_135", "value": true},
+            {"complete_quest": 135}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rusk’s laugh is like a hammer on anvil—loud, honest, and not afraid of sparks.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "quest_id": 133,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Noma",
+      "text": "This shelf judges intent. It refuses your hands.\n\nWe don’t force it. We prove ourselves—or we leave.",
+      "choices": [
+        {
+          "text": "We prove it. Patiently.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 133},
+            {"set_flag": "NOMA_ACCESS_EARNED", "value": true},
+            {"set_flag": "Q_READY_133", "value": true},
+            {"complete_quest": 133}
+          ]
+        },
+        {
+          "text": "We leave. Some doors should remain closed.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 133},
+            {"set_flag": "NOMA_ACCESS_REFUSED", "value": true},
+            {"set_flag": "Q_READY_133", "value": true},
+            {"complete_quest": 133}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The archive breathes like a living thing. Noma doesn’t flinch—she just keeps her notes tidy.",
+      "end": true
+    }
+  }
+}

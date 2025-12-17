@@ -1,0 +1,90 @@
+{
+  "icons": {
+    "sword": [
+      "sword_1.jpg", "sword_2.jpg", "sword_3.jpg", "sword_4.jpg", "sword_5.jpg",
+      "sword_6.jpg", "sword_7.jpg", "sword_8.jpg", "sword_9.jpg", "sword_10.jpg"
+    ],
+    "potion": [
+      "poition_1.jpg", "poition_2.jpg", "poition_3.jpg", "poition_4.jpg", "poition_5.jpg",
+      "poition_6.jpg", "poition_7.jpg", "poition_8.jpg", "poition_9.jpg", "poition_10.jpg",
+      "poition_11.jpg", "poition_12.jpg", "poition_13.jpg", "poition_14.jpg", "poition_15.jpg"
+    ],
+    "helmet": [
+      "helmet_1.jpg", "helmet_2.jpg", "helmet_3.jpg", "helmet_4.jpg", "helmet_5.jpg",
+      "helmet_6.jpg", "helmet_7.jpg", "helmet_8.jpg", "helmet_9.jpg", "helmet_10.jpg",
+      "helmet_11.jpg", "helmet_12.jpg"
+    ],
+    "ring": [
+      "ring_1.jpg", "ring_2.jpg", "ring_3.jpg", "ring_4.jpg", "ring_5.jpg",
+      "ring_6.jpg", "ring_7.jpg", "ring_8.jpg", "ring_9.jpg"
+    ],
+    "magic_gem": [
+      "magic_gem_1.jpg", "magic_gem_2.jpg", "magic_gem_3.jpg", "magic_gem_4.jpg",
+      "magic_gem_5.jpg", "magic_gem_6.jpg", "magic_gem_7.jpg", "magic_gem_8.jpg"
+    ],
+    "magic_wand": [
+      "magic_wand_1.jpg", "magic_wand_2.jpg", "magic_wand_3.jpg", "magic_wand_4.jpg",
+      "magic_wand_5.jpg", "magic_wand_6.jpg", "magic_wand_7.jpg", "magic_wand_8.jpg"
+    ],
+    "bow": [
+      "bow_1.jpg", "bow_2.jpg", "bow_3.jpg", "bow_4.jpg", "bow_5.jpg",
+      "bow_6.jpg", "bow_7.jpg", "bow_8.jpg"
+    ],
+    "arrow": [
+      "arrow_1.jpg", "arrow_2.jpg", "arrow_3.jpg", "arrow_4.jpg", "arrow_5.jpg"
+    ],
+    "key": [
+      "key_1.jpg", "key_2.jpg", "key_3.jpg", "key_4.jpg"
+    ],
+    "coins": [
+      "coins_1.jpg", "coins_2.jpg"
+    ],
+    "spellbook": [
+      "spelbook_1.jpg", "spelbook_2.jpg", "spelbook_3.jpg", "spelbook_4.jpg", "spelbook_5.jpg",
+      "spelbook_6.jpg", "spelbook_7.jpg", "spelbook_8.jpg", "spelbook_9.jpg", "spelbook_10.jpg",
+      "spelbook_11.jpg", "spelbook_12.jpg", "spelbook_13.jpg", "spelbook_14.jpg", "spelbook_15.jpg",
+      "spelbook_16.jpg"
+    ],
+    "melee_weapon": [
+      "other_melee_weapon_1.jpg", "other_melee_weapon_2.jpg", "other_melee_weapon_3.jpg",
+      "other_melee_weapon_4.jpg", "other_melee_weapon_5.jpg", "other_melee_weapon_6.jpg",
+      "other_melee_weapon_7.jpg"
+    ],
+    "monster_head": [
+      "monster_head_1.jpg", "monster_head_2.jpg", "monster_head_3.jpg",
+      "monster_head_4.jpg", "monster_head_5.jpg", "monster_head_6.jpg"
+    ]
+  },
+  "mappings": {
+    "itm_ration": {"category": "potion", "index": 0},
+    "itm_healing_tonic": {"category": "potion", "index": 1},
+    "itm_antidote": {"category": "potion", "index": 5},
+    "itm_ashblade": {"category": "sword", "index": 0},
+    "itm_wooden_shield": {"category": "helmet", "index": 0},
+    "itm_chainmail": {"category": "helmet", "index": 2},
+    "itm_hollow_mark": {"category": "magic_gem", "index": 0},
+    "itm_fen_reed": {"category": "magic_wand", "index": 0},
+    "itm_witch_boon": {"category": "magic_gem", "index": 1},
+    "itm_amulet_sighs": {"category": "magic_gem", "index": 2},
+    "itm_soulstone": {"category": "magic_gem", "index": 3},
+    "itm_map_fragment": {"category": "key", "index": 0},
+    "itm_firebomb": {"category": "potion", "index": 10},
+    "itm_throwing_knife": {"category": "melee_weapon", "index": 0},
+    "itm_herbal_kit": {"category": "potion", "index": 6},
+    "itm_lockpicks": {"category": "key", "index": 1},
+    "itm_relic_coin": {"category": "coins", "index": 0},
+    "itm_bone_charm": {"category": "magic_gem", "index": 4},
+    "itm_moonberry": {"category": "potion", "index": 2},
+    "itm_glow_ink": {"category": "potion", "index": 7},
+    "itm_phantom_toll": {"category": "coins", "index": 1},
+    "itm_mirka_tools": {"category": "melee_weapon", "index": 5},
+    "itm_ritual_knife": {"category": "melee_weapon", "index": 1},
+    "itm_mirror_shard": {"category": "magic_gem", "index": 5},
+    "itm_lira_focus": {"category": "magic_gem", "index": 6},
+    "itm_tower_key": {"category": "key", "index": 2},
+    "itm_hollow_crown": {"category": "magic_gem", "index": 7},
+    "itm_shrine_token": {"category": "key", "index": 3},
+    "itm_lantern_oil": {"category": "potion", "index": 3},
+    "itm_bandages": {"category": "potion", "index": 4}
+  }
+}

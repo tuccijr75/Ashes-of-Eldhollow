@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Hollow City Guard",
+    "line":"Keep moving. Don’t stare. The city punishes curiosity faster than crime.",
+    "choices":[
+      {"text":"How do I stay unnoticed?", "flags":["GUARD_UNNOTICED_TIP"]},
+      {"text":"Who’s really in charge here?", "flags":["GUARD_IN_CHARGE"]},
+      {"text":"I’m looking for work.", "start_next_available_quest":"hollow_city"}
+    ]
+  },
+  {
+    "speaker":"Hollow City Guard",
+    "line":"If you hear a bell and nobody flinches, you’re the only one who still has a choice. Use it."
+  }
+]

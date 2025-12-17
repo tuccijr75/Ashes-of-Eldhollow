@@ -1,0 +1,9 @@
+[
+  {
+    "speaker":"Narrator",
+    "line":"The Vale of Bones keeps count without mercy.",
+    "choices":[
+      {"text":"Step between the markers","outcome":"toggle_flag","toggle_flag":"visited_vale_of_bones"}
+    ]
+  }
+]

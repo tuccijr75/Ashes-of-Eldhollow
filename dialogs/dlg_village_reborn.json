@@ -1,10 +1,24 @@
 [
   {
-    "speaker":"Villager Trainee",
-    "line":"Teach me to fight the Hollow?",
+    "speaker":"Village Reborn",
+    "line":"The same streets. Different posture. People walk like they expect to keep existing tomorrow. It’s a fragile kind of courage."
+  },
+  {
+    "speaker":"Trainee Mara",
+    "line":"You’ve been out there. You’ve seen the Hollow and came back with your spine intact. Teach me—teach us—before the next night takes someone.",
     "choices":[
-      {"text":"Train them","outcome":"start_quest","start_quest":17},
-      {"text":"Refuse","outcome":"toggle_flag","toggle_flag":"village_untrained"}
+      {"text":"Train them. Start with discipline, not heroics.", "flags":["VILLAGE_TRAINED"]},
+      {"text":"Refuse. I’m not a commander.", "toggle_flag":"village_untrained", "flags":["VILLAGE_TRAINING_REFUSED"]},
+      {"text":"Ask what they’ve already learned.", "flags":["VILLAGE_TRAINING_ASKED"]}
     ]
+  },
+  {
+    "speaker":"Trainee Mara",
+    "line":"We learned how to panic quietly. We learned which doors hold. We learned that waiting for rescue is just another kind of prayer.",
+    "conditions":[{"has_flag":"VILLAGE_TRAINING_ASKED"}]
+  },
+  {
+    "speaker":"Village Reborn",
+    "line":"A few nods. A few steady breaths. The kind of progress you can’t celebrate without tempting fate—so you simply keep going."
   }
 ]

@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Nerenthis Depths",
+    "line": "A place that should not be open to the sky. The cold is older here—less weather, more law."
+  },
+  {
+    "speaker": "Faint Glow",
+    "line": "Something luminescent flickers behind ice like a thought trapped in glass."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "If there’s a contract that matters, it will end here.",
+    "choices": [
+      {
+        "text": "Take the next contract tied to Nerenthis.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_NERENTHIS_CONTRACT"]
+      },
+      {
+        "text": "Mark Nerenthis Depths as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_nerenthis_depths",
+        "flags": ["NW_NERENTHIS_CHECKPOINT"]
+      },
+      {
+        "text": "Withdraw—some doors should stay shut.",
+        "flags": ["NW_NERENTHIS_WITHDREW"]
+      }
+    ]
+  },
+  {
+    "speaker": "Nerenthis Depths",
+    "line": "The ice reflects you without mercy. For a moment, you look like someone who stayed."
+  }
+]

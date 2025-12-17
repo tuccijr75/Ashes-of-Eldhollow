@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/main/Main.gd" id=1]
+[ext_resource type="PackedScene" path="res://src/entities/player/Player.tscn" id=2]
+[ext_resource type="PackedScene" path="res://src/ui/DebugConsole.tscn" id=3]
+[ext_resource type="PackedScene" path="res://src/ui/DialogOverlay.tscn" id=4]
+
+[sub_resource type="Environment" id=1]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2(400, 300)
+
+[node name="DebugOverlay" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="DebugOverlay"]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 600.0
+offset_bottom = 200.0
+text = "Loading..."
+
+[node name="DebugConsole" parent="." instance=ExtResource( 3 )]
+
+[node name="DialogOverlay" parent="." instance=ExtResource( 4 )]

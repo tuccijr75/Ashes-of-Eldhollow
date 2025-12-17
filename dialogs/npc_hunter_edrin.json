@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Cursed Hunter Edrin",
+    "line":"Keep your breath quiet. The forest hears names like prayers—and answers like traps.",
+    "choices":[
+      {"text":"Guide me to the next task.", "start_next_available_quest":"vale_of_bones"},
+      {"text":"Teach me how to survive out here.", "flags":["EDRIN_SURVIVAL_TIP"]},
+      {"text":"Why are you cursed?", "flags":["EDRIN_CURSE"]}
+    ]
+  },
+  {
+    "speaker":"Cursed Hunter Edrin",
+    "line":"Because I chased something I shouldn’t have named. Now it chases me—using my own footsteps."
+  }
+]

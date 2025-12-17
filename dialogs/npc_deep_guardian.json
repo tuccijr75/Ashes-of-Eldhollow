@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Deep Guardian",
+    "line": "Nerenthis is a throat. The depths are what it swallows. Speak, or be swallowed quietly.",
+    "choices": [
+      {"text": "I’m searching for the abyss pearl.", "flags": ["NERE_PEARL_SEARCH"]},
+      {"text": "I’m searching for a way through.", "flags": ["NERE_PASSAGE_SEARCH"]},
+      {"text": "I’m leaving.", "flags": ["NERE_LEAVE"]}
+    ]
+  },
+  {
+    "speaker": "Deep Guardian",
+    "line": "Take the pearl if you must. But it will remember your hands."
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "quest_id": 115,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Korinth",
+      "text": "Discipline is a door. Most people knock until their knuckles bleed.\n\nThe worthy learn the hinges.",
+      "choices": [
+        {
+          "text": "Then accompany me.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 115},
+            {"set_flag": "KORINTH_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_115", "value": true},
+            {"complete_quest": 115}
+          ]
+        },
+        {
+          "text": "I’ll prove myself first.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 115},
+            {"set_flag": "KORINTH_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_115", "value": true},
+            {"complete_quest": 115}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Korinth’s approval is not warmth. It is weight that doesn’t crush you—if you stand correctly.",
+      "end": true
+    }
+  }
+}

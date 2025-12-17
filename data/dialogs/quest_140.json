@@ -1,0 +1,37 @@
+{
+  "quest_id": 140,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rill",
+      "text": "Water doesn’t keep secrets. It moves them.\n\nIf you want me along, you learn to choose routes that don’t drown someone else.",
+      "choices": [
+        {
+          "text": "Come with me. We’ll cross clean.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 140},
+            {"set_flag": "RILL_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_140", "value": true},
+            {"complete_quest": 140}
+          ]
+        },
+        {
+          "text": "I can’t promise clean crossings.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 140},
+            {"set_flag": "RILL_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_140", "value": true},
+            {"complete_quest": 140}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rill checks the waterline like it’s a ledger. She doesn’t smile much, but her attention is its own kind of kindness.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Sera",
+    "line": "The Chapel taught me to mend bodies. The road taught me to mend choices. Which do you need?",
+    "choices": [
+      {"text": "I need both. Come with me.", "flags": ["SERA_RECRUIT_OPEN"]},
+      {"text": "Just healing.", "flags": ["SERA_RECRUIT_HEAL"]},
+      {"text": "Neither.", "flags": ["SERA_RECRUIT_NO"]}
+    ]
+  }
+]

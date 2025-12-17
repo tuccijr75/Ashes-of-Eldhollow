@@ -1,10 +1,48 @@
 [
   {
-    "speaker":"Village Elder",
-    "line":"Children vanish and bells toll alone. Will you help us?",
+    "speaker":"Eldhollow Village",
+    "line":"Smoke hangs low over slate roofs. The bell tower stands quiet, as if listening for something it cannot afford to hear."
+  },
+  {
+    "speaker":"Village Elder Merrow",
+    "line":"You walk like you’ve seen ruin before. Good. We have enough soft-hearted strangers buried in our gardens.",
     "choices":[
-      {"text":"I will investigate.","outcome":"start_quest","start_quest":2},
-      {"text":"I need supplies first.","outcome":"gain_item","gain_item":"itm_ration"}
+      {"text":"What’s happened here?", "flags":["VILLAGE_MET_ELDER"]},
+      {"text":"I’m passing through.", "flags":["VILLAGE_PASSING_THROUGH"]},
+      {"text":"I can help—if you speak plainly.", "flags":["VILLAGE_MET_ELDER", "VOW_HELP_VILLAGE"]}
     ]
+  },
+  {
+    "speaker":"Village Elder Merrow",
+    "line":"Plainly? Fine. People vanish. Not all at once—one a night, sometimes two. The dogs won’t cross the lane by the well. And the bell… the bell rings without hands."
+  },
+  {
+    "speaker":"Blacksmith Rusk",
+    "line":"And before you ask: no, we’re not cursed because someone offended a spirit. We’re cursed because someone thinks we’re easy.",
+    "choices":[
+      {"text":"Who benefits?", "flags":["RUMOR_VILLAGE_BENEFIT"]},
+      {"text":"Any tracks?", "flags":["RUMOR_VILLAGE_TRACKS"]},
+      {"text":"Show me the well lane.", "flags":["VILLAGE_WELL_LANE_MARKED"]}
+    ]
+  },
+  {
+    "speaker":"Watchman Sable",
+    "line":"Tracks go nowhere when the fog is in a mood. But I’ve seen lantern-light move on the ridge—Ashpath direction—too steady for drunks.",
+    "choices":[
+      {"text":"Ashpath. I’ll remember.", "flags":["RUMOR_ASH_PATH_LANTERNS"]},
+      {"text":"I’ll go now.", "flags":["VILLAGE_DEPARTED"]}
+    ]
+  },
+  {
+    "speaker":"Village Elder Merrow",
+    "line":"If you truly mean to help, don’t promise us miracles. Promise us something smaller: that you’ll come back with the truth, even if the truth is ugly.",
+    "choices":[
+      {"text":"I’ll return with answers.", "flags":["VOW_RETURN_WITH_TRUTH"]},
+      {"text":"I can’t promise that.", "flags":["REFUSED_VOW_TRUTH"]}
+    ]
+  },
+  {
+    "speaker":"Eldhollow Village",
+    "line":"The bell remains silent. That, somehow, feels worse than the ringing."
   }
 ]

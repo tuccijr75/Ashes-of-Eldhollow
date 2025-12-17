@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Herald Lainee",
+    "line":"You’re walking into places where law becomes hunger. If you want to live, learn the difference between obedience and survival.",
+    "choices":[
+      {"text":"Point me toward the next fight that matters.", "start_next_available_quest":"blightlands"},
+      {"text":"Teach me a clause that keeps me alive.", "flags":["LAINEE_CLAUSE_TIP"]},
+      {"text":"Why do you still serve?", "flags":["LAINEE_WHY_SERVE"]}
+    ]
+  },
+  {
+    "speaker":"Herald Lainee",
+    "line":"Because if I don’t stand here, someone worse will. And they’ll smile while doing it."
+  }
+]

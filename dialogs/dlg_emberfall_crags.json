@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Emberfall Crags",
+    "line": "Cliffs ribbed with cooled lava rise from snow like burned bones. Warmth leaks from cracks you can’t see."
+  },
+  {
+    "speaker": "Ash",
+    "line": "It falls here even in still air, as if the mountain is shedding old anger."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "Heat and cold share the same teeth.",
+    "choices": [
+      {
+        "text": "Take the next contract tied to this harsh frontier.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_EMBERFALL_CONTRACT"]
+      },
+      {
+        "text": "Mark Emberfall Crags as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_emberfall_crags",
+        "flags": ["NW_EMBERFALL_CHECKPOINT"]
+      },
+      {
+        "text": "Step away from the fumaroles.",
+        "flags": ["NW_EMBERFALL_STEP_BACK"]
+      }
+    ]
+  },
+  {
+    "speaker": "Emberfall Crags",
+    "line": "Somewhere under the rock, something breathes in slow, volcanic patience."
+  }
+]

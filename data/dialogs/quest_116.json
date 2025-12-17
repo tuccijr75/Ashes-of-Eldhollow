@@ -1,0 +1,37 @@
+{
+  "quest_id": 116,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Korinth",
+      "text": "The wind carries what it is paid to carry.\n\nFind the coin. Not the story. The coin.",
+      "choices": [
+        {
+          "text": "I’ll bring proof, not noise.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 116},
+            {"set_flag": "KORINTH_METHOD_ACCEPTED", "value": true},
+            {"set_flag": "Q_READY_116", "value": true},
+            {"complete_quest": 116}
+          ]
+        },
+        {
+          "text": "What if the coin is mine to refuse?",
+          "next": "end",
+          "effects": [
+            {"start_quest": 116},
+            {"set_flag": "KORINTH_METHOD_QUESTIONED", "value": true},
+            {"set_flag": "Q_READY_116", "value": true},
+            {"complete_quest": 116}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You do not chase every whisper. You choose one and follow it until it becomes a fact.",
+      "end": true
+    }
+  }
+}

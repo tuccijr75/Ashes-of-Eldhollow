@@ -1,10 +1,31 @@
 [
   {
-    "speaker":"Grinning Shade",
-    "line":"Return the locket or join the broken dead." ,
+    "speaker":"Graveyard",
+    "line":"Headstones tilt like tired teeth. Wind combs through dry grass with the patience of a confession."
+  },
+  {
+    "speaker":"Gravekeeper Oren",
+    "line":"No loud promises here. The dead take them personally.",
     "choices":[
-      {"text":"Hold up the locket","outcome":"toggle_flag","toggle_flag":"shade_weakened"},
-      {"text":"Attack","outcome":"start_quest","start_quest":4}
+      {"text":"I’m only passing through.", "flags":["GY_PASSING"]},
+      {"text":"I’m looking for someone.", "flags":["GY_LOOKING"]},
+      {"text":"What’s wrong with this place?", "flags":["GY_WHATS_WRONG"]}
     ]
+  },
+  {
+    "speaker":"Grinning Shade",
+    "line":"Return the locket… or join the broken dead.",
+    "choices":[
+      {"text":"Hold up the locket and speak a name.", "toggle_flag":"shade_weakened", "flags":["GY_SHADE_APPEASED"]},
+      {"text":"Refuse. The living keep what they carry.", "flags":["GY_SHADE_REFUSED"]}
+    ]
+  },
+  {
+    "speaker":"Gravekeeper Oren",
+    "line":"If you can’t put a spirit to rest, at least don’t feed it. Don’t bargain. Don’t boast. And don’t answer when it calls you ‘friend’."
+  },
+  {
+    "speaker":"Graveyard",
+    "line":"The air loosens. The shade’s grin fades to something almost human—then the wind scatters it like ash."
   }
 ]

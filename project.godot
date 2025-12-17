@@ -1,0 +1,157 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Ashes of Eldhollow"
+run/main_scene="res://src/main/Main.tscn"
+config/features=PackedStringArray("4.5")
+
+[autoload]
+
+GameLog="*res://src/autoload/Logger.gd"
+GameState="*res://src/autoload/GameState.gd"
+WorldFlags="*res://src/autoload/WorldFlags.gd"
+Game="*res://src/autoload/Game.gd"
+RNG="*res://src/autoload/RNG.gd"
+DB="*res://src/autoload/DB.gd"
+QuestDirector="*res://src/autoload/QuestDirector.gd"
+QuestSys="*res://src/autoload/QuestSys.gd"
+SaveSys="*res://src/autoload/SaveSys.gd"
+WorldSys="*res://src/autoload/WorldStream.gd"
+Config="*res://src/autoload/Config.gd"
+InteractionSys="*res://src/autoload/InteractionSys.gd"
+EncounterSys="*res://src/autoload/EncounterSys.gd"
+CombatSys="*res://src/autoload/CombatSys.gd"
+NPCDB="*res://src/autoload/NPCDB.gd"
+WorldPopulator="*res://src/autoload/WorldPopulator.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[filesystem]
+
+import/blender/enabled=false
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 4194309,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"axis": 0,
+"axis_value": 0.0,
+"button_index": 0,
+"device": -1,
+"pressure": 0.0
+}]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 4194305,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"axis": 0,
+"axis_value": 0.0,
+"button_index": 1,
+"device": -1,
+"pressure": 0.0
+}]
+}
+move_left={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 65,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"device": -1,
+"keycode": 4194319,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}]
+}
+move_right={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 68,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"device": -1,
+"keycode": 4194321,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}]
+}
+move_up={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 87,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"device": -1,
+"keycode": 4194320,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}]
+}
+move_down={
+"deadzone": 0.5,
+"events": [{
+"device": -1,
+"keycode": 83,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}, {
+"device": -1,
+"keycode": 4194322,
+"location": 0,
+"modifiers": 0,
+"physical_keycode": 0,
+"unicode": 0
+}]
+}
+
+[rendering]
+
+renderer/rendering_method="mobile"

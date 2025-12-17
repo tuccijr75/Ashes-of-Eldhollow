@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Mirror Oracle",
+    "line": "Shards show truths. Whole mirrors show bargains. Which did you come to make?",
+    "choices": [
+      {"text": "I want truth.", "flags": ["MIRROR_ORACLE_TRUTH"]},
+      {"text": "I want a bargain.", "flags": ["MIRROR_ORACLE_BARGAIN"]},
+      {"text": "I want to leave.", "flags": ["MIRROR_ORACLE_LEAVE"]}
+    ]
+  },
+  {
+    "speaker": "Mirror Oracle",
+    "line": "Then remember: reflections don’t lie. They simply choose the angle that hurts most."
+  }
+]

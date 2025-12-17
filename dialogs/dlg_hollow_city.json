@@ -1,10 +1,52 @@
 [
   {
+    "speaker":"Hollow City",
+    "line":"The air tastes like old iron and cold parchment. Above, towers lean inward as if listening to secrets traded in the streets below."
+  },
+  {
     "speaker":"Hollow Guard",
-    "line":"State your purpose in the undercity.",
+    "line":"Undercity threshold. State purpose. Speak clearly—echoes carry names here.",
     "choices":[
-      {"text":"Blend in with Mark","outcome":"toggle_flag","toggle_flag":"city_disguise"},
-      {"text":"Attack","outcome":"start_quest","start_quest":22}
+      {"text":"I’m here to find answers.", "flags":["HC_PURPOSE_ANSWERS"]},
+      {"text":"I’m here to trade.", "flags":["HC_PURPOSE_TRADE"]},
+      {"text":"I’m here to disappear.", "flags":["HC_PURPOSE_HIDE"]}
     ]
+  },
+  {
+    "speaker":"Hollow Guard",
+    "line":"Then don’t look surprised when the city answers back.",
+    "choices":[
+      {"text":"Blend in with the Marked crowd.", "toggle_flag":"city_disguise", "flags":["HC_DISGUISED"]},
+      {"text":"Keep your face bare.", "flags":["HC_UNMASKED"]}
+    ]
+  },
+  {
+    "speaker":"Street Hawker",
+    "line":"Masks! Papers! Seals that look official from ten paces! Two paces if you squint!",
+    "choices":[
+      {"text":"Ask about seals.", "flags":["RUMOR_SEALS"]},
+      {"text":"Ask about the Authority.", "flags":["RUMOR_AUTHORITY_WEB"]},
+      {"text":"Ignore the hawker.", "flags":["HC_IGNORED_HAWKER"]}
+    ]
+  },
+  {
+    "speaker":"Archivist Noma",
+    "line":"You’re not from here. Your questions have edges. If you want the city’s truth, start with its lies—learn who profits from them.",
+    "choices":[
+      {"text":"Who profits?", "flags":["HC_PROFITS"]},
+      {"text":"Where do I begin?", "flags":["HC_BEGIN"]}
+    ]
+  },
+  {
+    "speaker":"Archivist Noma",
+    "line":"Begin with names that repeat. The Herald. The King. The clauses no one admits they signed. And the quiet folk who carry messages between them.",
+    "choices":[
+      {"text":"I’ll watch for repeating names.", "flags":["HC_WATCH_NAMES"]},
+      {"text":"Tell me about the clauses.", "flags":["HC_CLAUSES"]}
+    ]
+  },
+  {
+    "speaker":"Hollow City",
+    "line":"Somewhere deeper, a bell chimes once—too soft to be heard, too precise to be imagined."
   }
 ]

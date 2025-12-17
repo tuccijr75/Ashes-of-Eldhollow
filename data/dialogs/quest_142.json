@@ -1,0 +1,37 @@
+{
+  "quest_id": 142,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rill",
+      "text": "They offer a bribe: carry them quiet. No questions.\n\n‘Quiet’ can mean safe. It can also mean complicit.",
+      "choices": [
+        {
+          "text": "Refuse the bribe.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 142},
+            {"set_flag": "RILL_BRIBE_REFUSED", "value": true},
+            {"set_flag": "Q_READY_142", "value": true},
+            {"complete_quest": 142}
+          ]
+        },
+        {
+          "text": "Take it. We’ll decide later what it means.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 142},
+            {"set_flag": "RILL_BRIBE_TAKEN", "value": true},
+            {"set_flag": "Q_READY_142", "value": true},
+            {"complete_quest": 142}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The water reflects your choice in broken light. It does not judge—but it will carry the consequences.",
+      "end": true
+    }
+  }
+}

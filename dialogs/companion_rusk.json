@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Rusk",
+    "line": "If I swing for you, you swing for the village. That’s the deal.",
+    "choices": [
+      {"text": "Deal.", "flags": ["RUSK_RECRUIT_OPEN"]},
+      {"text": "I can’t promise that.", "flags": ["RUSK_RECRUIT_REFUSE"]},
+      {"text": "Later.", "flags": ["RUSK_RECRUIT_LATER"]}
+    ]
+  }
+]

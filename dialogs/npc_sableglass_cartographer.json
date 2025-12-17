@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Sableglass Cartographer",
+    "line": "Don’t trust dunes. They rearrange landmarks like a bored thief. I draw what stays still—mostly regrets.",
+    "choices": [
+      {"text": "What’s the safest path forward?", "flags": ["SABLEGLASS_SAFE_PATH"]},
+      {"text": "Why is it called Mirror Wastes?", "flags": ["SABLEGLASS_MIRROR_LORE"]},
+      {"text": "Good luck.", "flags": ["SABLEGLASS_END"]}
+    ]
+  },
+  {
+    "speaker": "Sableglass Cartographer",
+    "line": "If you find a compass that spins only when you think of home, throw it away. It's already owned you."
+  }
+]

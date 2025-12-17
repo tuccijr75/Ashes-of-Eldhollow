@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Healer Tamsin",
+    "line":"I can stitch skin. I can’t stitch foolishness. Which one did you bring me today?",
+    "choices":[
+      {"text":"Point me toward work that pays in survival.", "start_next_available_quest":"fenmire"},
+      {"text":"Patch me up (a little).", "flags":["TAMSIN_PATCHED_UP"]},
+      {"text":"Any herbs I should know?", "flags":["TAMSIN_HERBS"]}
+    ]
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"In the mire, the safest path is the one that looks wrong. The mire memorizes the obvious."
+  }
+]

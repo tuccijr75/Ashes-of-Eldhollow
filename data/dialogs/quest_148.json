@@ -1,0 +1,37 @@
+{
+  "quest_id": 148,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Sera",
+      "text": "Holy light reveals rot. It also reveals what you wanted to keep hidden.\n\nTell me what we reveal—and what we spare.",
+      "choices": [
+        {
+          "text": "Reveal the danger. Let it burn.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 148},
+            {"set_flag": "SERA_REVEALED_DANGER", "value": true},
+            {"set_flag": "Q_READY_148", "value": true},
+            {"complete_quest": 148}
+          ]
+        },
+        {
+          "text": "Spare the vulnerable truth.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 148},
+            {"set_flag": "SERA_SPARED_TRUTH", "value": true},
+            {"set_flag": "Q_READY_148", "value": true},
+            {"complete_quest": 148}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Sera’s light doesn’t dim. It just waits for your decision to give it a direction.",
+      "end": true
+    }
+  }
+}

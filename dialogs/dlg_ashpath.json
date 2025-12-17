@@ -1,10 +1,35 @@
 [
   {
+    "speaker":"Ashpath",
+    "line":"Ash drifts like gray snow. A cottage door bulges inward, heat pushing against it as if the house wants out."
+  },
+  {
     "speaker":"Trapped Child",
-    "line":"The fire whispers—help!",
+    "line":"H-help! The fire keeps talking. It says my name like it knows it!"
+  },
+  {
+    "speaker":"Soot-Speaker",
+    "line":"(From the smoke) Open. Open. Open.",
     "choices":[
-      {"text":"Break the door (STR)","flags":["rescued_child"],"outcome":"set_checkpoint"},
-      {"text":"Calm the child (CHA)","flags":["calmed_child"],"outcome":"toggle_flag","toggle_flag":"calmed_child"}
+      {"text":"Force the door and pull the child free.", "flags":["ASHPATH_RESCUED_CHILD"], "outcome":"set_checkpoint", "checkpoint":"ashpath_rescue"},
+      {"text":"Talk the child through it—steady breath, steady hands.", "flags":["ASHPATH_CALMED_CHILD", "ASHPATH_RESCUED_CHILD"], "outcome":"set_checkpoint", "checkpoint":"ashpath_rescue"},
+      {"text":"Back away. This isn’t ordinary fire.", "flags":["ASHPATH_REFUSED_RESCUE"]}
     ]
+  },
+  {
+    "speaker":"Trapped Child",
+    "line":"I… I can move. I can move!"
+  },
+  {
+    "speaker":"Watchman Sable",
+    "line":"Good. Because we’ve seen that smoke before—on nights when the bell rings without hands. If you’re chasing answers, follow the ash trail toward Stonebridge.",
+    "choices":[
+      {"text":"Stonebridge. Understood.", "flags":["RUMOR_STONEBRIDGE_ASH_TRAIL"]},
+      {"text":"What did the smoke want?", "flags":["RUMOR_SOOT_SPEAKER"]}
+    ]
+  },
+  {
+    "speaker":"Ashpath",
+    "line":"The fire gutters. For a moment you swear the smoke watches you leave—disappointed, patient, and certain you’ll meet again."
   }
 ]

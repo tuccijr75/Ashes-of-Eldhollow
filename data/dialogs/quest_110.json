@@ -1,0 +1,37 @@
+{
+  "quest_id": 110,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Lira",
+      "text": "If you want me beside you, understand this: spirits do not lie the way people do.\n\nThey tell the truth that hurts most.",
+      "choices": [
+        {
+          "text": "I can live with painful truth. Join me.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 110},
+            {"set_flag": "LIRA_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_110", "value": true},
+            {"complete_quest": 110}
+          ]
+        },
+        {
+          "text": "Not now.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 110},
+            {"set_flag": "LIRA_RECRUIT_DECLINED", "value": true},
+            {"set_flag": "Q_READY_110", "value": true},
+            {"complete_quest": 110}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "A companion is not a weapon. It is a witness. Lira’s eyes do not blink when the world lies.",
+      "end": true
+    }
+  }
+}

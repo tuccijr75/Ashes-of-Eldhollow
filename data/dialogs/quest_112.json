@@ -1,0 +1,37 @@
+{
+  "quest_id": 112,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Lira",
+      "text": "The most important thing a spirit says is the thing it cannot say out loud.\n\nListen to the shape of the silence.",
+      "choices": [
+        {
+          "text": "Listen without filling the gap.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 112},
+            {"set_flag": "LIRA_SILENCE_HEARD", "value": true},
+            {"set_flag": "Q_READY_112", "value": true},
+            {"complete_quest": 112}
+          ]
+        },
+        {
+          "text": "Talk to drown it out.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 112},
+            {"set_flag": "LIRA_SILENCE_DROWNED", "value": true},
+            {"set_flag": "Q_READY_112", "value": true},
+            {"complete_quest": 112}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You learn a small skill with a large consequence: the ability to stay quiet without disappearing.",
+      "end": true
+    }
+  }
+}

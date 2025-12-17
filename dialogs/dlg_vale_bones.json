@@ -1,10 +1,35 @@
 [
   {
+    "speaker":"Vale of Bones",
+    "line":"Bone-white stones jut from the earth like the ribs of something too large to bury. An obelisk stands among them—smooth, black, and listening."
+  },
+  {
     "speaker":"Obelisk Voice",
     "line":"Silence is the trial. Make no sound to claim the blade.",
     "choices":[
-      {"text":"Attempt trial","outcome":"start_quest","start_quest":15},
-      {"text":"Fail loudly","outcome":"toggle_flag","toggle_flag":"trial_failed"}
+      {"text":"Attempt the trial—slow breath, steady hands.", "flags":["VALE_TRIAL_ATTEMPTED"]},
+      {"text":"Speak anyway. Ask what the blade costs.", "flags":["VALE_TRIAL_ASKED"]},
+      {"text":"Kick a stone. Refuse the premise.", "toggle_flag":"trial_failed", "flags":["VALE_TRIAL_FAILED"]}
     ]
+  },
+  {
+    "speaker":"Obelisk Voice",
+    "line":"The cost is not blood. It is restraint. Few can afford it.",
+    "conditions":[{"has_flag":"VALE_TRIAL_ASKED"}]
+  },
+  {
+    "speaker":"Vale of Bones",
+    "line":"For a heartbeat, the world becomes perfectly still—then returns with a shiver, as if disappointed you can still move.",
+    "conditions":[{"has_flag":"VALE_TRIAL_ATTEMPTED"}]
+  },
+  {
+    "speaker":"Vale of Bones",
+    "line":"A sharp sound rings out. Somewhere nearby, something answers it. Not a creature—an attention.",
+    "conditions":[{"has_flag":"VALE_TRIAL_FAILED"}]
+  },
+  {
+    "speaker":"Obelisk Voice",
+    "line":"Return when you can be quiet without feeling small.",
+    "conditions":[{"any":[{"has_flag":"VALE_TRIAL_ATTEMPTED"},{"has_flag":"VALE_TRIAL_FAILED"},{"has_flag":"VALE_TRIAL_ASKED"}]}]
   }
 ]

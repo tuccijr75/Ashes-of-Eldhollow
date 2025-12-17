@@ -1,0 +1,31 @@
+[
+  {
+    "speaker": "Ice Caverns",
+    "line": "Blue corridors curl beneath the snow. Every surface reflects you—warped, thin, and always too slow."
+  },
+  {
+    "speaker": "Drip",
+    "line": "A single drop falls somewhere deep. It sounds like a coin spent.",
+    "choices": [
+      {
+        "text": "Push deeper and look for the next lead.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_ICECAVERNS_CONTRACT"]
+      },
+      {
+        "text": "Mark the cavern mouth as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_ice_caverns",
+        "flags": ["NW_ICECAVERNS_CHECKPOINT"]
+      },
+      {
+        "text": "Retreat while you still know which way is out.",
+        "flags": ["NW_ICECAVERNS_RETREATED"]
+      }
+    ]
+  },
+  {
+    "speaker": "Ice Caverns",
+    "line": "Your footsteps become another echo the caves learn to imitate."
+  }
+]

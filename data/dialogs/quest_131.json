@@ -1,0 +1,37 @@
+{
+  "quest_id": 131,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Noma",
+      "text": "There are doors that are wrong. Some because they lead nowhere. Others because they lead somewhere that should not exist.\n\nWe’re making a catalog.",
+      "choices": [
+        {
+          "text": "Name the wrong doors. I’ll help.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 131},
+            {"set_flag": "NOMA_TAXONOMY_SET", "value": true},
+            {"set_flag": "Q_READY_131", "value": true},
+            {"complete_quest": 131}
+          ]
+        },
+        {
+          "text": "Some things shouldn’t be written down.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 131},
+            {"set_flag": "NOMA_TAXONOMY_FEARED", "value": true},
+            {"set_flag": "Q_READY_131", "value": true},
+            {"complete_quest": 131}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The city’s alleys feel like margins. Noma writes in them anyway.",
+      "end": true
+    }
+  }
+}

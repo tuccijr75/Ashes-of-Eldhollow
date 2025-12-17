@@ -1,0 +1,37 @@
+{
+  "quest_id": 125,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Edrin",
+      "text": "The mark doesn’t fade. It doesn’t wash. It waits.\n\nIf you want me beside you, understand this: loud courage feeds the thing that hunts me.",
+      "choices": [
+        {
+          "text": "Then we do this quietly. Come with me.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 125},
+            {"set_flag": "EDRIN_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_125", "value": true},
+            {"complete_quest": 125}
+          ]
+        },
+        {
+          "text": "I can’t promise quiet.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 125},
+            {"set_flag": "EDRIN_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_125", "value": true},
+            {"complete_quest": 125}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Edrin’s eyes never stop scanning the distance. He’s not looking for enemies. He’s looking for patterns.",
+      "end": true
+    }
+  }
+}

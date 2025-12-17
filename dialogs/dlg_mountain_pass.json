@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Mountain Pass",
+    "line": "The trail narrows between black stone walls. Frost has stitched shut the old warning-signs."
+  },
+  {
+    "speaker": "Loose Pebbles",
+    "line": "Something above shifts its weight—rock, or watcher, or both."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "A pass is a promise: there is a way through.",
+    "choices": [
+      {
+        "text": "Ask around for the next job worth the risk.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_PASS_CONTRACT"]
+      },
+      {
+        "text": "Mark Mountain Pass as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_mountain_pass",
+        "flags": ["NW_PASS_CHECKPOINT"]
+      },
+      {
+        "text": "Proceed carefully.",
+        "flags": ["NW_PASS_PROCEEDED"]
+      }
+    ]
+  },
+  {
+    "speaker": "Mountain Pass",
+    "line": "The wind funnels through the stone like breath through teeth."
+  }
+]

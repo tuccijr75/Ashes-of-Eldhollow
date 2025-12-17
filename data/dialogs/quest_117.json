@@ -1,0 +1,37 @@
+{
+  "quest_id": 117,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Korinth",
+      "text": "Four breaths.\n\nOn the fourth, you strike. Not sooner. Not later. Your fear will beg you to hurry—do not bargain with it.",
+      "choices": [
+        {
+          "text": "Teach me. I’ll hold the rhythm.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 117},
+            {"set_flag": "KORINTH_BREATH_RHYTHM_LEARNED", "value": true},
+            {"set_flag": "Q_READY_117", "value": true},
+            {"complete_quest": 117}
+          ]
+        },
+        {
+          "text": "If I hesitate, I die.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 117},
+            {"set_flag": "KORINTH_BREATH_RHYTHM_RESISTED", "value": true},
+            {"set_flag": "Q_READY_117", "value": true},
+            {"complete_quest": 117}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Your lungs burn. Your hands stop shaking. The cold feels less like a tyrant and more like a measurement.",
+      "end": true
+    }
+  }
+}

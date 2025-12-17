@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Gravekeeper Oren",
+    "line":"People think the dead are the danger. Mostly they’re just disappointed in the living.",
+    "choices":[
+      {"text":"Any business I should handle here?", "start_next_available_quest":"vale_of_bones"},
+      {"text":"How do I avoid angering them?", "flags":["OREN_RITES_TIP"]},
+      {"text":"Do you hear them?", "flags":["OREN_HEARS"]}
+    ]
+  },
+  {
+    "speaker":"Gravekeeper Oren",
+    "line":"If the stones feel warm, leave. Something’s wearing grief like a coat."
+  }
+]

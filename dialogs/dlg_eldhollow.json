@@ -1,0 +1,9 @@
+[
+  {
+    "speaker":"Narrator",
+    "line":"Eldhollow holds its streets like a secret held too long.",
+    "choices":[
+      {"text":"Enter the town","outcome":"toggle_flag","toggle_flag":"visited_eldhollow"}
+    ]
+  }
+]

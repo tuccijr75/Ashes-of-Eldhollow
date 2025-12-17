@@ -1,0 +1,117 @@
+{
+  "quest_id": 100,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Herald",
+      "text": "The Ladder has run out of ordinary steps.\n\nWhat remains is the rung that breaks, and the hand that decides whether to hold.",
+      "choices": [
+        {
+          "text": "Take the crown of procedure (ENDING: INK).",
+          "next": "end",
+          "effects": [
+            {
+              "start_quest": 100
+            },
+            {
+              "set_flag": "ENDING_ID",
+              "value": "INK"
+            },
+            {
+              "set_flag": "Q_READY_100",
+              "value": true
+            },
+            {
+              "complete_quest": 100
+            }
+          ]
+        },
+        {
+          "text": "Take the crown of force (ENDING: BLOOD).",
+          "next": "end",
+          "effects": [
+            {
+              "start_quest": 100
+            },
+            {
+              "set_flag": "ENDING_ID",
+              "value": "BLOOD"
+            },
+            {
+              "set_flag": "Q_READY_100",
+              "value": true
+            },
+            {
+              "complete_quest": 100
+            }
+          ]
+        },
+        {
+          "text": "Take the crown of mercy (ENDING: SILENCE).",
+          "next": "end",
+          "effects": [
+            {
+              "start_quest": 100
+            },
+            {
+              "set_flag": "ENDING_ID",
+              "value": "SILENCE"
+            },
+            {
+              "set_flag": "Q_READY_100",
+              "value": true
+            },
+            {
+              "complete_quest": 100
+            }
+          ]
+        },
+        {
+          "text": "Take the crown of obligation (ENDING: DEBT).",
+          "next": "end",
+          "effects": [
+            {
+              "start_quest": 100
+            },
+            {
+              "set_flag": "ENDING_ID",
+              "value": "DEBT"
+            },
+            {
+              "set_flag": "Q_READY_100",
+              "value": true
+            },
+            {
+              "complete_quest": 100
+            }
+          ]
+        },
+        {
+          "text": "Take the crown of truth (ENDING: WITNESS).",
+          "next": "end",
+          "effects": [
+            {
+              "start_quest": 100
+            },
+            {
+              "set_flag": "ENDING_ID",
+              "value": "WITNESS"
+            },
+            {
+              "set_flag": "Q_READY_100",
+              "value": true
+            },
+            {
+              "complete_quest": 100
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The contract closes with a sound like a book shutting in an empty room.\n\nYou can walk away, but you cannot walk back into who you were.\n\nEnding: {ENDING_ID}.",
+      "end": true
+    }
+  }
+}

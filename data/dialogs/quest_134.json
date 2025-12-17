@@ -1,0 +1,37 @@
+{
+  "quest_id": 134,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Noma",
+      "text": "Give me one rule.\n\nWhen you hold a dangerous secret, what do you do first? Not ideally. Always.",
+      "choices": [
+        {
+          "text": "I warn the people it can harm.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 134},
+            {"set_flag": "NOMA_RULE_WARN", "value": true},
+            {"set_flag": "Q_READY_134", "value": true},
+            {"complete_quest": 134}
+          ]
+        },
+        {
+          "text": "I contain it first. Then decide who can bear it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 134},
+            {"set_flag": "NOMA_RULE_CONTAIN", "value": true},
+            {"set_flag": "Q_READY_134", "value": true},
+            {"complete_quest": 134}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Noma nods once. The Hollow City doesn’t soften, but it does stop tightening—for now.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "quest_id": 111,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Lira",
+      "text": "A spirit points to the thought you avoid.\n\nLook anyway. Courage is not loud; it is consistent.",
+      "choices": [
+        {
+          "text": "Look and name what you see.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 111},
+            {"set_flag": "LIRA_TRUTH_FACED", "value": true},
+            {"set_flag": "Q_READY_111", "value": true},
+            {"complete_quest": 111}
+          ]
+        },
+        {
+          "text": "Refuse. Some truths can wait.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 111},
+            {"set_flag": "LIRA_TRUTH_REFUSED", "value": true},
+            {"set_flag": "Q_READY_111", "value": true},
+            {"complete_quest": 111}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Whether you faced it or not, the truth remains. Lira simply refuses to pretend it isn’t there.",
+      "end": true
+    }
+  }
+}

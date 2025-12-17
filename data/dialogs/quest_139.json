@@ -1,0 +1,37 @@
+{
+  "quest_id": 139,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rusk",
+      "text": "Now swear it—not to me. To the craft.\n\nName one thing you will never forge, no matter the reward.",
+      "choices": [
+        {
+          "text": "I won’t forge tools for slaughter.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 139},
+            {"set_flag": "RUSK_OATH_NO_SLAUGHTER", "value": true},
+            {"set_flag": "Q_READY_139", "value": true},
+            {"complete_quest": 139}
+          ]
+        },
+        {
+          "text": "I won’t forge chains for the innocent.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 139},
+            {"set_flag": "RUSK_OATH_NO_CHAINS", "value": true},
+            {"set_flag": "Q_READY_139", "value": true},
+            {"complete_quest": 139}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Rusk nods. The oath doesn’t make you good—but it gives you a line you can measure yourself against.",
+      "end": true
+    }
+  }
+}

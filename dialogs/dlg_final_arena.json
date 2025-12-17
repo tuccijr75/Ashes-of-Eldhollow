@@ -1,10 +1,43 @@
 [
   {
+    "speaker":"Final Arena",
+    "line":"The floor is scored with old circles—ritual marks, duel marks, and the impatient scratches of people who waited too long for an answer."
+  },
+  {
     "speaker":"Hollow King",
-    "line":"All your paths converge here. Will you defy or kneel?",
+    "line":"All your paths converge here. You’ve collected vows like coins. Tell me: will you spend them, or hoard them until they rot?",
     "choices":[
-      {"text":"Fight","outcome":"start_quest","start_quest":24},
-      {"text":"Parley","outcome":"toggle_flag","toggle_flag":"king_parley"}
+      {"text":"Parley. I want terms that don’t require kneeling.", "toggle_flag":"king_parley", "flags":["KING_PARLEY"]},
+      {"text":"Defy. I won’t accept a throne built from fear.", "flags":["KING_DEFIANT"]},
+      {"text":"Ask why he built the Hollow.", "flags":["KING_WHY"]}
     ]
+  },
+  {
+    "speaker":"Hollow King",
+    "line":"Because people begged for someone to decide. They called it peace. I called it efficiency.",
+    "conditions":[{"has_flag":"KING_WHY"}]
+  },
+  {
+    "speaker":"Hollow King",
+    "line":"Then here is the truth: the world will always build cages. The only question is whether you pretend they’re homes.",
+    "conditions":[{"has_flag":"KING_DEFIANT"}]
+  },
+  {
+    "speaker":"Hollow King",
+    "line":"Parley, then. Say what you intend to do with authority if you survive this day.",
+    "conditions":[{"has_flag":"KING_PARLEY"}]
+  },
+  {
+    "speaker":"Hollow King",
+    "line":"Your intent is a map. Speak it.",
+    "choices":[
+      {"text":"Restore balance—leave room for people to choose.", "flags":["KING_INTENT_BALANCE"]},
+      {"text":"Rule—if law is inevitable, let it be mine.", "flags":["KING_INTENT_RULE"]},
+      {"text":"End it—break the mechanism entirely.", "flags":["KING_INTENT_END"]}
+    ]
+  },
+  {
+    "speaker":"Final Arena",
+    "line":"The arena waits. Not for violence—for decision."
   }
 ]

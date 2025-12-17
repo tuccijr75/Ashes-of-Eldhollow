@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Noma",
+    "line": "Records are weapons. I can be one, if you stop pretending you’re above the paperwork of reality.",
+    "choices": [
+      {"text": "I need an archivist at my side.", "flags": ["NOMA_RECRUIT_OPEN"]},
+      {"text": "I need silence, not lectures.", "flags": ["NOMA_RECRUIT_SNUB"]},
+      {"text": "Later.", "flags": ["NOMA_RECRUIT_LATER"]}
+    ]
+  }
+]

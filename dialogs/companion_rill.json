@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Rill",
+    "line": "I can get you across waters that remember drowning. But I don’t row for free.",
+    "choices": [
+      {"text": "Name your price.", "flags": ["RILL_RECRUIT_OPEN"]},
+      {"text": "I’ll find another way.", "flags": ["RILL_RECRUIT_DECLINE"]},
+      {"text": "Later.", "flags": ["RILL_RECRUIT_LATER"]}
+    ]
+  }
+]

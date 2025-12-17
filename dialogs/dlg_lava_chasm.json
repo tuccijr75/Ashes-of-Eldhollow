@@ -1,10 +1,29 @@
 [
   {
+    "speaker":"Lava Chasm",
+    "line":"Heat rises in slow waves. The air shimmers until distance becomes suspicion. Far below, molten light writes the same sentence again and again: everything ends."
+  },
+  {
     "speaker":"Avatar of Regret",
     "line":"Face what your choices forged.",
     "choices":[
-      {"text":"Confront","outcome":"start_quest","start_quest":23},
-      {"text":"Deny responsibility","outcome":"toggle_flag","toggle_flag":"regret_denied"}
+      {"text":"Confront it—name what you did.", "flags":["REGRET_CONFRONTED"]},
+      {"text":"Deny responsibility.", "toggle_flag":"regret_denied", "flags":["REGRET_DENIED"]},
+      {"text":"Ask what it wants.", "flags":["REGRET_ASKED"]}
     ]
+  },
+  {
+    "speaker":"Avatar of Regret",
+    "line":"I want you to stop pretending your hands were forced. The world offers pressure. You choose the shape you become under it.",
+    "conditions":[{"has_flag":"REGRET_ASKED"}]
+  },
+  {
+    "speaker":"Avatar of Regret",
+    "line":"Denial is a second wound. You don’t feel it yet because you’re still bleeding from the first.",
+    "conditions":[{"has_flag":"REGRET_DENIED"}]
+  },
+  {
+    "speaker":"Lava Chasm",
+    "line":"The heat does not judge you. That is the most frightening kind of honesty."
   }
 ]

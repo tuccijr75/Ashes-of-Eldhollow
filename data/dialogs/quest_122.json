@@ -1,0 +1,37 @@
+{
+  "quest_id": 122,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirka",
+      "text": "Walls fail when they carry debts they never agreed to.\n\nFind what Eldhollow is leaning on—and who decided it could.",
+      "choices": [
+        {
+          "text": "I’ll find the true load.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 122},
+            {"set_flag": "MIRKA_TRUE_LOAD_NAMED", "value": true},
+            {"set_flag": "Q_READY_122", "value": true},
+            {"complete_quest": 122}
+          ]
+        },
+        {
+          "text": "If it’s obligation, someone will bleed for it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 122},
+            {"set_flag": "MIRKA_TRUE_LOAD_THREAT", "value": true},
+            {"set_flag": "Q_READY_122", "value": true},
+            {"complete_quest": 122}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You start to see it: not just weight, but who is expected to carry it in silence.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Cinderway Caldera",
+    "line": "A bowl of black stone filled with drifting snow and stubborn heat. The air tastes of metal and old storms."
+  },
+  {
+    "speaker": "Distant Rumble",
+    "line": "Not quite thunder. Not quite a heartbeat."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "If you need a place to stand your ground, this is one.",
+    "choices": [
+      {
+        "text": "Look for the next job in the wastes.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_CINDERWAY_CONTRACT"]
+      },
+      {
+        "text": "Mark Cinderway Caldera as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_cinderway_caldera",
+        "flags": ["NW_CINDERWAY_CHECKPOINT"]
+      },
+      {
+        "text": "Leave before the mountain notices you.",
+        "flags": ["NW_CINDERWAY_LEFT"]
+      }
+    ]
+  },
+  {
+    "speaker": "Cinderway Caldera",
+    "line": "Snow hisses where it lands. The sound is almost laughter."
+  }
+]

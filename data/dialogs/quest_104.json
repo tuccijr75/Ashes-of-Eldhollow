@@ -1,0 +1,37 @@
+{
+  "quest_id": 104,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Ice-Cavern Delver",
+      "text": "Hear that? The ice is settling. Means the tunnels are changing. Means we’re late.\n\nIf your breath drifts sideways, stop. Deep-cold hunts heat.",
+      "choices": [
+        {
+          "text": "Slow down; survive.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 104},
+            {"set_flag": "NW_DELVER_SURVIVAL_ROUTE", "value": true},
+            {"set_flag": "Q_READY_104", "value": true},
+            {"complete_quest": 104}
+          ]
+        },
+        {
+          "text": "Push through; outrun it.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 104},
+            {"set_flag": "NW_DELVER_SPEED_ROUTE", "value": true},
+            {"set_flag": "Q_READY_104", "value": true},
+            {"complete_quest": 104}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "You make it out with frost on your lashes and a lesson in your ribs: the cold isn’t empty. It is hungry.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Archivist Noma",
+    "line":"The city keeps records because it forgets on purpose. Help me remember the parts they erased.",
+    "choices":[
+      {"text":"Give me a task worth the risk.", "start_next_available_quest":"hollow_city"},
+      {"text":"What are they hiding?", "flags":["NOMA_HIDING"]},
+      {"text":"Teach me a rule I can exploit.", "flags":["NOMA_RULE_TIP"]}
+    ]
+  },
+  {
+    "speaker":"Archivist Noma",
+    "line":"If a law is spoken like a prayer, it’s not law. It’s a spell. Don’t repeat it."
+  }
+]

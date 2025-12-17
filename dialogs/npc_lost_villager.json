@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Lost Villager",
+    "line":"I swear the path moved when I wasn’t looking. It… slid under my feet like a rug.",
+    "choices":[
+      {"text":"I’ll get you back. Stay close.", "flags":["VILLAGER_ESCORT_PROMISE"]},
+      {"text":"What did you see?", "flags":["VILLAGER_SAW_SOMETHING"]},
+      {"text":"Keep walking. Don’t stop.", "flags":["VILLAGER_KEEP_WALKING"]}
+    ]
+  },
+  {
+    "speaker":"Lost Villager",
+    "line":"If we make it out, I’ll never say ‘shortcut’ again."
+  }
+]

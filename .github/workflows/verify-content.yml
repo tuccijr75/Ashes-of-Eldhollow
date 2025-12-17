@@ -1,0 +1,58 @@
+name: Verify Content
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify content + gates
+        shell: pwsh
+        run: |
+          Set-StrictMode -Version Latest
+          $ErrorActionPreference = 'Stop'
+          ./scripts/verify-content.ps1
+
+      - name: Download Godot (portable)
+        shell: pwsh
+        run: |
+          Set-StrictMode -Version Latest
+          $ErrorActionPreference = 'Stop'
+
+          $version = '4.5.1'
+          $zipName = "Godot_v${version}-stable_win64.exe.zip"
+          $url = "https://downloads.tuxfamily.org/godotengine/${version}/${zipName}"
+
+          New-Item -ItemType Directory -Force -Path .ci | Out-Null
+          $zipPath = Join-Path .ci $zipName
+          $exePath = Join-Path .ci "Godot_v${version}-stable_win64.exe"
+
+          if (-not (Test-Path -LiteralPath $exePath)) {
+            Write-Host "Downloading $url"
+            Invoke-WebRequest -Uri $url -OutFile $zipPath
+            Expand-Archive -Path $zipPath -DestinationPath .ci -Force
+          }
+
+          if (-not (Test-Path -LiteralPath $exePath)) {
+            throw "Godot exe not found after download: $exePath"
+          }
+
+          "GODOT_EXE=$exePath" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Godot headless smoke + tests
+        shell: pwsh
+        run: |
+          Set-StrictMode -Version Latest
+          $ErrorActionPreference = 'Stop'
+          ./scripts/verify-headless.ps1 -GodotExe "$env:GODOT_EXE"

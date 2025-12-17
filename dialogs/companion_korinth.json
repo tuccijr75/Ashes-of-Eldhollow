@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Korinth",
+    "line": "I do not follow. I accompany, when it serves the balance.",
+    "choices": [
+      {"text": "Then accompany me.", "flags": ["KORINTH_RECRUIT_OPEN"]},
+      {"text": "Fine. I’ll prove myself first.", "flags": ["KORINTH_RECRUIT_PROVE"]},
+      {"text": "Later.", "flags": ["KORINTH_RECRUIT_LATER"]}
+    ]
+  }
+]

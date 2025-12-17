@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Frozen Wastes",
+    "line": "A field of ice-glass stretches to the horizon. Under it, faint shapes drift like thoughts you almost remember."
+  },
+  {
+    "speaker": "Your Breath",
+    "line": "Each exhale feels borrowed. The cold counts them."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "If you linger, do it with purpose.",
+    "choices": [
+      {
+        "text": "Seek the next task the wastes can offer.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_FROZEN_CONTRACT"]
+      },
+      {
+        "text": "Mark Frozen Wastes as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_frozen_wastes",
+        "flags": ["NW_FROZEN_CHECKPOINT"]
+      },
+      {
+        "text": "Keep moving.",
+        "flags": ["NW_FROZEN_MOVED_ON"]
+      }
+    ]
+  },
+  {
+    "speaker": "Frozen Wastes",
+    "line": "The ice creaks, not from pressure—like a jaw learning your name."
+  }
+]

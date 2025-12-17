@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Skyreach Monastery",
+    "line": "Stone steps climb into cloud. Prayer-bells hang silent, rimed so thick they look carved from frost."
+  },
+  {
+    "speaker": "Old Inscription",
+    "line": "‘Discipline is warmth.’ The letters are worn smooth where desperate hands once traced them."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "The monastery offers shelter—if not comfort.",
+    "choices": [
+      {
+        "text": "Ask for work or guidance.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_SKYREACH_CONTRACT"]
+      },
+      {
+        "text": "Set a checkpoint at the monastery steps.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_skyreach_monastery",
+        "flags": ["NW_SKYREACH_CHECKPOINT"]
+      },
+      {
+        "text": "Leave quietly.",
+        "flags": ["NW_SKYREACH_LEFT"]
+      }
+    ]
+  },
+  {
+    "speaker": "Skyreach Monastery",
+    "line": "The wind does not enter the prayer-hall. It waits outside, listening."
+  }
+]

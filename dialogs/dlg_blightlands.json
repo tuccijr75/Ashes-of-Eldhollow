@@ -1,0 +1,9 @@
+[
+  {
+    "speaker":"Narrator",
+    "line":"The Blightlands breathe through cracked soil and old ash.",
+    "choices":[
+      {"text":"Keep moving","outcome":"toggle_flag","toggle_flag":"visited_blightlands"}
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Mirror Wastes",
+    "line": "Ice plates reflect the sky so perfectly you can’t tell if you’re walking on ground or falling upward."
+  },
+  {
+    "speaker": "Reflection",
+    "line": "For a heartbeat, you see yourself turn left when you turn right."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "If answers exist here, they will not come gently.",
+    "choices": [
+      {
+        "text": "Take the next contract and follow it like a straight line.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_MIRROR_CONTRACT"]
+      },
+      {
+        "text": "Mark Mirror Wastes as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_mirror_wastes",
+        "flags": ["NW_MIRROR_CHECKPOINT"]
+      },
+      {
+        "text": "Blink slowly and keep moving.",
+        "flags": ["NW_MIRROR_MOVED_ON"]
+      }
+    ]
+  },
+  {
+    "speaker": "Mirror Wastes",
+    "line": "Your shadow looks wrong for a moment—then remembers how to behave."
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "quest_id": 121,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirka",
+      "text": "We don’t fight the unknown with faith. We fight it with numbers.\n\nTell me what you see, not what you fear.",
+      "choices": [
+        {
+          "text": "I’ll measure the breach. No guessing.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 121},
+            {"set_flag": "MIRKA_MEASURED_BREACH", "value": true},
+            {"set_flag": "Q_READY_121", "value": true},
+            {"complete_quest": 121}
+          ]
+        },
+        {
+          "text": "Sometimes you have to act before you know.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 121},
+            {"set_flag": "MIRKA_RUSHED_MEASUREMENT", "value": true},
+            {"set_flag": "Q_READY_121", "value": true},
+            {"complete_quest": 121}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Chalk marks appear where Mirka points. The wall looks less like a mystery and more like a problem with an address.",
+      "end": true
+    }
+  }
+}

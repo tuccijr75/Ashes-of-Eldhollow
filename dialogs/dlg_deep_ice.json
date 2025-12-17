@@ -1,0 +1,35 @@
+[
+  {
+    "speaker": "Deep Ice",
+    "line": "The surface is thick, ancient, and full of trapped bubbles. Each one looks like a tiny held scream."
+  },
+  {
+    "speaker": "Pressure",
+    "line": "A low groan travels through the ice and into your bones."
+  },
+  {
+    "speaker": "Your Journal",
+    "line": "If you go farther, do it with a plan.",
+    "choices": [
+      {
+        "text": "Take the next contract that points deeper.",
+        "start_next_available_quest": "northern_wastes",
+        "flags": ["NW_DEEPICE_CONTRACT"]
+      },
+      {
+        "text": "Mark Deep Ice as a checkpoint.",
+        "outcome": "set_checkpoint",
+        "checkpoint": "nw_deep_ice",
+        "flags": ["NW_DEEPICE_CHECKPOINT"]
+      },
+      {
+        "text": "Step back onto safer snow.",
+        "flags": ["NW_DEEPICE_STEPPED_BACK"]
+      }
+    ]
+  },
+  {
+    "speaker": "Deep Ice",
+    "line": "The cracks you don’t make are the ones that worry you."
+  }
+]

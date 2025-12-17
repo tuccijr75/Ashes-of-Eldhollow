@@ -1,0 +1,63 @@
+{
+  "quest_id": 98,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Censor",
+      "text": "The Authority calls this a hearing.\nYou should call it what it is: a knife that asks politely.\n\nYou have carried your signatures here. Now choose what to do with them.",
+      "choices": [
+        {
+          "text": "Reduce Censure: accept the ritual, pay the fine, and live smaller.",
+          "next": "vow",
+          "effects": [
+            {
+              "start_quest": 98
+            },
+            {
+              "set_censure_mode": "reduced"
+            }
+          ]
+        },
+        {
+          "text": "Defy Censure: refuse the ritual, keep your name, and live hunted.",
+          "next": "vow",
+          "effects": [
+            {
+              "start_quest": 98
+            },
+            {
+              "set_censure_mode": "defied"
+            }
+          ]
+        }
+      ]
+    },
+    "vow": {
+      "speaker": "Censor",
+      "text": "So be it.\n\nThe Ladder does not forgive. It only recalculates.",
+      "choices": [
+        {
+          "text": "Finalize the record.",
+          "next": "end",
+          "effects": [
+            {
+              "set_flag": "Q_READY_098",
+              "value": true
+            },
+            {
+              "complete_quest": 98
+            },
+            {
+              "compute_boss_unlock": true
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The contract closes with a sound like a book shutting in an empty room.\n\nYou can walk away, but you cannot walk back into who you were.",
+      "end": true
+    }
+  }
+}

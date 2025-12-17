@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Roadside Minstrel",
+    "line":"A song for a coin, a coin for a secret, a secret for a safer road. That’s how the world stays moving.",
+    "choices":[
+      {"text":"Sing something to lift the ash off my mind.", "flags":["MINSTREL_SONG"]},
+      {"text":"What secret do you know?", "flags":["MINSTREL_SECRET"]},
+      {"text":"Keep your secrets.", "flags":["MINSTREL_REFUSED"]}
+    ]
+  },
+  {
+    "speaker":"Roadside Minstrel",
+    "line":"Here’s a free one: never argue with a road that keeps changing its story."
+  }
+]

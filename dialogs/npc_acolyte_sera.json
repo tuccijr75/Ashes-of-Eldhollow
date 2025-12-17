@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Acolyte Sera",
+    "line":"If you’re going out again… take this truth with you: the Hollow doesn’t hate you. It just doesn’t notice you—until you make noise.",
+    "choices":[
+      {"text":"Bless me for the road.", "flags":["CHAPEL_BLESSING_ACCEPTED"]},
+      {"text":"What should I do next?", "start_next_available_quest":"blightlands"},
+      {"text":"Any warning?", "flags":["CHAPEL_SERA_WARNING"]}
+    ]
+  },
+  {
+    "speaker":"Acolyte Sera",
+    "line":"If a bell rings without wind, don’t answer it. And if you must answer… answer with your feet."
+  }
+]

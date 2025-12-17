@@ -1,0 +1,38 @@
+{
+  "quest_id": 119,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Korinth",
+      "text": "Balance is not achieved in one heroic gesture.\n\nIt is paid in small coins, every day. You choose what you spend."
+      ,
+      "choices": [
+        {
+          "text": "I’ll pay it with effort, not shortcuts.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 119},
+            {"set_flag": "KORINTH_DEBT_PAID_WITH_EFFORT", "value": true},
+            {"set_flag": "Q_READY_119", "value": true},
+            {"complete_quest": 119}
+          ]
+        },
+        {
+          "text": "I’ll pay it with honesty—even if it costs me.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 119},
+            {"set_flag": "KORINTH_DEBT_PAID_WITH_TRUTH", "value": true},
+            {"set_flag": "Q_READY_119", "value": true},
+            {"complete_quest": 119}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Korinth inclines his head—a motion so small it could be mistaken for wind. You know better.",
+      "end": true
+    }
+  }
+}

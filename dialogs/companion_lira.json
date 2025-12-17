@@ -1,0 +1,11 @@
+[
+  {
+    "speaker": "Lira",
+    "line": "If you want me beside you, understand this: spirits do not lie the way people do. They tell the truth that hurts most.",
+    "choices": [
+      {"text": "I can live with painful truth.", "flags": ["LIRA_RECRUIT_OPEN"]},
+      {"text": "I need results, not poetry.", "flags": ["LIRA_RECRUIT_HARD"]},
+      {"text": "Not now.", "flags": ["LIRA_RECRUIT_LATER"]}
+    ]
+  }
+]

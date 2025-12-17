@@ -1,0 +1,37 @@
+{
+  "quest_id": 105,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mountain Guide",
+      "text": "Up there, a single bad step becomes a story the ravens tell.\n\nTo cross, you’ll pay. Boots. Bones. Oaths.",
+      "choices": [
+        {
+          "text": "Pay with an oath.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 105},
+            {"set_flag": "NW_TOLL_OATH", "value": true},
+            {"set_flag": "Q_READY_105", "value": true},
+            {"complete_quest": 105}
+          ]
+        },
+        {
+          "text": "Refuse and force passage.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 105},
+            {"set_flag": "NW_TOLL_REFUSED", "value": true},
+            {"set_flag": "Q_READY_105", "value": true},
+            {"complete_quest": 105}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The pass opens. Not because it is kind—because you have paid, one way or another.",
+      "end": true
+    }
+  }
+}

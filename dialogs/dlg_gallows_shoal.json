@@ -1,0 +1,9 @@
+[
+  {
+    "speaker":"Narrator",
+    "line":"Gallows Shoal rattles with wet rope and salt-stung vows.",
+    "choices":[
+      {"text":"Walk the shore","outcome":"toggle_flag","toggle_flag":"visited_gallows_shoal"}
+    ]
+  }
+]

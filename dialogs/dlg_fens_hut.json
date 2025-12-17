@@ -1,0 +1,38 @@
+[
+  {
+    "speaker":"Fens Hut",
+    "line":"A hut on stilts trembles above dark water. Windchimes made of bottle-glass sing in a pattern that feels almost deliberate."
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"Boots off. Words soft. The mire doesn’t like being insulted.",
+    "choices":[
+      {"text":"I need directions through Fenmire.", "flags":["FENS_HUT_DIRECTIONS"]},
+      {"text":"I’m looking for the missing.", "flags":["FENS_HUT_MISSING"]},
+      {"text":"I’m hurt. Can you help?", "flags":["FENS_HUT_AID_REQUESTED"]}
+    ]
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"Everyone wants directions. Few want the truth: the mire moves. If you can’t read it, you’ll walk until you’re too tired to care where you end up."
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"If you cross at Fenmire Crossing, pay the toll with something you can afford to lose. Don’t offer your anger. It comes back hungry.",
+    "conditions":[{"has_flag":"FENS_HUT_DIRECTIONS"}]
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"Missing folk? Some vanish into water. Some vanish into bargains. If you find proof of the second kind, bring it to me—quietly.",
+    "conditions":[{"has_flag":"FENS_HUT_MISSING"}]
+  },
+  {
+    "speaker":"Healer Tamsin",
+    "line":"I can’t mend what the Hollow takes. But I can keep you standing long enough to make your own choices.",
+    "conditions":[{"has_flag":"FENS_HUT_AID_REQUESTED"}]
+  },
+  {
+    "speaker":"Fens Hut",
+    "line":"As you leave, the glass chimes shift. For a moment, the song sounds like a warning spoken gently."
+  }
+]

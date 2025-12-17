@@ -1,0 +1,37 @@
+{
+  "quest_id": 120,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Mirka",
+      "text": "People call cracks ‘omens’ when they don’t want to admit they ignored the load.\n\nIf you want me at your side, you don’t get to worship damage. You fix it.",
+      "choices": [
+        {
+          "text": "Then come with me. We’ll fix what we can.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 120},
+            {"set_flag": "MIRKA_RECRUITED", "value": true},
+            {"set_flag": "Q_READY_120", "value": true},
+            {"complete_quest": 120}
+          ]
+        },
+        {
+          "text": "I’m not sure I can promise that.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 120},
+            {"set_flag": "MIRKA_RECRUIT_DELAYED", "value": true},
+            {"set_flag": "Q_READY_120", "value": true},
+            {"complete_quest": 120}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Mirka’s hands are scarred the way honest work scars them. If she follows you, it will be to build—never to pretend.",
+      "end": true
+    }
+  }
+}

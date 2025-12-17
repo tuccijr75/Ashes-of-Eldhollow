@@ -1,0 +1,37 @@
+{
+  "quest_id": 149,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Sera",
+      "text": "Mercy costs something.\n\nWho pays it this time?\n\nChoose mercy you can afford—without spending someone else.",
+      "choices": [
+        {
+          "text": "I pay it myself.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 149},
+            {"set_flag": "SERA_MERCY_SELF", "value": true},
+            {"set_flag": "Q_READY_149", "value": true},
+            {"complete_quest": 149}
+          ]
+        },
+        {
+          "text": "I refuse mercy that makes others the price.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 149},
+            {"set_flag": "SERA_MERCY_REFUSED_PRICE", "value": true},
+            {"set_flag": "Q_READY_149", "value": true},
+            {"complete_quest": 149}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "Sera exhales slowly. Her faith doesn’t soften—but it stops being lonely.",
+      "end": true
+    }
+  }
+}

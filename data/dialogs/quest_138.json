@@ -1,0 +1,37 @@
+{
+  "quest_id": 138,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Rusk",
+      "text": "Power is heat. You pick how to quench it, or it cracks in your hand.\n\nSnow is restraint. Ash is spite.",
+      "choices": [
+        {
+          "text": "Quench in snow. Keep control.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 138},
+            {"set_flag": "RUSK_QUENCH_SNOW", "value": true},
+            {"set_flag": "Q_READY_138", "value": true},
+            {"complete_quest": 138}
+          ]
+        },
+        {
+          "text": "Quench in ash. Let it remember why.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 138},
+            {"set_flag": "RUSK_QUENCH_ASH", "value": true},
+            {"set_flag": "Q_READY_138", "value": true},
+            {"complete_quest": 138}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The metal cools with a hiss like a held-in scream. When it stops, you hear your own breathing again.",
+      "end": true
+    }
+  }
+}

@@ -1,10 +1,36 @@
 [
   {
+    "speaker":"Herald Arena",
+    "line":"Stone tiers rise around a pit scarred by old contests. The crowd is thin, but their attention is sharp enough to cut."
+  },
+  {
     "speaker":"Hollow Herald",
-    "line":"Prove the mark upon you was earned, not stolen.",
+    "line":"Prove the mark upon you was earned, not stolen. The city loves a thief—until it needs a scapegoat.",
     "choices":[
-      {"text":"Fight","outcome":"start_quest","start_quest":18},
-      {"text":"Attempt diplomacy","outcome":"toggle_flag","toggle_flag":"herald_spared"}
+      {"text":"I won’t fight for spectacle.", "flags":["HERALD_REFUSED_SPECTACLE"]},
+      {"text":"I’ll answer questions, not blades.", "flags":["HERALD_DIPLOMACY"], "toggle_flag":"herald_spared"},
+      {"text":"If you insist, I’ll endure.", "flags":["HERALD_ACCEPTED_TRIAL"]}
     ]
+  },
+  {
+    "speaker":"Hollow Herald",
+    "line":"Then speak: why do you chase authority? To save, to rule, or to be forgiven?",
+    "choices":[
+      {"text":"To save people who were never protected.", "flags":["HERALD_INTENT_SAVE"]},
+      {"text":"To end the machines of control.", "flags":["HERALD_INTENT_END"]},
+      {"text":"To understand what I’ve become.", "flags":["HERALD_INTENT_UNDERSTAND"]}
+    ]
+  },
+  {
+    "speaker":"Hollow Herald",
+    "line":"Good. Intent is not innocence—but it’s a beginning. The King will want to hear you make that claim where it matters.",
+    "choices":[
+      {"text":"Where do I find the King?", "flags":["RUMOR_HC_KING"]},
+      {"text":"I’m not finished here.", "flags":["HERALD_STAYED"]}
+    ]
+  },
+  {
+    "speaker":"Herald Arena",
+    "line":"A hush spreads through the tiers. You can feel the city adjusting around your words, like a lock turning one notch closer to opening."
   }
 ]

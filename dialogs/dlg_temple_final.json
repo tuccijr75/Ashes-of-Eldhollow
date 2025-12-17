@@ -1,11 +1,35 @@
 [
   {
+    "speaker":"Inner Temple",
+    "line":"The chamber is too quiet for stone. Your breath feels like a trespass. In the center, an altar waits—patient, impersonal, certain you will choose something.",
+    "flags":["TEMPLE_FINAL_REACHED"]
+  },
+  {
     "speaker":"Temple Voice",
-    "line":"Choose: restore, rule, or end all.",
+    "line":"Choose: restore, rule, or end all. Every ending is a law you write into the world.",
     "choices":[
-      {"text":"Restore balance","outcome":"toggle_flag","toggle_flag":"ending_balance"},
-      {"text":"Rule as Hollow","outcome":"toggle_flag","toggle_flag":"ending_rule"},
-      {"text":"End all","outcome":"toggle_flag","toggle_flag":"ending_ash"}
+      {"text":"Restore balance (leave room for people).", "toggle_flag":"ending_balance", "flags":["ENDING_CHOSEN"]},
+      {"text":"Rule as Hollow (be the law).", "toggle_flag":"ending_rule", "flags":["ENDING_CHOSEN"]},
+      {"text":"End all (break the machine).", "toggle_flag":"ending_ash", "flags":["ENDING_CHOSEN"]}
     ]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Balance chosen. The world will keep its wounds—but it may learn to heal without permission.",
+    "conditions":[{"has_flag":"ending_balance"}]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Rule chosen. The world will be orderly. And it will be afraid of you in the way fear pretends to be respect.",
+    "conditions":[{"has_flag":"ending_rule"}]
+  },
+  {
+    "speaker":"Temple Voice",
+    "line":"Ash chosen. The machine will break. So will a great deal else. You’ve accepted the cost.",
+    "conditions":[{"has_flag":"ending_ash"}]
+  },
+  {
+    "speaker":"Inner Temple",
+    "line":"The altar does not celebrate. It simply remembers what you decided."
   }
 ]

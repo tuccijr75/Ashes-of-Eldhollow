@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Frost Titan",
+    "line": "Small flame. Loud heart. Why do you wake the deep ice?",
+    "choices": [
+      {"text": "To take what I need.", "flags": ["TITAN_ANGERED"]},
+      {"text": "To stop what’s coming.", "flags": ["TITAN_LISTENS"]},
+      {"text": "I was lost.", "flags": ["TITAN_DISMISSED"]}
+    ]
+  },
+  {
+    "speaker": "Frost Titan",
+    "line": "Then prove your intent: leave something precious behind."
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "speaker":"Farne",
+    "line":"I map what the mire tries to erase. You look like someone the mire would love to keep.",
+    "choices":[
+      {"text":"Help me reach the next safe route.", "start_next_available_quest":"fenmire"},
+      {"text":"What’s the strangest thing you’ve seen?", "flags":["FARNE_STRANGEST"]},
+      {"text":"Trade advice for a story.", "flags":["FARNE_STORY_TRADE"]}
+    ]
+  },
+  {
+    "speaker":"Farne",
+    "line":"If you hear your own footsteps behind you—don’t turn. The mire uses curiosity like a leash."
+  }
+]

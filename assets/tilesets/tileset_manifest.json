@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "tileset": {
+    "id": "eldhollow",
+    "name": "Ashes of Eldhollow (32x32)",
+    "tileSize": 32,
+    "outputDir": "assets/tilesets/eldhollow",
+    "sourceMeta": "assets/tilesets/tiles.meta.json"
+  },
+  "style": {
+    "artStyle": "top-down pixel art",
+    "palette": "muted dark-fantasy, readable silhouettes",
+    "lighting": "soft, slightly cool moonlit ambience",
+    "background": "transparent for props; opaque for ground tiles",
+    "seams": "tileable where applicable",
+    "scale": "consistent 32x32"
+  },
+  "animation": {
+    "lava": {
+      "tileId": 52,
+      "frames": ["lava_01.png", "lava_02.png", "lava_03.png", "lava_04.png"],
+      "frameCount": 4,
+      "notes": "Looping subtle flow; keep edges consistent with lava_edge."
+    }
+  },
+  "tiles": [
+    {
+      "id": 1,
+      "key": "grass",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless grass ground, dark-fantasy forest meadow, a few subtle tufts, muted greens, no border, crisp pixel edges"
+    },
+    {
+      "id": 2,
+      "key": "path",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless dirt path, compacted earth with small pebbles, slightly worn, muted brown, no hard border"
+    },
+    {
+      "id": 3,
+      "key": "stone_floor",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless stone floor slabs, slightly cracked, cold gray, medieval chapel interior, no border"
+    },
+    {
+      "id": 4,
+      "key": "wall",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, stone wall segment viewed from above (top-down RPG), thick masonry, dark gray, readable, tileable"
+    },
+    {
+      "id": 5,
+      "key": "wall_corner",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, stone wall corner piece, matches stone wall palette, tileable corner, dark gray"
+    },
+    {
+      "id": 6,
+      "key": "wall_edge",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, stone wall edge/trim, matches stone wall palette, tileable"
+    },
+    {
+      "id": 7,
+      "key": "door",
+      "category": "structure",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, wooden door hatch viewed from above, iron bands, dark-fantasy chapel, transparent background"
+    },
+    {
+      "id": 8,
+      "key": "window",
+      "category": "structure",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small stone-framed window/skylight element, subtle blue glow, transparent background"
+    },
+    {
+      "id": 9,
+      "key": "roof",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless roof shingles, dark slate, medieval, no border"
+    },
+    {
+      "id": 10,
+      "key": "water",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless calm water, dark blue, subtle ripple pattern, no shoreline"
+    },
+    {
+      "id": 11,
+      "key": "water_edge",
+      "category": "ground",
+      "tileable": false,
+      "prompt": "32x32 PNG, top-down pixel art tile, shoreline water edge transition, dark blue water meeting earth, clean readable edge"
+    },
+    {
+      "id": 12,
+      "key": "bridge_wood",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, wooden bridge planks, slightly wet, dark fantasy, tileable"
+    },
+    {
+      "id": 13,
+      "key": "spawn",
+      "category": "marker",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art marker, subtle glowing rune circle for spawn point, pale blue, transparent background"
+    },
+    {
+      "id": 14,
+      "key": "grave",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small grave marker with cracked stone and a tiny wilted flower, dark-fantasy, transparent background"
+    },
+    {
+      "id": 15,
+      "key": "tree",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small pine tree canopy viewed from above, dark green, readable silhouette, transparent background"
+    },
+    {
+      "id": 16,
+      "key": "bush",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, bush/brush clump viewed from above, muted green, transparent background"
+    },
+    {
+      "id": 17,
+      "key": "lamp",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, iron street lamp or torch post with warm glow, dark-fantasy village, transparent background"
+    },
+    {
+      "id": 18,
+      "key": "stairs",
+      "category": "structure",
+      "tileable": false,
+      "prompt": "32x32 PNG, top-down pixel art tile, stone stairway/steps viewed from above, chapel dungeon entrance, consistent palette"
+    },
+
+    {
+      "id": 20,
+      "key": "marsh",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless swamp marsh ground, dark green-brown, damp texture, sparse moss"
+    },
+    {
+      "id": 21,
+      "key": "deep_marsh",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless deeper swamp waterlogged ground, darker, more glossy, subtle bubbles"
+    },
+    {
+      "id": 22,
+      "key": "mud",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless thick mud, footprints or ridges hinted, dark brown, glossy"
+    },
+    {
+      "id": 23,
+      "key": "water_fen",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless swamp water, murky green, subtle ripples, no shoreline"
+    },
+    {
+      "id": 24,
+      "key": "plank",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, damp wooden planks walkway, swamp setting, tileable"
+    },
+    {
+      "id": 25,
+      "key": "plank_bridge",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, narrow plank bridge with rope rails hinted, swamp, tileable"
+    },
+    {
+      "id": 26,
+      "key": "reed",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, reed/grass tuft cluster in swamp, thin stalks, transparent background"
+    },
+    {
+      "id": 27,
+      "key": "log",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, fallen log, wet bark, swampy, transparent background"
+    },
+    {
+      "id": 28,
+      "key": "hut_floor",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, hut interior wooden floorboards, worn, tileable"
+    },
+    {
+      "id": 29,
+      "key": "hut_wall",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, hut wall segment, wood and moss, swamp witch hut, tileable"
+    },
+    {
+      "id": 30,
+      "key": "hut_roof",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, thatch roof with moss, swamp hut, tileable"
+    },
+    {
+      "id": 31,
+      "key": "ruin",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small broken stone ruin chunk, cracked blocks with moss, transparent background"
+    },
+    {
+      "id": 32,
+      "key": "altar",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small ancient altar stone with faint glow, swamp temple, transparent background"
+    },
+    {
+      "id": 33,
+      "key": "rune",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, carved rune stone or rune mark, pale light, transparent background"
+    },
+    {
+      "id": 34,
+      "key": "vine",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, creeping vine cluster, swamp green, transparent background"
+    },
+    {
+      "id": 35,
+      "key": "stone_path",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless stone path with small uneven stones, damp, tileable"
+    },
+
+    {
+      "id": 40,
+      "key": "blight_soil",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless blighted soil, dark purple-brown, sickly undertone, subtle specks"
+    },
+    {
+      "id": 41,
+      "key": "cracked_soil",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless cracked dry soil, ashlands, darker fissures, tileable"
+    },
+    {
+      "id": 42,
+      "key": "ash_dust",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless ash dust ground, smoky gray, subtle swirl texture, tileable"
+    },
+    {
+      "id": 43,
+      "key": "obsidian",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless obsidian rock surface, dark glossy black with blue highlights, tileable"
+    },
+    {
+      "id": 44,
+      "key": "obsidian_spike",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, jagged obsidian spike cluster, sharp silhouette, transparent background"
+    },
+    {
+      "id": 45,
+      "key": "bone_pile",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, small bone pile, skull fragments, pale bone color, transparent background"
+    },
+    {
+      "id": 46,
+      "key": "obelisk",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, black stone obelisk with faint runes, Vale of Bones, transparent background"
+    },
+    {
+      "id": 47,
+      "key": "bridge_rope",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, rope bridge plank segment, rope rails suggested, tileable"
+    },
+    {
+      "id": 48,
+      "key": "bridge_stone",
+      "category": "structure",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, stone bridge segment, cold gray, chipped, tileable"
+    },
+    {
+      "id": 49,
+      "key": "arena_floor",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless arena floor of dark stone, slightly scorched, tileable"
+    },
+    {
+      "id": 50,
+      "key": "arena_pillar",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, broken arena pillar base, dark stone, transparent background"
+    },
+    {
+      "id": 51,
+      "key": "chasm",
+      "category": "ground",
+      "tileable": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless chasm void crack, dark abyss with jagged rock edges, tileable"
+    },
+    {
+      "id": 52,
+      "key": "lava",
+      "category": "ground",
+      "tileable": true,
+      "animated": true,
+      "prompt": "32x32 PNG, top-down pixel art tile, seamless molten lava surface, bright orange-red with darker crust islands, subtle motion feel, tileable"
+    },
+    {
+      "id": 53,
+      "key": "lava_edge",
+      "category": "ground",
+      "tileable": false,
+      "prompt": "32x32 PNG, top-down pixel art tile, lava shoreline edge where molten lava meets dark rock, readable border, matches lava palette"
+    },
+    {
+      "id": 54,
+      "key": "gate",
+      "category": "structure",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, heavy iron gate or barred arch, dark fantasy, transparent background"
+    },
+    {
+      "id": 55,
+      "key": "shrine",
+      "category": "prop",
+      "tileable": false,
+      "transparent": true,
+      "prompt": "32x32 PNG, top-down pixel art prop, corrupted shrine stone with faint glow, ashlands, transparent background"
+    }
+  ]
+}

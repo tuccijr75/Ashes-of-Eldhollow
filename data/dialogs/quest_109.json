@@ -1,0 +1,37 @@
+{
+  "quest_id": 109,
+  "start": "start",
+  "nodes": {
+    "start": {
+      "speaker": "Void Sentinel",
+      "text": "The Umbral Reaches accept entry. They do not accept return.\n\nThe void respects confidence. It eats hesitation first.",
+      "choices": [
+        {
+          "text": "Swear a vow and enter anyway.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 109},
+            {"set_flag": "NW_UMBRAL_VOW", "value": true},
+            {"set_flag": "Q_READY_109", "value": true},
+            {"complete_quest": 109}
+          ]
+        },
+        {
+          "text": "Back away and live with the question.",
+          "next": "end",
+          "effects": [
+            {"start_quest": 109},
+            {"set_flag": "NW_UMBRAL_WITHDRAW", "value": true},
+            {"set_flag": "Q_READY_109", "value": true},
+            {"complete_quest": 109}
+          ]
+        }
+      ]
+    },
+    "end": {
+      "speaker": "Narrator",
+      "text": "The threshold remains. What changes is you: either marked by a vow, or marked by restraint.",
+      "end": true
+    }
+  }
+}

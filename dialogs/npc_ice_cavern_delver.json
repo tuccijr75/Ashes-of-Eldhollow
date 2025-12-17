@@ -1,0 +1,15 @@
+[
+  {
+    "speaker": "Ice-Cavern Delver",
+    "line": "Hear that? The ice is settling. Means the tunnels are changing. Means we’re late.",
+    "choices": [
+      {"text": "Late for what?", "flags": ["ICE_DELVER_LATE"]},
+      {"text": "What did you find down here?", "flags": ["ICE_DELVER_FIND"]},
+      {"text": "Get out while you can.", "flags": ["ICE_DELVER_WARNED"]}
+    ]
+  },
+  {
+    "speaker": "Ice-Cavern Delver",
+    "line": "If you see your own breath drifting sideways, stop. That’s a pocket of deep-cold hunting heat."
+  }
+]

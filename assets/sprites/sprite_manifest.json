@@ -1,0 +1,83 @@
+{
+  "swordsman_lvl1": {
+    "source": "swordsman/PNG/Swordsman_lvl1/Without_shadow",
+    "spriteSheet": {
+      "idle": "Swordsman_lvl1_Idle_without_shadow.png",
+      "walk": "Swordsman_lvl1_Walk_without_shadow.png",
+      "run": "Swordsman_lvl1_Run_without_shadow.png",
+      "attack": "Swordsman_lvl1_attack_without_shadow.png",
+      "walk_attack": "Swordsman_lvl1_Walk_Attack_without_shadow.png",
+      "run_attack": "Swordsman_lvl1_Run_Attack_without_shadow.png",
+      "hurt": "Swordsman_lvl1_Hurt_without_shadow.png",
+      "death": "Swordsman_lvl1_Death_without_shadow.png"
+    },
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "frames": {
+      "idle": 6,
+      "walk": 8,
+      "run": 8,
+      "attack": 6,
+      "walk_attack": 8,
+      "run_attack": 8,
+      "hurt": 3,
+      "death": 9
+    },
+    "fps": 12,
+    "levelRequirement": 1
+  },
+  "swordsman_lvl2": {
+    "source": "swordsman/PNG/Swordsman_lvl2/Without_shadow",
+    "spriteSheet": {
+      "idle": "Swordsman_lvl2_Idle_without_shadow.png",
+      "walk": "Swordsman_lvl2_Walk_without_shadow.png",
+      "run": "Swordsman_lvl2_Run_without_shadow.png",
+      "attack": "Swordsman_lvl2_attack_without_shadow.png",
+      "walk_attack": "Swordsman_lvl2_Walk_Attack_without_shadow.png",
+      "run_attack": "Swordsman_lvl2_Run_Attack_without_shadow.png",
+      "hurt": "Swordsman_lvl2_Hurt_without_shadow.png",
+      "death": "Swordsman_lvl2_Death_without_shadow.png"
+    },
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "frames": {
+      "idle": 6,
+      "walk": 8,
+      "run": 8,
+      "attack": 6,
+      "walk_attack": 8,
+      "run_attack": 8,
+      "hurt": 3,
+      "death": 9
+    },
+    "fps": 12,
+    "levelRequirement": 10
+  },
+  "swordsman_lvl3": {
+    "source": "swordsman/PNG/Swordsman_lvl3/Without_shadow",
+    "spriteSheet": {
+      "idle": "Swordsman_lvl3_Idle_without_shadow.png",
+      "walk": "Swordsman_lvl3_Walk_without_shadow.png",
+      "run": "Swordsman_lvl3_Run_without_shadow.png",
+      "attack": "Swordsman_lvl3_attack_without_shadow.png",
+      "walk_attack": "Swordsman_lvl3_Walk_Attack_without_shadow.png",
+      "run_attack": "Swordsman_lvl3_Run_Attack_without_shadow.png",
+      "hurt": "Swordsman_lvl3_Hurt_without_shadow.png",
+      "death": "Swordsman_lvl3_Death_without_shadow.png"
+    },
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "frames": {
+      "idle": 6,
+      "walk": 8,
+      "run": 8,
+      "attack": 6,
+      "walk_attack": 8,
+      "run_attack": 8,
+      "hurt": 3,
+      "death": 9
+    },
+    "fps": 12,
+    "levelRequirement": 20
+  }
+}
